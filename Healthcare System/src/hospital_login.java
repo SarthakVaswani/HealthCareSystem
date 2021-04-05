@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.sql.*;
 import javax.swing.JOptionPane;
 /*
@@ -29,6 +30,8 @@ public class hospital_login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         hospital_id = new javax.swing.JTextField();
@@ -41,28 +44,41 @@ public class hospital_login extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Hospital Login");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, -1, -1));
+
+        jLabel4.setBackground(new java.awt.Color(79, 138, 242));
+        jLabel4.setOpaque(true);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 150));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Hospital ID");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 84, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 110, 20));
 
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 135, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
         hospital_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hospital_idActionPerformed(evt);
             }
         });
-        jPanel1.add(hospital_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 80, 100, -1));
+        jPanel1.add(hospital_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 230, 30));
 
-        login_button.setText("Login");
+        login_button.setBackground(new java.awt.Color(79, 138, 242));
+        login_button.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        login_button.setText("Submit");
         login_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 login_buttonActionPerformed(evt);
             }
         });
-        jPanel1.add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 219, -1, -1));
+        jPanel1.add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 110, 40));
 
         reset_button.setText("Reset");
         reset_button.addActionListener(new java.awt.event.ActionListener() {
@@ -70,17 +86,18 @@ public class hospital_login extends javax.swing.JFrame {
                 reset_buttonActionPerformed(evt);
             }
         });
-        jPanel1.add(reset_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 219, -1, -1));
+        jPanel1.add(reset_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, -1, -1));
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(184, 132, 100, -1));
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 230, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hopital_background.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 340));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setOpaque(true);
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,7 +118,8 @@ public class hospital_login extends javax.swing.JFrame {
     }//GEN-LAST:event_hospital_idActionPerformed
 
     private void login_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_buttonActionPerformed
-       try{
+     login_button.setBackground(Color.decode("#4F8AF2")); 
+        try{
            Class.forName("com.mysql.jdbc.Driver");
            Connection con =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false","root","baggster");
            String hospitalID= hospital_id.getText();
@@ -180,6 +198,8 @@ public class hospital_login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login_button;
     private javax.swing.JPasswordField password;
