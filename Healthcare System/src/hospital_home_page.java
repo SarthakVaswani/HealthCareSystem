@@ -26,21 +26,141 @@ public class hospital_home_page extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
+        SideMenu = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        MainPanel = new javax.swing.JPanel();
+        RegisterDoctorpage = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        AppointmentPage = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButton1.setText("Register Doctor");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("jButton3");
+
+        javax.swing.GroupLayout SideMenuLayout = new javax.swing.GroupLayout(SideMenu);
+        SideMenu.setLayout(SideMenuLayout);
+        SideMenuLayout.setHorizontalGroup(
+            SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SideMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(SideMenuLayout.createSequentialGroup()
+                .addComponent(jButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        SideMenuLayout.setVerticalGroup(
+            SideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SideMenuLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jButton1)
+                .addGap(45, 45, 45)
+                .addComponent(jButton2)
+                .addGap(69, 69, 69)
+                .addComponent(jButton3)
+                .addContainerGap(479, Short.MAX_VALUE))
+        );
+
+        jSplitPane1.setLeftComponent(SideMenu);
+
+        MainPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setText("jLabel1");
+
+        javax.swing.GroupLayout RegisterDoctorpageLayout = new javax.swing.GroupLayout(RegisterDoctorpage);
+        RegisterDoctorpage.setLayout(RegisterDoctorpageLayout);
+        RegisterDoctorpageLayout.setHorizontalGroup(
+            RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
+                .addGap(418, 418, 418)
+                .addComponent(jLabel1)
+                .addContainerGap(502, Short.MAX_VALUE))
+        );
+        RegisterDoctorpageLayout.setVerticalGroup(
+            RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
+                .addGap(297, 297, 297)
+                .addComponent(jLabel1)
+                .addContainerGap(428, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(RegisterDoctorpage, "card2");
+
+        jLabel2.setText("jLabel2");
+
+        javax.swing.GroupLayout AppointmentPageLayout = new javax.swing.GroupLayout(AppointmentPage);
+        AppointmentPage.setLayout(AppointmentPageLayout);
+        AppointmentPageLayout.setHorizontalGroup(
+            AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AppointmentPageLayout.createSequentialGroup()
+                .addGap(414, 414, 414)
+                .addComponent(jLabel2)
+                .addContainerGap(506, Short.MAX_VALUE))
+        );
+        AppointmentPageLayout.setVerticalGroup(
+            AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AppointmentPageLayout.createSequentialGroup()
+                .addGap(342, 342, 342)
+                .addComponent(jLabel2)
+                .addContainerGap(383, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(AppointmentPage, "card3");
+
+        jSplitPane1.setRightComponent(MainPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1073, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSplitPane1)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       MainPanel.removeAll();
+       MainPanel.add(RegisterDoctorpage);
+       MainPanel.repaint();
+       MainPanel.revalidate();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        MainPanel.removeAll();
+       MainPanel.add(AppointmentPage);
+       MainPanel.repaint();
+       MainPanel.revalidate();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +198,15 @@ public class hospital_home_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AppointmentPage;
+    private javax.swing.JPanel MainPanel;
+    private javax.swing.JPanel RegisterDoctorpage;
+    private javax.swing.JPanel SideMenu;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }
