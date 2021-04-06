@@ -52,7 +52,7 @@ public class doctor_Login extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DOCTOR  LOGIN");
         jLabel4.setToolTipText("");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 310, 70));
@@ -60,7 +60,7 @@ public class doctor_Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 21)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(34, 34, 34));
         jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 140, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 140, 40));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 21)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(34, 34, 34));
@@ -77,13 +77,13 @@ public class doctor_Login extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 100, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 100, 40));
 
         jButton2.setBackground(new java.awt.Color(42, 127, 186));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Reset");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 90, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 90, 40));
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
         jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -92,7 +92,7 @@ public class doctor_Login extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 230, 40));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 290, 30));
 
         jTextField3.setBackground(new java.awt.Color(255, 255, 255));
         jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -103,20 +103,20 @@ public class doctor_Login extends javax.swing.JFrame {
                 jTextField3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 230, 40));
+        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 290, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/doc (2).png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 510, 500));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 430, 500));
 
         jLabel5.setBackground(new java.awt.Color(42, 127, 186));
         jLabel5.setForeground(new java.awt.Color(42, 127, 186));
         jLabel5.setOpaque(true);
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 100));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 100));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setOpaque(true);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 500));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

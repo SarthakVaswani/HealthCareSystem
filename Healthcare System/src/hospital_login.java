@@ -52,7 +52,7 @@ public class hospital_login extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(79, 138, 242));
         jLabel4.setOpaque(true);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 110));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 110));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -65,14 +65,14 @@ public class hospital_login extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hosp.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 510, 500));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 430, 500));
 
         hospital_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hospital_idActionPerformed(evt);
             }
         });
-        jPanel1.add(hospital_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 230, 30));
+        jPanel1.add(hospital_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 260, 30));
 
         login_button.setBackground(new java.awt.Color(42, 127, 186));
         login_button.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -82,7 +82,7 @@ public class hospital_login extends javax.swing.JFrame {
                 login_buttonActionPerformed(evt);
             }
         });
-        jPanel1.add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 90, 40));
+        jPanel1.add(login_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 90, 40));
 
         reset_button.setBackground(new java.awt.Color(42, 127, 186));
         reset_button.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -92,18 +92,18 @@ public class hospital_login extends javax.swing.JFrame {
                 reset_buttonActionPerformed(evt);
             }
         });
-        jPanel1.add(reset_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 80, 40));
+        jPanel1.add(reset_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 80, 40));
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 230, 30));
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 260, 30));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setOpaque(true);
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 500));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
