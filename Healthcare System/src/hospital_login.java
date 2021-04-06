@@ -45,28 +45,32 @@ public class hospital_login extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 38)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Hospital Login");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
+        jLabel5.setText("HOSPITAL LOGIN");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 330, 60));
 
-        jLabel4.setBackground(new java.awt.Color(79, 138, 242));
+        jLabel4.setBackground(new java.awt.Color(42, 127, 186));
         jLabel4.setOpaque(true);
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 110));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 100));
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Hospital ID");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 110, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 140, 30));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 110, 30));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hosp.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 430, 500));
 
+        hospital_id.setBackground(new java.awt.Color(255, 255, 255));
+        hospital_id.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        hospital_id.setInheritsPopupMenu(true);
+        hospital_id.setOpaque(false);
         hospital_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hospital_idActionPerformed(evt);
@@ -76,6 +80,7 @@ public class hospital_login extends javax.swing.JFrame {
 
         login_button.setBackground(new java.awt.Color(42, 127, 186));
         login_button.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        login_button.setForeground(new java.awt.Color(255, 255, 255));
         login_button.setText("Submit");
         login_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +91,7 @@ public class hospital_login extends javax.swing.JFrame {
 
         reset_button.setBackground(new java.awt.Color(42, 127, 186));
         reset_button.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        reset_button.setForeground(new java.awt.Color(255, 255, 255));
         reset_button.setText("Reset");
         reset_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +100,8 @@ public class hospital_login extends javax.swing.JFrame {
         });
         jPanel1.add(reset_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 80, 40));
 
+        password.setBackground(new java.awt.Color(255, 255, 255));
+        password.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
@@ -102,6 +110,7 @@ public class hospital_login extends javax.swing.JFrame {
         jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 260, 30));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel3.setOpaque(true);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 500));
 
