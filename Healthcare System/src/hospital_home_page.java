@@ -1,3 +1,5 @@
+import java.sql.*;
+import javax.swing.JOptionPane;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -38,17 +40,17 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        fullNameJText = new javax.swing.JTextField();
+        DOB = new javax.swing.JTextField();
+        phoneNumber = new javax.swing.JTextField();
+        emailID = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        AgeJSpinner = new javax.swing.JSpinner();
+        SpecializationCB = new javax.swing.JComboBox<>();
         UpdateDetails = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         AppointmentPage = new javax.swing.JPanel();
@@ -113,23 +115,23 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Email ID");
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fullNameJText.setBackground(new java.awt.Color(255, 255, 255));
+        fullNameJText.setForeground(new java.awt.Color(0, 0, 0));
+        fullNameJText.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField3.setToolTipText("");
-        jTextField3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        DOB.setBackground(new java.awt.Color(255, 255, 255));
+        DOB.setForeground(new java.awt.Color(0, 0, 0));
+        DOB.setToolTipText("");
+        DOB.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        phoneNumber.setBackground(new java.awt.Color(255, 255, 255));
+        phoneNumber.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        emailID.setBackground(new java.awt.Color(255, 255, 255));
+        emailID.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        emailID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                emailIDActionPerformed(evt);
             }
         });
 
@@ -165,12 +167,12 @@ public class hospital_home_page extends javax.swing.JFrame {
             }
         });
 
-        jSpinner1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jSpinner1.setToolTipText("");
-        jSpinner1.setBorder(null);
+        AgeJSpinner.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        AgeJSpinner.setToolTipText("");
+        AgeJSpinner.setBorder(null);
 
-        jComboBox1.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
+        SpecializationCB.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        SpecializationCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
 
         javax.swing.GroupLayout RegisterDoctorpageLayout = new javax.swing.GroupLayout(RegisterDoctorpage);
         RegisterDoctorpage.setLayout(RegisterDoctorpageLayout);
@@ -182,13 +184,13 @@ public class hospital_home_page extends javax.swing.JFrame {
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
                         .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(fullNameJText, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(DOB, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(emailID)
+                            .addComponent(SpecializationCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(200, 200, 200)
                         .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,14 +201,14 @@ public class hospital_home_page extends javax.swing.JFrame {
                                 .addComponent(jRadioButton2)
                                 .addGap(26, 26, 26)
                                 .addComponent(jRadioButton3))
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AgeJSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(303, 303, 303))
         );
@@ -221,10 +223,10 @@ public class hospital_home_page extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AgeJSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegisterDoctorpageLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(fullNameJText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(35, 35, 35)
                 .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -235,24 +237,24 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addComponent(jRadioButton1)
                         .addComponent(jRadioButton2)
                         .addComponent(jRadioButton3))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                    .addComponent(DOB, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(35, 35, 35)
                 .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(70, 70, 70))
                     .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SpecializationCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(emailID, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(133, 133, 133))
@@ -480,9 +482,9 @@ public class hospital_home_page extends javax.swing.JFrame {
        MainPanel.revalidate();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void emailIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_emailIDActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
@@ -496,7 +498,42 @@ public class hospital_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+       String fullname=fullNameJText.getText();
+       String dateOfBirth=DOB.getText();
+       String email_ID=emailID.getText();
+       String phone_Number=phoneNumber.getText();
+       int age=(Integer)AgeJSpinner.getValue();
+       String specialization=(String) SpecializationCB.getSelectedItem();
+       String gender = null;
+       if(jRadioButton1.isSelected())
+           gender="Male";
+       else if(jRadioButton2.isSelected())
+           gender="Female";
+       else if(jRadioButton3.isSelected())
+           gender="Other";
+       
+       try{
+           Class.forName("com.mysql.jdbc.Driver");
+           Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false","root","baggster");
+           Statement stm=con.createStatement();
+           String createQuery="Insert into doctorAccount values('"+fullname+"','"+age+"','"+dateOfBirth+"','"+gender+"','"+specialization+"','"+phone_Number+"','"+email_ID+"');";
+           stm.execute(createQuery);
+           JOptionPane.showMessageDialog(this,"Doctor Profile Created!");
+           fullNameJText.setText("");
+           DOB.setText("");
+           emailID.setText("");
+           phoneNumber.setText("");
+           jRadioButton1.setSelected(false);
+           jRadioButton2.setSelected(false);
+           jRadioButton3.setSelected(false);
+           
+       }
+       catch(Exception e)
+       {
+           JOptionPane.showMessageDialog(this,"Please enter valid details");
+       }
+       
+           
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -541,20 +578,24 @@ public class hospital_home_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSpinner AgeJSpinner;
     private javax.swing.JPanel AppointmentPage;
     private javax.swing.JPanel AwarenessFacts;
+    private javax.swing.JTextField DOB;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JPanel RegisterDoctorpage;
     private javax.swing.JPanel SideMenu;
+    private javax.swing.JComboBox<String> SpecializationCB;
     private javax.swing.JPanel UpdateDetails;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField emailID;
+    private javax.swing.JTextField fullNameJText;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -571,11 +612,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField phoneNumber;
     // End of variables declaration//GEN-END:variables
 }

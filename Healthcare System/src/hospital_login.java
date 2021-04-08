@@ -152,7 +152,7 @@ public class hospital_login extends javax.swing.JFrame {
                JOptionPane.showMessageDialog(this,"Hospital ID or password is invalid");
                hospital_id.setText("");
       password.setText("");
-               
+              
            }
            con.close();
            
