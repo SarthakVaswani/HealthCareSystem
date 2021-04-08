@@ -516,7 +516,7 @@ public class hospital_home_page extends javax.swing.JFrame {
            Class.forName("com.mysql.jdbc.Driver");
            Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false","root","baggster");
            Statement stm=con.createStatement();
-           String createQuery="Insert into doctorAccount values('"+fullname+"','"+age+"','"+dateOfBirth+"','"+gender+"','"+specialization+"','"+phone_Number+"','"+email_ID+"');";
+           String createQuery="Insert into doctorAccount values('"+fullname+"','"+age+"','"+dateOfBirth+"','"+gender+"','"+specialization+"','"+phone_Number+"','"+email_ID+"',D_ID);";
            stm.execute(createQuery);
            JOptionPane.showMessageDialog(this,"Doctor Profile Created!");
            fullNameJText.setText("");
@@ -526,6 +526,7 @@ public class hospital_home_page extends javax.swing.JFrame {
            jRadioButton1.setSelected(false);
            jRadioButton2.setSelected(false);
            jRadioButton3.setSelected(false);
+           
            
        }
        catch(Exception e)
