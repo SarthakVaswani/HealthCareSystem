@@ -26,21 +26,143 @@ public class doctor_home_page extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane2 = new javax.swing.JSplitPane();
+        SideBar = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        ViewPatientJ = new javax.swing.JButton();
+        AppointmentStatusJ = new javax.swing.JButton();
+        MainPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1073, 806));
+
+        jButton1.setText("jButton1");
+
+        ViewPatientJ.setText("View patient records");
+        ViewPatientJ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewPatientJActionPerformed(evt);
+            }
+        });
+
+        AppointmentStatusJ.setText("Appointment Status");
+        AppointmentStatusJ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AppointmentStatusJActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout SideBarLayout = new javax.swing.GroupLayout(SideBar);
+        SideBar.setLayout(SideBarLayout);
+        SideBarLayout.setHorizontalGroup(
+            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(69, 69, 69))
+            .addGroup(SideBarLayout.createSequentialGroup()
+                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SideBarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(ViewPatientJ))
+                    .addComponent(AppointmentStatusJ))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        SideBarLayout.setVerticalGroup(
+            SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SideBarLayout.createSequentialGroup()
+                .addGap(146, 146, 146)
+                .addComponent(jButton1)
+                .addGap(26, 26, 26)
+                .addComponent(ViewPatientJ)
+                .addGap(27, 27, 27)
+                .addComponent(AppointmentStatusJ)
+                .addContainerGap(503, Short.MAX_VALUE))
+        );
+
+        jSplitPane2.setLeftComponent(SideBar);
+
+        MainPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setText("Patient Records");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(385, 385, 385)
+                .addComponent(jLabel1)
+                .addContainerGap(402, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(289, 289, 289)
+                .addComponent(jLabel1)
+                .addContainerGap(493, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(jPanel1, "card2");
+
+        jLabel2.setText("Appointment Status");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(355, 355, 355)
+                .addComponent(jLabel2)
+                .addContainerGap(411, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(324, 324, 324)
+                .addComponent(jLabel2)
+                .addContainerGap(458, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(jPanel2, "card3");
+
+        jSplitPane2.setRightComponent(MainPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1050, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jSplitPane2)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void AppointmentStatusJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AppointmentStatusJActionPerformed
+        MainPanel.removeAll();
+        MainPanel.add(jPanel2);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_AppointmentStatusJActionPerformed
+
+    private void ViewPatientJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewPatientJActionPerformed
+       MainPanel.removeAll();
+        MainPanel.add(jPanel1);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+    }//GEN-LAST:event_ViewPatientJActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +200,15 @@ public class doctor_home_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AppointmentStatusJ;
+    private javax.swing.JPanel MainPanel;
+    private javax.swing.JPanel SideBar;
+    private javax.swing.JButton ViewPatientJ;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSplitPane jSplitPane2;
     // End of variables declaration//GEN-END:variables
 }
