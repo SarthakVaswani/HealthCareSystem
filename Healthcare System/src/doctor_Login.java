@@ -87,7 +87,7 @@ public class doctor_Login extends javax.swing.JFrame {
 
         DocPassword.setBackground(new java.awt.Color(255, 255, 255));
         DocPassword.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel1.add(DocPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 250, 30));
+        jPanel1.add(DocPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 260, 30));
 
         DoctorIDJText.setBackground(new java.awt.Color(255, 255, 255));
         DoctorIDJText.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
