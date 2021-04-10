@@ -1,11 +1,13 @@
+
 import java.sql.*;
 import javax.swing.JOptionPane;
+import java.sql.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author svas0
@@ -70,27 +72,27 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
+        NameD = new javax.swing.JTextField();
+        DOBD = new javax.swing.JTextField();
+        PhND = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        ED = new javax.swing.JTextField();
         jLabel33 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        DegreeD = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        AddressD = new javax.swing.JTextArea();
         jLabel35 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jButton8 = new javax.swing.JButton();
+        YED = new javax.swing.JTextField();
+        DoctorUpdate = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox<>();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
         jRadioButton8 = new javax.swing.JRadioButton();
         jSpinner1 = new javax.swing.JSpinner();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
+        D_IDSearch = new javax.swing.JTextField();
+        SearchDoctor = new javax.swing.JButton();
         AwarenessUpdate = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
@@ -105,11 +107,13 @@ public class hospital_home_page extends javax.swing.JFrame {
         jTextField18 = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
         DescriptionUpdateJ = new javax.swing.JTextArea();
-        jButton10 = new javax.swing.JButton();
+        DeleteAW = new javax.swing.JButton();
         AwarenessUpdateJ = new javax.swing.JButton();
         jRadioButton9 = new javax.swing.JRadioButton();
         jRadioButton10 = new javax.swing.JRadioButton();
         jComboBox3 = new javax.swing.JComboBox<>();
+        SearchAW = new javax.swing.JTextField();
+        SearchAwareness = new javax.swing.JButton();
         AppointmentPage = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         AwarenessFacts = new javax.swing.JPanel();
@@ -445,51 +449,61 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setText("Phone Number");
 
-        jTextField7.setBackground(new java.awt.Color(255, 255, 255));
+        NameD.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        DOBD.setBackground(new java.awt.Color(255, 255, 255));
+        DOBD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                DOBDActionPerformed(evt);
             }
         });
 
-        jTextField12.setBackground(new java.awt.Color(255, 255, 255));
+        PhND.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel32.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(0, 0, 0));
         jLabel32.setText("Email ID");
 
-        jTextField13.setBackground(new java.awt.Color(255, 255, 255));
+        ED.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel33.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(0, 0, 0));
         jLabel33.setText("Degree");
 
-        jTextField14.setBackground(new java.awt.Color(255, 255, 255));
+        DegreeD.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel34.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(0, 0, 0));
         jLabel34.setText("Address");
 
-        jTextArea3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        AddressD.setBackground(new java.awt.Color(255, 255, 255));
+        AddressD.setColumns(20);
+        AddressD.setRows(5);
+        jScrollPane3.setViewportView(AddressD);
 
         jLabel35.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(0, 0, 0));
         jLabel35.setText("Year Of Experience");
 
-        jTextField15.setBackground(new java.awt.Color(255, 255, 255));
+        YED.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton8.setBackground(new java.awt.Color(42, 127, 186));
-        jButton8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton8.setText("Save");
+        DoctorUpdate.setBackground(new java.awt.Color(42, 127, 186));
+        DoctorUpdate.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        DoctorUpdate.setText("Save");
+        DoctorUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoctorUpdateActionPerformed(evt);
+            }
+        });
 
         jButton9.setBackground(new java.awt.Color(42, 127, 186));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jButton9.setText("Delete");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
 
@@ -504,11 +518,14 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         jSpinner1.setBorder(null);
 
-        jTextField8.setBackground(new java.awt.Color(255, 255, 255));
+        D_IDSearch.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel25.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel25.setText("Search");
+        SearchDoctor.setText("Search");
+        SearchDoctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchDoctorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout DoctorUPdateLayout = new javax.swing.GroupLayout(DoctorUPdate);
         DoctorUPdate.setLayout(DoctorUPdateLayout);
@@ -518,16 +535,16 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addGap(120, 120, 120)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextField13, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(ED, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, 200, Short.MAX_VALUE))
                     .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DOBD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NameD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(131, 131, 131)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DoctorUPdateLayout.createSequentialGroup()
@@ -541,10 +558,10 @@ public class hospital_home_page extends javax.swing.JFrame {
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PhND, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(DegreeD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(YED, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(DoctorUPdateLayout.createSequentialGroup()
                                     .addComponent(jRadioButton6)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -554,22 +571,22 @@ public class hospital_home_page extends javax.swing.JFrame {
                             .addGroup(DoctorUPdateLayout.createSequentialGroup()
                                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(DoctorUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorUPdateLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SearchDoctor)
+                .addGap(33, 33, 33)
+                .addComponent(D_IDSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(299, 299, 299))
         );
         DoctorUPdateLayout.setVerticalGroup(
             DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctorUPdateLayout.createSequentialGroup()
                 .addContainerGap(20, Short.MAX_VALUE)
-                .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(D_IDSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SearchDoctor))
                 .addGap(18, 18, 18)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -577,7 +594,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(NameD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(DoctorUPdateLayout.createSequentialGroup()
@@ -588,7 +605,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DOBD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jRadioButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -597,15 +614,15 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12))
+                    .addComponent(PhND))
                 .addGap(20, 20, 20)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ED, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DegreeD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -616,11 +633,11 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(DoctorUPdateLayout.createSequentialGroup()
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(YED, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                         .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(DoctorUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(22, 22, 22))))
         );
 
@@ -679,9 +696,14 @@ public class hospital_home_page extends javax.swing.JFrame {
         DescriptionUpdateJ.setRows(5);
         jScrollPane4.setViewportView(DescriptionUpdateJ);
 
-        jButton10.setBackground(new java.awt.Color(39, 61, 172));
-        jButton10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton10.setText("Delete");
+        DeleteAW.setBackground(new java.awt.Color(39, 61, 172));
+        DeleteAW.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        DeleteAW.setText("Delete");
+        DeleteAW.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteAWActionPerformed(evt);
+            }
+        });
 
         AwarenessUpdateJ.setBackground(new java.awt.Color(39, 61, 172));
         AwarenessUpdateJ.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -700,6 +722,13 @@ public class hospital_home_page extends javax.swing.JFrame {
         jRadioButton10.setText("Disease");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fever", "Diarrhea", "Fatigue", "Muscle aches", "Coughing" }));
+
+        SearchAwareness.setText("Search");
+        SearchAwareness.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchAwarenessActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout AwarenessUpdateLayout = new javax.swing.GroupLayout(AwarenessUpdate);
         AwarenessUpdate.setLayout(AwarenessUpdateLayout);
@@ -736,25 +765,39 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jScrollPane4))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AwarenessUpdateLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10)
-                .addGap(36, 36, 36)
-                .addComponent(AwarenessUpdateJ)
-                .addGap(174, 174, 174))
+                .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AwarenessUpdateLayout.createSequentialGroup()
+                        .addComponent(DeleteAW)
+                        .addGap(36, 36, 36)
+                        .addComponent(AwarenessUpdateJ)
+                        .addGap(174, 174, 174))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AwarenessUpdateLayout.createSequentialGroup()
+                        .addComponent(SearchAwareness)
+                        .addGap(37, 37, 37)
+                        .addComponent(SearchAW, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(103, 103, 103))))
         );
         AwarenessUpdateLayout.setVerticalGroup(
             AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AwarenessUpdateLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(11, 11, 11)
                 .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(SearchAW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SearchAwareness))
+                .addGap(18, 18, 18)
                 .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(NameUpdateJ, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(35, 35, 35)
+                    .addGroup(AwarenessUpdateLayout.createSequentialGroup()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NameUpdateJ, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))
+                    .addGroup(AwarenessUpdateLayout.createSequentialGroup()
+                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)))
                 .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                     .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -778,7 +821,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeleteAW, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AwarenessUpdateJ, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17))
         );
@@ -1130,24 +1173,24 @@ public class hospital_home_page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       MainPanel.removeAll();
-       MainPanel.add(RegisterDoctorpage);
-       MainPanel.repaint();
-       MainPanel.revalidate();
+        MainPanel.removeAll();
+        MainPanel.add(RegisterDoctorpage);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         MainPanel.removeAll();
-       MainPanel.add(UpdateDetails);
-       MainPanel.repaint();
-       MainPanel.revalidate();
+        MainPanel.add(UpdateDetails);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         MainPanel.removeAll();
-       MainPanel.add(AppointmentPage);
-       MainPanel.repaint();
-       MainPanel.revalidate();
+        MainPanel.add(AppointmentPage);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void emailIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIDActionPerformed
@@ -1159,61 +1202,59 @@ public class hospital_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       MainPanel.removeAll();
-       MainPanel.add(AwarenessFacts);
-       MainPanel.repaint();
-       MainPanel.revalidate();
+        MainPanel.removeAll();
+        MainPanel.add(AwarenessFacts);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       String fullname=fullNameJText.getText();
-       String dateOfBirth=DOB.getText();
-       String email_ID=emailID.getText();
-       String phone_Number=phoneNumber.getText();
-       int age=(Integer)AgeJSpinner.getValue();
-       String specialization=(String) SpecializationCB.getSelectedItem();
-       String gender = null;
-       if(jRadioButton1.isSelected())
-           gender="Male";
-       else if(jRadioButton2.isSelected())
-           gender="Female";
-       else if(jRadioButton3.isSelected())
-           gender="Other";
-       String degree=DegreeJ.getText();
-       String address=AddressJ.getText();
-       String yearExpereince=YearOfExperienceJ.getText();
-       
-       try{
-           Class.forName("com.mysql.jdbc.Driver");
-           Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false","root","baggster");
-           Statement stm=con.createStatement();
-           String createQuery="Insert into doctorAccount values('"+fullname+"','"+age+"','"+dateOfBirth+"','"+gender+"','"+specialization+"','"+phone_Number+"','"+email_ID+"',D_ID,'"+degree+"','"+address+"','"+yearExpereince+"');";
-           stm.execute(createQuery);
-           JOptionPane.showMessageDialog(this,"Doctor Profile Created!");
-           fullNameJText.setText("");
-           DOB.setText("");
-           emailID.setText("");
-           phoneNumber.setText("");
-           jRadioButton1.setSelected(false);
-           jRadioButton2.setSelected(false);
-           jRadioButton3.setSelected(false);
-           DegreeJ.setText("");
-           AddressJ.setText("");
-           YearOfExperienceJ.setText("");
-           
-           
-       }
-       catch(Exception e)
-       {
-           JOptionPane.showMessageDialog(this,"Please enter valid details");
-       }
-       
-           
+        String fullname = fullNameJText.getText();
+        String dateOfBirth = DOB.getText();
+        String email_ID = emailID.getText();
+        String phone_Number = phoneNumber.getText();
+        int age = (Integer) AgeJSpinner.getValue();
+        String specialization = (String) SpecializationCB.getSelectedItem();
+        String gender = null;
+        if (jRadioButton1.isSelected()) {
+            gender = "Male";
+        } else if (jRadioButton2.isSelected()) {
+            gender = "Female";
+        } else if (jRadioButton3.isSelected()) {
+            gender = "Other";
+        }
+        String degree = DegreeJ.getText();
+        String address = AddressJ.getText();
+        String yearExpereince = YearOfExperienceJ.getText();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stm = con.createStatement();
+            String createQuery = "Insert into doctorAccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID + "',D_ID,'" + degree + "','" + address + "','" + yearExpereince + "');";
+            stm.execute(createQuery);
+            JOptionPane.showMessageDialog(this, "Doctor Profile Created!");
+            fullNameJText.setText("");
+            DOB.setText("");
+            emailID.setText("");
+            phoneNumber.setText("");
+            jRadioButton1.setSelected(false);
+            jRadioButton2.setSelected(false);
+            jRadioButton3.setSelected(false);
+            DegreeJ.setText("");
+            AddressJ.setText("");
+            YearOfExperienceJ.setText("");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Please enter valid details");
+        }
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         dispose();
-        Home_screen hs= new Home_screen();
+        Home_screen hs = new Home_screen();
         hs.show();
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1222,17 +1263,17 @@ public class hospital_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_NameJActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-       UpdateMainPanel.removeAll();
-       UpdateMainPanel.add(DoctorUPdate);
-       UpdateMainPanel.repaint();
-       UpdateMainPanel.revalidate();
+        UpdateMainPanel.removeAll();
+        UpdateMainPanel.add(DoctorUPdate);
+        UpdateMainPanel.repaint();
+        UpdateMainPanel.revalidate();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-       UpdateMainPanel.removeAll();
-       UpdateMainPanel.add(AwarenessUpdate);
-       UpdateMainPanel.repaint();
-       UpdateMainPanel.revalidate();
+        UpdateMainPanel.removeAll();
+        UpdateMainPanel.add(AwarenessUpdate);
+        UpdateMainPanel.repaint();
+        UpdateMainPanel.revalidate();
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void YOOriginJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YOOriginJActionPerformed
@@ -1244,45 +1285,212 @@ public class hospital_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_COOUpdateJActionPerformed
 
     private void AwarenessSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AwarenessSubmitActionPerformed
-       String name=NameJ.getText();
-       String category=null;
-       if(jRadioButton4.isSelected())
-           category="Medicine";
-       else if(jRadioButton5.isSelected())
-           category="Disease";
-       String countryOrigin=CountryOfOriginJ.getText();
-       String yearOrigin=YearOfOrigin.getText();
-       String generalSymptoms=(String)GeneralSymptomsCB.getSelectedItem();
-       String description=DescriptionJ.getText();
-       try{
-           Class.forName("com.mysql.jdbc.Driver");
-           Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false","root","baggster");
-           Statement stm=con.createStatement();
-           String createQuery="Insert into awarenessfacts values('"+name+"','"+category+"','"+countryOrigin+"','"+yearOrigin+"','"+generalSymptoms+"','"+description+"');";
-           stm.execute(createQuery);
-           JOptionPane.showMessageDialog(this,"Awareness facts added");
-           NameJ.setText("");
-           CountryOfOriginJ.setText("");
-           YearOfOrigin.setText("");
-           DescriptionJ.setText("");
-           jRadioButton4.setSelected(false);
-           jRadioButton5.setSelected(false);
-           
-           
-       }
-       catch(Exception e)
-       {
-           JOptionPane.showMessageDialog(this,"Please enter valid details");
-       }
+        String name = NameJ.getText();
+        String category = null;
+        if (jRadioButton4.isSelected()) {
+            category = "Medicine";
+        } else if (jRadioButton5.isSelected()) {
+            category = "Disease";
+        }
+        String countryOrigin = CountryOfOriginJ.getText();
+        String yearOrigin = YearOfOrigin.getText();
+        String generalSymptoms = (String) GeneralSymptomsCB.getSelectedItem();
+        String description = DescriptionJ.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stm = con.createStatement();
+            String createQuery = "Insert into awarenessfacts values('" + name + "','" + category + "','" + countryOrigin + "','" + yearOrigin + "','" + generalSymptoms + "','" + description + "');";
+            stm.execute(createQuery);
+            JOptionPane.showMessageDialog(this, "Awareness facts added");
+            NameJ.setText("");
+            CountryOfOriginJ.setText("");
+            YearOfOrigin.setText("");
+            DescriptionJ.setText("");
+            jRadioButton4.setSelected(false);
+            jRadioButton5.setSelected(false);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Please enter valid details");
+        }
     }//GEN-LAST:event_AwarenessSubmitActionPerformed
 
     private void AwarenessUpdateJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AwarenessUpdateJActionPerformed
-        // TODO add your handling code here:
+        String awarenessName = SearchAW.getText();
+        String name = NameUpdateJ.getText();
+        String category = null;
+        if (jRadioButton9.isSelected()) {
+            category = "Medicine";
+        } else if (jRadioButton10.isSelected()) {
+            category = "Disease";
+        }
+        String countryOrigin = COOUpdateJ.getText();
+        String yearOrigin = YOOriginJ.getText();
+        String generalSymptoms = (String) jComboBox3.getSelectedItem();
+        String description = DescriptionUpdateJ.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stmt = (Statement) con.createStatement();
+            String query = "update awarenessfacts set name='" + name + "',category='" + category + "',countryOfOrigin='" + countryOrigin + "',yearOfOrigin='" + yearOrigin + "',generalSymptoms='" + generalSymptoms + "',description='" + description + "' where name ='" + awarenessName + "';";
+            int i = stmt.executeUpdate(query);
+
+            JOptionPane.showMessageDialog(this, "records Modified");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_AwarenessUpdateJActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void DOBDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOBDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_DOBDActionPerformed
+
+    private void SearchDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchDoctorActionPerformed
+        String Doctor_ID = D_IDSearch.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stmt = (Statement) con.createStatement();
+            String searchD_ID = "select FullName,DateOfBirth,Specialization,Ph_Number,Email_id,D_ID,degree,address,yearOfExperience from doctoraccount where D_ID='" + Doctor_ID + "';";
+            ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
+            int found = 0;
+            while (rs.next()) {
+                String fullname = rs.getString("FullName");
+//    String age=rs.getString("Age");
+                String dob = rs.getString("DateOfBirth");
+//   String gender=rs.getString("Gender");
+                String specialization = rs.getString("Specialization");
+                String phNumber = rs.getString("Ph_Number");
+                String emailID = rs.getString("Email_id");
+                String degreeD = rs.getString("degree");
+                String addressD = rs.getString("address");
+                String yearExp = rs.getString("yearOfExperience");
+                NameD.setText(fullname);
+//jSpinner1.setValue(age);       
+                DOBD.setText(dob);
+//jTextField4.setText(gender);  
+                jComboBox2.setSelectedItem(specialization);
+                PhND.setText(phNumber);
+                ED.setText(emailID);
+                DegreeD.setText(degreeD);
+                AddressD.setText(addressD);
+                YED.setText(yearExp);
+                found++;
+
+                JOptionPane.showMessageDialog(this, "records searched");
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_SearchDoctorActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        String Doctor_ID = D_IDSearch.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stmt = (Statement) con.createStatement();
+            String deleteDoctor = "delete from doctoraccount where D_ID='" + Doctor_ID + "'";
+            int i = stmt.executeUpdate(deleteDoctor);
+            JOptionPane.showMessageDialog(this, "records Deleted");
+            fullNameJText.setText("");
+            DOB.setText("");
+            emailID.setText("");
+            phoneNumber.setText("");
+            jRadioButton1.setSelected(false);
+            jRadioButton2.setSelected(false);
+            jRadioButton3.setSelected(false);
+            DegreeJ.setText("");
+            AddressJ.setText("");
+            YearOfExperienceJ.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void DoctorUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorUpdateActionPerformed
+        String Doctor_ID = D_IDSearch.getText();
+        String fullname = NameD.getText();
+        String dateOfBirth = DOBD.getText();
+        String email_ID = ED.getText();
+        String phone_Number = PhND.getText();
+        int age = (Integer) jSpinner1.getValue();
+        String specialization = (String) SpecializationCB.getSelectedItem();
+        String gender = null;
+        if (jRadioButton6.isSelected()) {
+            gender = "Male";
+        } else if (jRadioButton7.isSelected()) {
+            gender = "Female";
+        } else if (jRadioButton8.isSelected()) {
+            gender = "Other";
+        }
+        String degree = DegreeD.getText();
+        String address = AddressD.getText();
+        String yearExpereince = YED.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stmt = (Statement) con.createStatement();
+            String query = "update doctoraccount set FullName='" + fullname + "',Age='" + age + "',DateOfBirth='" + dateOfBirth + "',Gender='" + gender + "',Specialization='" + specialization + "',Ph_Number='" + phone_Number + "',Email_id='" + email_ID + "',degree='" + degree + "',address='" + address + "',yearOfExperience='" + yearExpereince + "' where D_ID ='" + Doctor_ID + "';";
+            int i = stmt.executeUpdate(query);
+
+            JOptionPane.showMessageDialog(this, "records Modified");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_DoctorUpdateActionPerformed
+
+    private void SearchAwarenessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchAwarenessActionPerformed
+        String awarenessName = SearchAW.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stmt = (Statement) con.createStatement();
+            String searchD_ID = "select name,countryOfOrigin,yearOfOrigin,generalSymptoms,description from awarenessfacts where name='" + awarenessName + "';";
+            ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
+            int found = 0;
+            while (rs.next()) {
+                String nameU = rs.getString("name");
+//                String categoryU = rs.getString("category");
+                String countryOfOriginU = rs.getString("countryOfOrigin");
+                String yearOforiginU = rs.getString("yearOfOrigin");
+                String generalSymptomsU = rs.getString("generalSymptoms");
+                String descriptionU = rs.getString("description");
+                NameUpdateJ.setText(nameU);
+//                .setText(categoryU);
+                COOUpdateJ.setText(countryOfOriginU);
+                YOOriginJ.setText(yearOforiginU);
+                jComboBox3.setSelectedItem(generalSymptomsU);
+                DescriptionUpdateJ.setText(descriptionU);
+                found++;
+
+                JOptionPane.showMessageDialog(this, "records searched");
+            }
+        } catch (Exception e) {
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_SearchAwarenessActionPerformed
+
+    private void DeleteAWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteAWActionPerformed
+        String awarenessName = SearchAW.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Statement stmt = (Statement) con.createStatement();
+            String deleteDoctor = "delete from awarenessfacts where name='" + awarenessName + "'";
+            int i = stmt.executeUpdate(deleteDoctor);
+            JOptionPane.showMessageDialog(this, "records Deleted");
+            NameUpdateJ.setText("");
+            COOUpdateJ.setText("");
+            YOOriginJ.setText("");
+            DescriptionUpdateJ.setText("");
+            jRadioButton9.setSelected(false);
+            jRadioButton10.setSelected(false);
+            YearOfExperienceJ.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_DeleteAWActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1320,6 +1528,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea AddressD;
     private javax.swing.JTextArea AddressJ;
     private javax.swing.JSpinner AgeJSpinner;
     private javax.swing.JPanel AppointmentPage;
@@ -1330,19 +1539,31 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JTextField COOUpdateJ;
     private javax.swing.JTextField CountryOfOriginJ;
     private javax.swing.JTextField DOB;
+    private javax.swing.JTextField DOBD;
+    private javax.swing.JTextField D_IDSearch;
+    private javax.swing.JTextField DegreeD;
     private javax.swing.JTextField DegreeJ;
+    private javax.swing.JButton DeleteAW;
     private javax.swing.JTextArea DescriptionJ;
     private javax.swing.JTextArea DescriptionUpdateJ;
     private javax.swing.JPanel DoctorUPdate;
+    private javax.swing.JButton DoctorUpdate;
+    private javax.swing.JTextField ED;
     private javax.swing.JComboBox<String> GeneralSymptomsCB;
     private javax.swing.JPanel MainPanel;
+    private javax.swing.JTextField NameD;
     private javax.swing.JTextField NameJ;
     private javax.swing.JTextField NameUpdateJ;
+    private javax.swing.JTextField PhND;
     private javax.swing.JPanel RegisterDoctorpage;
+    private javax.swing.JTextField SearchAW;
+    private javax.swing.JButton SearchAwareness;
+    private javax.swing.JButton SearchDoctor;
     private javax.swing.JPanel SideMenu;
     private javax.swing.JComboBox<String> SpecializationCB;
     private javax.swing.JPanel UpdateDetails;
     private javax.swing.JPanel UpdateMainPanel;
+    private javax.swing.JTextField YED;
     private javax.swing.JTextField YOOriginJ;
     private javax.swing.JTextField YearOfExperienceJ;
     private javax.swing.JTextField YearOfOrigin;
@@ -1350,13 +1571,11 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JTextField emailID;
     private javax.swing.JTextField fullNameJText;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -1377,7 +1596,6 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -1417,16 +1635,8 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JTextField phoneNumber;

@@ -701,17 +701,17 @@
                                   <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="jTextField13" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="ED" alignment="0" max="32767" attributes="0"/>
                                           <Component id="jComboBox2" alignment="0" pref="200" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="jLabel34" min="-2" pref="113" max="-2" attributes="0"/>
                                       <Component id="jScrollPane3" min="-2" pref="270" max="-2" attributes="0"/>
                                       <Component id="jLabel32" min="-2" pref="82" max="-2" attributes="0"/>
                                       <Component id="jLabel30" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="jTextField9" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="DOBD" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="jLabel28" min="-2" pref="134" max="-2" attributes="0"/>
                                       <Component id="jLabel26" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="NameD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -728,10 +728,10 @@
                                                   <Component id="jLabel33" min="-2" pref="58" max="-2" attributes="0"/>
                                                   <Component id="jLabel35" min="-2" pref="171" max="-2" attributes="0"/>
                                                   <Component id="jLabel31" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
-                                                  <Component id="jTextField12" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                  <Component id="jTextField14" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <Component id="PhND" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <Component id="DegreeD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                   <Component id="jLabel29" min="-2" pref="88" max="-2" attributes="0"/>
-                                                  <Component id="jTextField15" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <Component id="YED" min="-2" pref="200" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -743,7 +743,7 @@
                                               <Group type="102" attributes="0">
                                                   <Component id="jButton9" min="-2" pref="95" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jButton8" min="-2" pref="91" max="-2" attributes="0"/>
+                                                  <Component id="DoctorUpdate" min="-2" pref="91" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -752,9 +752,9 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jLabel25" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="jTextField8" min="-2" pref="197" max="-2" attributes="0"/>
+                                  <Component id="SearchDoctor" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Component id="D_IDSearch" min="-2" pref="197" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -763,9 +763,9 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace pref="20" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField8" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jLabel25" alignment="1" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="D_IDSearch" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="SearchDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -775,7 +775,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jSpinner1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="NameD" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -788,7 +788,7 @@
                                           <Component id="jLabel28" min="-2" pref="32" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jTextField9" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="DOBD" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                               <Component id="jRadioButton6" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                               <Component id="jRadioButton7" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                               <Component id="jRadioButton8" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
@@ -800,7 +800,7 @@
                                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jComboBox2" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField12" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="PhND" alignment="3" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -809,8 +809,8 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField13" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jTextField14" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="ED" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="DegreeD" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -824,11 +824,11 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jTextField15" min="-2" pref="33" max="-2" attributes="0"/>
+                                          <Component id="YED" min="-2" pref="33" max="-2" attributes="0"/>
                                           <EmptySpace pref="39" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jButton9" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
-                                              <Component id="jButton8" alignment="3" max="32767" attributes="0"/>
+                                              <Component id="DoctorUpdate" alignment="3" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                       </Group>
@@ -904,24 +904,24 @@
                             <Property name="text" type="java.lang.String" value="Phone Number"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField7">
+                        <Component class="javax.swing.JTextField" name="NameD">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField9">
+                        <Component class="javax.swing.JTextField" name="DOBD">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DOBDActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField12">
+                        <Component class="javax.swing.JTextField" name="PhND">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -939,7 +939,7 @@
                             <Property name="text" type="java.lang.String" value="Email ID"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField13">
+                        <Component class="javax.swing.JTextField" name="ED">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -957,7 +957,7 @@
                             <Property name="text" type="java.lang.String" value="Degree"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField14">
+                        <Component class="javax.swing.JTextField" name="DegreeD">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -982,7 +982,7 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                           <SubComponents>
-                            <Component class="javax.swing.JTextArea" name="jTextArea3">
+                            <Component class="javax.swing.JTextArea" name="AddressD">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1004,14 +1004,14 @@
                             <Property name="text" type="java.lang.String" value="Year Of Experience"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField15">
+                        <Component class="javax.swing.JTextField" name="YED">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton8">
+                        <Component class="javax.swing.JButton" name="DoctorUpdate">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ba" green="7f" red="2a" type="rgb"/>
@@ -1021,6 +1021,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Save"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DoctorUpdateActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton9">
                           <Properties>
@@ -1032,6 +1035,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Delete"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox2">
                           <Properties>
@@ -1083,23 +1089,20 @@
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField8">
+                        <Component class="javax.swing.JTextField" name="D_IDSearch">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel25">
+                        <Component class="javax.swing.JButton" name="SearchDoctor">
                           <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Verdana" size="14" style="1"/>
-                            </Property>
-                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="0" red="0" type="rgb"/>
-                            </Property>
                             <Property name="text" type="java.lang.String" value="Search"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchDoctorActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1157,30 +1160,49 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jButton10" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                  <Component id="AwarenessUpdateJ" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="DeleteAW" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                          <Component id="AwarenessUpdateJ" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="174" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="SearchAwareness" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                          <Component id="SearchAW" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel24" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jLabel36" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="SearchAW" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="SearchAwareness" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="NameUpdateJ" min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jRadioButton9" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton10" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel24" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="NameUpdateJ" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel36" min="-2" pref="32" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jRadioButton9" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton10" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jLabel37" pref="32" max="32767" attributes="0"/>
                                       <Component id="jLabel38" max="32767" attributes="0"/>
@@ -1209,7 +1231,7 @@
                                   <Component id="jScrollPane4" min="-2" pref="134" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jButton10" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="DeleteAW" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                       <Component id="AwarenessUpdateJ" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -1347,7 +1369,7 @@
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Component class="javax.swing.JButton" name="jButton10">
+                        <Component class="javax.swing.JButton" name="DeleteAW">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="ac" green="3d" red="27" type="rgb"/>
@@ -1357,6 +1379,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Delete"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeleteAWActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="AwarenessUpdateJ">
                           <Properties>
@@ -1404,6 +1429,16 @@
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                           </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="SearchAW">
+                        </Component>
+                        <Component class="javax.swing.JButton" name="SearchAwareness">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Search"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SearchAwarenessActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
