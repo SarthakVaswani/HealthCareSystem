@@ -34,8 +34,6 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         MainPanel = new javax.swing.JPanel();
-        AppointmentStatus = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         ViewPatientRecord = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -55,6 +53,8 @@ public class doctor_home_page extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         AddPrescription = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        AppointmentStatus = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,27 +121,6 @@ public class doctor_home_page extends javax.swing.JFrame {
         jSplitPane2.setLeftComponent(SideBar);
 
         MainPanel.setLayout(new java.awt.CardLayout());
-
-        jLabel1.setText("Appointment");
-
-        javax.swing.GroupLayout AppointmentStatusLayout = new javax.swing.GroupLayout(AppointmentStatus);
-        AppointmentStatus.setLayout(AppointmentStatusLayout);
-        AppointmentStatusLayout.setHorizontalGroup(
-            AppointmentStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AppointmentStatusLayout.createSequentialGroup()
-                .addGap(385, 385, 385)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(344, Short.MAX_VALUE))
-        );
-        AppointmentStatusLayout.setVerticalGroup(
-            AppointmentStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AppointmentStatusLayout.createSequentialGroup()
-                .addGap(289, 289, 289)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(516, Short.MAX_VALUE))
-        );
-
-        MainPanel.add(AppointmentStatus, "card2");
 
         ViewPatientRecord.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -294,6 +273,27 @@ public class doctor_home_page extends javax.swing.JFrame {
         );
 
         MainPanel.add(AddPrescription, "card4");
+
+        jLabel1.setText("Appointment");
+
+        javax.swing.GroupLayout AppointmentStatusLayout = new javax.swing.GroupLayout(AppointmentStatus);
+        AppointmentStatus.setLayout(AppointmentStatusLayout);
+        AppointmentStatusLayout.setHorizontalGroup(
+            AppointmentStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AppointmentStatusLayout.createSequentialGroup()
+                .addGap(385, 385, 385)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(344, Short.MAX_VALUE))
+        );
+        AppointmentStatusLayout.setVerticalGroup(
+            AppointmentStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AppointmentStatusLayout.createSequentialGroup()
+                .addGap(289, 289, 289)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(516, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(AppointmentStatus, "card2");
 
         jSplitPane2.setRightComponent(MainPanel);
 
