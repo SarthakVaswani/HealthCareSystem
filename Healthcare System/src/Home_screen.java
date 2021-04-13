@@ -1,5 +1,5 @@
 
-import java.awt.Color;
+import java.awt.*;
 
 
 
@@ -20,6 +20,9 @@ public class Home_screen extends javax.swing.JFrame {
      */
     public Home_screen() {
         initComponents();
+        Toolkit toolkit=getToolkit();
+        Dimension size=toolkit.getScreenSize();
+        setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
     }
 
     /**
