@@ -587,7 +587,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         DoctorUPdateLayout.setVerticalGroup(
             DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctorUPdateLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(D_IDSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchDoctor))
@@ -638,7 +638,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(DoctorUPdateLayout.createSequentialGroup()
                         .addComponent(YED, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                         .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(DoctorUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -873,14 +873,14 @@ public class hospital_home_page extends javax.swing.JFrame {
             .addGroup(AppointmentPageLayout.createSequentialGroup()
                 .addGap(283, 283, 283)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(347, Short.MAX_VALUE))
         );
         AppointmentPageLayout.setVerticalGroup(
             AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AppointmentPageLayout.createSequentialGroup()
                 .addGap(308, 308, 308)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(353, Short.MAX_VALUE))
+                .addContainerGap(359, Short.MAX_VALUE))
         );
 
         MainPanel.add(AppointmentPage, "card3");
@@ -1051,6 +1051,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(87, 69, 122));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
         jButton1.setText("Register Doctor");
         jButton1.setToolTipText("");
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -1064,6 +1065,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(87, 69, 122));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_update_24px_1.png"))); // NOI18N
         jButton2.setText("Update Details ");
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton2.setOpaque(false);
@@ -1076,6 +1078,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(87, 69, 122));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_timesheet_32px.png"))); // NOI18N
         jButton3.setText("Create Appointment");
         jButton3.setToolTipText("");
         jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
@@ -1089,6 +1092,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(87, 69, 122));
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_megaphone_30px.png"))); // NOI18N
         jButton4.setText("Awareness Facts");
         jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton4.setOpaque(false);
@@ -1101,7 +1105,9 @@ public class hospital_home_page extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(204, 204, 255));
         jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jButton6.setText("Logout");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_export_48px.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jButton6.setBorderPainted(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -1131,11 +1137,11 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(SideMenuLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(SideMenuLayout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(jLabel13)))
+                        .addComponent(jLabel13))
+                    .addGroup(SideMenuLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SideMenuLayout.setVerticalGroup(
@@ -1151,10 +1157,13 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 263, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
         );
+
+        jButton6.setOpaque(false);
+        jButton6.setContentAreaFilled(false);
 
         jSplitPane1.setLeftComponent(SideMenu);
 
