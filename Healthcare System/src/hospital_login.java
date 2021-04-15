@@ -23,6 +23,7 @@ public class hospital_login extends javax.swing.JFrame {
         Toolkit toolkit=getToolkit();
         Dimension size=toolkit.getScreenSize();
         setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
+      
     }
 
     /**
@@ -52,23 +53,23 @@ public class hospital_login extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(42, 127, 186));
-        jButton1.setForeground(new java.awt.Color(42, 127, 186));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_back_arrow_50px.png"))); // NOI18N
-        jButton1.setBorder(null);
+        jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 50, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 70, 60));
         jButton1.setOpaque(false);
         jButton1.setContentAreaFilled(false);
 
-        jLabel5.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 38)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 40)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("HOSPITAL LOGIN");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 330, 60));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 290, 60));
 
         jLabel4.setBackground(new java.awt.Color(42, 127, 186));
         jLabel4.setOpaque(true);
@@ -142,7 +143,7 @@ public class hospital_login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

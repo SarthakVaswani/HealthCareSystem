@@ -22,6 +22,7 @@ public class doctor_home_page extends javax.swing.JFrame {
         Toolkit toolkit=getToolkit();
         Dimension size=toolkit.getScreenSize();
         setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
+        setResizable(false);
     }
 
     /**
