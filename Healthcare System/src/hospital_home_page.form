@@ -587,13 +587,13 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jToggleButton1" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                                   <Component id="jToggleButton2" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="378" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="UpdateMainPanel" min="-2" pref="855" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -603,14 +603,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel11" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jToggleButton2" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="jToggleButton1" alignment="1" min="-2" pref="36" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jToggleButton2" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="jToggleButton1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="UpdateMainPanel" min="-2" pref="675" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="43" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -713,41 +713,38 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jSpinner1" min="-2" pref="56" max="-2" attributes="0"/>
-                                          <Component id="jLabel27" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <Component id="jSpinner1" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <Component id="jLabel27" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <Component id="jLabel33" min="-2" pref="58" max="-2" attributes="0"/>
+                                      <Component id="jLabel35" min="-2" pref="171" max="-2" attributes="0"/>
+                                      <Component id="jLabel31" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                                      <Component id="PhND" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="DegreeD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="jLabel29" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <Component id="YED" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                          <Component id="jButton9" min="-2" pref="95" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="DoctorUpdate" min="-2" pref="91" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel33" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Component id="jLabel35" min="-2" pref="171" max="-2" attributes="0"/>
-                                          <Component id="jLabel31" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
-                                          <Component id="PhND" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <Component id="DegreeD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <Component id="jLabel29" min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="YED" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="D_IDSearch" min="-2" pref="197" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
                                               <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                              <Component id="jButton9" min="-2" pref="95" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="DoctorUpdate" min="-2" pref="91" max="-2" attributes="0"/>
-                                          </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="97" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="728" max="32767" attributes="0"/>
                                   <Component id="SearchDoctor" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                  <Component id="D_IDSearch" min="-2" pref="197" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1121,44 +1118,42 @@
                                   <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="SearchAwareness" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jLabel39" min="-2" pref="110" max="-2" attributes="0"/>
-                                                  <Component id="jLabel24" min="-2" pref="113" max="-2" attributes="0"/>
-                                                  <Component id="NameUpdateJ" alignment="0" pref="200" max="32767" attributes="0"/>
-                                                  <Component id="COOUpdateJ" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jTextField18" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jLabel37" alignment="0" min="-2" pref="172" max="-2" attributes="0"/>
-                                              </Group>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jLabel39" min="-2" pref="110" max="-2" attributes="0"/>
+                                              <Component id="jLabel24" min="-2" pref="113" max="-2" attributes="0"/>
+                                              <Component id="NameUpdateJ" alignment="0" pref="200" max="32767" attributes="0"/>
+                                              <Component id="COOUpdateJ" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextField18" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel37" alignment="0" min="-2" pref="172" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="159" max="32767" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel38" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
-                                                  <Component id="YOOriginJ" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jLabel41" min="-2" pref="173" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="jComboBox3" alignment="0" pref="200" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel38" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                              <Component id="YOOriginJ" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jLabel41" min="-2" pref="173" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="SearchAW" min="-2" pref="124" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="jComboBox3" alignment="0" pref="200" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="SearchAW" min="-2" pref="200" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                          <Component id="SearchAwareness" min="-2" pref="80" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel40" min="-2" pref="135" max="-2" attributes="0"/>
                                               <Component id="jScrollPane4" min="-2" pref="555" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace pref="190" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1167,12 +1162,12 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="SearchAW" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="SearchAwareness" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="SearchAW" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                                      <Component id="SearchAwareness" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel24" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                       <Component id="jLabel36" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
@@ -1212,7 +1207,7 @@
                                   <Component id="jLabel40" min="-2" pref="31" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jScrollPane4" min="-2" pref="134" max="-2" attributes="0"/>
-                                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                                  <EmptySpace pref="50" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="DeleteAW" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                                       <Component id="AwarenessUpdateJ" alignment="3" max="32767" attributes="0"/>
@@ -1423,6 +1418,11 @@
                           </AuxValues>
                         </Component>
                         <Component class="javax.swing.JTextField" name="SearchAW">
+                          <Properties>
+                            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="SearchAwareness">
                           <Properties>
@@ -1863,26 +1863,26 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jButton6" min="-2" pref="70" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jButton2" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jButton3" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace pref="404" max="32767" attributes="0"/>
+                      <EmptySpace pref="397" max="32767" attributes="0"/>
                       <Component id="jButton6" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
