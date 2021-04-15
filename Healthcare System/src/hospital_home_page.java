@@ -299,7 +299,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(RegisterDoctorpageLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(150, 150, 150)
                 .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(RegisterDoctorpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(emailID, javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,7 +332,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(DegreeJ, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(YearOfExperienceJ, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(125, 189, Short.MAX_VALUE))
+                .addGap(125, 179, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegisterDoctorpageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -892,7 +892,7 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         MainPanel.add(AppointmentPage, "card3");
 
-        AwarenessFacts.setBackground(new java.awt.Color(221, 221, 221));
+        AwarenessFacts.setBackground(new java.awt.Color(255, 255, 255));
         AwarenessFacts.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel12.setBackground(new java.awt.Color(124, 85, 227));
@@ -984,7 +984,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         AwarenessFactsLayout.setHorizontalGroup(
             AwarenessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AwarenessFactsLayout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addGap(160, 160, 160)
                 .addGroup(AwarenessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2)
                     .addGroup(AwarenessFactsLayout.createSequentialGroup()
@@ -1009,7 +1009,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                                 .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(21, 21, 21)))
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
             .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AwarenessFactsLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
