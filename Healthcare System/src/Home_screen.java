@@ -36,8 +36,8 @@ public class Home_screen extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        HospitalLoginClick = new javax.swing.JButton();
+        DoctorLoginClick = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -54,29 +54,29 @@ public class Home_screen extends javax.swing.JFrame {
         jPanel2.setMaximumSize(new java.awt.Dimension(490, 440));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setBackground(new java.awt.Color(42, 127, 186));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Hospital Login");
-        jButton3.setBorderPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        HospitalLoginClick.setBackground(new java.awt.Color(42, 127, 186));
+        HospitalLoginClick.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        HospitalLoginClick.setForeground(new java.awt.Color(255, 255, 255));
+        HospitalLoginClick.setText("Hospital Login");
+        HospitalLoginClick.setBorderPainted(false);
+        HospitalLoginClick.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                HospitalLoginClickActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 170, 40));
+        jPanel2.add(HospitalLoginClick, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 170, 40));
 
-        jButton4.setBackground(new java.awt.Color(42, 126, 186));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Doctor Login");
-        jButton4.setBorderPainted(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        DoctorLoginClick.setBackground(new java.awt.Color(42, 126, 186));
+        DoctorLoginClick.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        DoctorLoginClick.setForeground(new java.awt.Color(255, 255, 255));
+        DoctorLoginClick.setText("Doctor Login");
+        DoctorLoginClick.setBorderPainted(false);
+        DoctorLoginClick.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                DoctorLoginClickActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 170, 40));
+        jPanel2.add(DoctorLoginClick, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 170, 40));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -139,19 +139,19 @@ doclogin.show();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-jButton4.setBackground(Color.decode("#86e8a7"));  
+    private void DoctorLoginClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorLoginClickActionPerformed
+DoctorLoginClick.setBackground(Color.decode("#86e8a7"));  
 dispose();
 doctor_Login doclogin=new doctor_Login();
 doclogin.show();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_DoctorLoginClickActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        jButton4.setBackground(Color.decode("#86e8a7"));   
+    private void HospitalLoginClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HospitalLoginClickActionPerformed
+        DoctorLoginClick.setBackground(Color.decode("#86e8a7"));   
           dispose();
         hospital_login hf=new hospital_login();
         hf.show();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_HospitalLoginClickActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,10 +189,10 @@ doclogin.show();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DoctorLoginClick;
+    private javax.swing.JButton HospitalLoginClick;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;

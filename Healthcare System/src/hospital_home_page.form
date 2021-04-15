@@ -7,9 +7,6 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1200, 900]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -124,7 +121,7 @@
                               <Component id="DegreeJ" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                               <Component id="YearOfExperienceJ" min="-2" pref="200" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="125" pref="179" max="32767" attributes="0"/>
+                          <EmptySpace min="125" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
@@ -221,7 +218,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Register Doctor Data"/>
+                    <Property name="text" type="java.lang.String" value="Register Doctor"/>
                     <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                 </Component>
@@ -586,9 +583,9 @@
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jToggleButton1" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="DoctorSwitch" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                                  <Component id="jToggleButton2" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="AwarenessSwitch" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="378" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
@@ -605,12 +602,12 @@
                           <Component id="jLabel11" min="-2" pref="103" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jToggleButton2" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="jToggleButton1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="AwarenessSwitch" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="DoctorSwitch" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="UpdateMainPanel" min="-2" pref="675" max="-2" attributes="0"/>
-                          <EmptySpace pref="43" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -632,7 +629,7 @@
                     <Property name="opaque" type="boolean" value="true"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+                <Component class="javax.swing.JToggleButton" name="DoctorSwitch">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="7a" green="45" red="57" type="rgb"/>
@@ -651,10 +648,10 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DoctorSwitchActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JToggleButton" name="jToggleButton2">
+                <Component class="javax.swing.JToggleButton" name="AwarenessSwitch">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="7a" green="45" red="57" type="rgb"/>
@@ -673,7 +670,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AwarenessSwitchActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="UpdateMainPanel">
@@ -695,68 +692,70 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="ED" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jComboBox2" alignment="0" pref="200" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="jLabel34" min="-2" pref="113" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane3" min="-2" pref="270" max="-2" attributes="0"/>
-                                      <Component id="jLabel32" min="-2" pref="82" max="-2" attributes="0"/>
-                                      <Component id="jLabel30" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="DOBD" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="jLabel28" min="-2" pref="134" max="-2" attributes="0"/>
-                                      <Component id="jLabel26" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <Component id="NameD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jSpinner1" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <Component id="jLabel27" min="-2" pref="56" max="-2" attributes="0"/>
-                                      <Component id="jLabel33" min="-2" pref="58" max="-2" attributes="0"/>
-                                      <Component id="jLabel35" min="-2" pref="171" max="-2" attributes="0"/>
-                                      <Component id="jLabel31" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
-                                      <Component id="PhND" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="DegreeD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="jLabel29" min="-2" pref="88" max="-2" attributes="0"/>
-                                      <Component id="YED" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                          <Component id="jButton9" min="-2" pref="95" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                          <Component id="DoctorUpdate" min="-2" pref="91" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="D_IDSearch" min="-2" pref="197" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="ED" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="jComboBox2" alignment="0" pref="200" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="jLabel34" min="-2" pref="113" max="-2" attributes="0"/>
+                                              <Component id="jScrollPane3" min="-2" pref="270" max="-2" attributes="0"/>
+                                              <Component id="jLabel32" min="-2" pref="82" max="-2" attributes="0"/>
+                                              <Component id="jLabel30" min="-2" pref="110" max="-2" attributes="0"/>
+                                              <Component id="DOBD" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Component id="jLabel28" min="-2" pref="134" max="-2" attributes="0"/>
+                                              <Component id="jLabel26" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
+                                              <Component id="NameD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jSpinner1" min="-2" pref="56" max="-2" attributes="0"/>
+                                              <Component id="jLabel27" min="-2" pref="56" max="-2" attributes="0"/>
+                                              <Component id="jLabel33" min="-2" pref="58" max="-2" attributes="0"/>
+                                              <Component id="jLabel35" min="-2" pref="171" max="-2" attributes="0"/>
+                                              <Component id="jLabel31" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
+                                              <Component id="PhND" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Component id="DegreeD" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Component id="jLabel29" min="-2" pref="88" max="-2" attributes="0"/>
+                                              <Component id="YED" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                                  <Component id="Delete" min="-2" pref="95" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="DoctorUpdate" min="-2" pref="91" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                       </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
+                                          <Component id="D_IDSearch" min="-2" pref="197" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                          <Component id="SearchDoctor" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="728" max="32767" attributes="0"/>
-                                  <Component id="SearchDoctor" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                  <EmptySpace min="70" pref="97" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="48" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="D_IDSearch" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                       <Component id="SearchDoctor" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace pref="29" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel26" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                                       <Component id="jLabel27" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
@@ -812,7 +811,7 @@
                                           <Component id="YED" min="-2" pref="33" max="-2" attributes="0"/>
                                           <EmptySpace pref="67" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jButton9" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="Delete" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                                               <Component id="DoctorUpdate" alignment="3" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -1005,13 +1004,16 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Dialog" size="18" style="1"/>
                             </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Save"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DoctorUpdateActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton9">
+                        <Component class="javax.swing.JButton" name="Delete">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="7a" green="45" red="57" type="rgb"/>
@@ -1019,10 +1021,13 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Dialog" size="18" style="1"/>
                             </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Delete"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeleteActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="jComboBox2">
@@ -1132,28 +1137,28 @@
                                               <Component id="jLabel38" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                                               <Component id="YOOriginJ" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jLabel41" min="-2" pref="173" max="-2" attributes="0"/>
+                                              <Component id="jComboBox3" alignment="0" pref="200" max="32767" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="SearchAwareness" min="-2" pref="80" max="-2" attributes="0"/>
+                                                      <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jComboBox3" alignment="0" pref="200" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="SearchAW" min="-2" pref="200" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                          <Component id="SearchAwareness" min="-2" pref="80" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      </Group>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
+                                                  <Component id="SearchAW" min="-2" pref="200" max="-2" attributes="0"/>
+                                              </Group>
                                               <Component id="jLabel40" min="-2" pref="135" max="-2" attributes="0"/>
                                               <Component id="jScrollPane4" min="-2" pref="555" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="190" max="32767" attributes="0"/>
+                                          <EmptySpace min="39" pref="190" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -1358,6 +1363,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Dialog" size="18" style="1"/>
                             </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Delete"/>
                           </Properties>
                           <Events>
@@ -1371,6 +1379,9 @@
                             </Property>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Dialog" size="18" style="1"/>
+                            </Property>
+                            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="ff" green="ff" red="ff" type="rgb"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="Update"/>
                           </Properties>
@@ -1451,7 +1462,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" pref="254" max="-2" attributes="0"/>
-                          <EmptySpace pref="463" max="32767" attributes="0"/>
+                          <EmptySpace pref="245" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1460,7 +1471,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" pref="137" max="-2" attributes="0"/>
-                          <EmptySpace pref="453" max="32767" attributes="0"/>
+                          <EmptySpace pref="353" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1526,7 +1537,7 @@
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="209" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Component id="jLabel12" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
@@ -1579,7 +1590,7 @@
                           <Component id="jScrollPane2" min="-2" pref="195" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="AwarenessSubmit" min="-2" pref="54" max="-2" attributes="0"/>
-                          <EmptySpace pref="54" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1774,6 +1785,9 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="18" style="1"/>
                     </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Submit"/>
                   </Properties>
                   <Events>
@@ -1880,7 +1894,7 @@
                       <Component id="jButton3" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace pref="397" max="32767" attributes="0"/>
+                      <EmptySpace pref="297" max="32767" attributes="0"/>
                       <Component id="jButton6" min="-2" pref="60" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>

@@ -22,10 +22,10 @@ public class doctor_Login extends javax.swing.JFrame {
      */
     public doctor_Login() {
         initComponents();
-        Toolkit toolkit=getToolkit();
-        Dimension size=toolkit.getScreenSize();
-        setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
-     
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
+
     }
 
     /**
@@ -101,6 +101,11 @@ public class doctor_Login extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Reset");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 80, 40));
 
         DocPassword.setBackground(new java.awt.Color(255, 255, 255));
@@ -159,10 +164,8 @@ public class doctor_Login extends javax.swing.JFrame {
                 dispose();
                 doctor_home_page dhp = new doctor_home_page();
                 dhp.show();
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(this,"Doctor ID or passoword is Invalid");
+            } else {
+                JOptionPane.showMessageDialog(this, "Doctor ID or passoword is Invalid");
                 DoctorIDJText.setText("");
                 DocPassword.setText("");
             }
@@ -179,10 +182,13 @@ public class doctor_Login extends javax.swing.JFrame {
     }//GEN-LAST:event_DoctorIDJTextActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-dispose();
-       Home_screen hs=new Home_screen();
-        hs.show();        // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      DoctorIDJText.setText("");
+       DocPassword.setText("");  // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

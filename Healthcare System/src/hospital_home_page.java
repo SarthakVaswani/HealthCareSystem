@@ -68,8 +68,8 @@ public class hospital_home_page extends javax.swing.JFrame {
         AddressJ = new javax.swing.JTextArea();
         UpdateDetails = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        DoctorSwitch = new javax.swing.JToggleButton();
+        AwarenessSwitch = new javax.swing.JToggleButton();
         UpdateMainPanel = new javax.swing.JPanel();
         DoctorUPdate = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
@@ -91,7 +91,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         YED = new javax.swing.JTextField();
         DoctorUpdate = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
         jComboBox2 = new javax.swing.JComboBox<>();
         jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton7 = new javax.swing.JRadioButton();
@@ -150,7 +150,6 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jSplitPane1.setPreferredSize(new java.awt.Dimension(1000, 800));
         jSplitPane1.setDividerSize(0);
@@ -165,7 +164,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Register Doctor Data");
+        jLabel1.setText("Register Doctor");
         jLabel1.setOpaque(true);
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
@@ -332,7 +331,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(DegreeJ, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(YearOfExperienceJ, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(125, 179, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegisterDoctorpageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -408,25 +407,25 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel11.setText("Update Details");
         jLabel11.setOpaque(true);
 
-        jToggleButton1.setBackground(new java.awt.Color(87, 69, 122));
-        buttonGroup1.add(jToggleButton1);
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Doctor");
-        jToggleButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        DoctorSwitch.setBackground(new java.awt.Color(87, 69, 122));
+        buttonGroup1.add(DoctorSwitch);
+        DoctorSwitch.setForeground(new java.awt.Color(255, 255, 255));
+        DoctorSwitch.setText("Doctor");
+        DoctorSwitch.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DoctorSwitch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                DoctorSwitchActionPerformed(evt);
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(87, 69, 122));
-        buttonGroup1.add(jToggleButton2);
-        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setText("Awareness");
-        jToggleButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        AwarenessSwitch.setBackground(new java.awt.Color(87, 69, 122));
+        buttonGroup1.add(AwarenessSwitch);
+        AwarenessSwitch.setForeground(new java.awt.Color(255, 255, 255));
+        AwarenessSwitch.setText("Awareness");
+        AwarenessSwitch.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        AwarenessSwitch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                AwarenessSwitchActionPerformed(evt);
             }
         });
 
@@ -498,6 +497,7 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         DoctorUpdate.setBackground(new java.awt.Color(87, 69, 122));
         DoctorUpdate.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        DoctorUpdate.setForeground(new java.awt.Color(255, 255, 255));
         DoctorUpdate.setText("Save");
         DoctorUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -505,12 +505,13 @@ public class hospital_home_page extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(87, 69, 122));
-        jButton9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton9.setText("Delete");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Delete.setBackground(new java.awt.Color(87, 69, 122));
+        Delete.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Delete.setForeground(new java.awt.Color(255, 255, 255));
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                DeleteActionPerformed(evt);
             }
         });
 
@@ -541,57 +542,58 @@ public class hospital_home_page extends javax.swing.JFrame {
         DoctorUPdateLayout.setHorizontalGroup(
             DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctorUPdateLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(ED, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, 200, Short.MAX_VALUE))
-                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DOBD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NameD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(131, 131, 131)
-                .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PhND, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DegreeD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(YED, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(DoctorUPdateLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(DoctorUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(80, 80, 80)
+                        .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(ED, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, 200, Short.MAX_VALUE))
+                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DOBD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NameD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(131, 131, 131)
+                        .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PhND, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DegreeD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(YED, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(DoctorUPdateLayout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(32, 32, 32)
+                                .addComponent(DoctorUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(DoctorUPdateLayout.createSequentialGroup()
+                                .addComponent(jRadioButton6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton8))))
+                    .addGroup(DoctorUPdateLayout.createSequentialGroup()
+                        .addGap(227, 227, 227)
                         .addComponent(D_IDSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(DoctorUPdateLayout.createSequentialGroup()
-                            .addComponent(jRadioButton6)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jRadioButton7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jRadioButton8))))
-                .addGap(70, 70, 70))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctorUPdateLayout.createSequentialGroup()
-                .addContainerGap(728, Short.MAX_VALUE)
-                .addComponent(SearchDoctor)
-                .addGap(56, 56, 56))
+                        .addGap(66, 66, 66)
+                        .addComponent(SearchDoctor)))
+                .addGap(70, 97, Short.MAX_VALUE))
         );
         DoctorUPdateLayout.setVerticalGroup(
             DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctorUPdateLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(D_IDSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchDoctor))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -637,7 +639,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                         .addComponent(YED, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                         .addGroup(DoctorUPdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(DoctorUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
@@ -701,6 +703,7 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         DeleteAW.setBackground(new java.awt.Color(87, 69, 122));
         DeleteAW.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        DeleteAW.setForeground(new java.awt.Color(255, 255, 255));
         DeleteAW.setText("Delete");
         DeleteAW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -710,6 +713,7 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         AwarenessUpdateJ.setBackground(new java.awt.Color(87, 69, 122));
         AwarenessUpdateJ.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        AwarenessUpdateJ.setForeground(new java.awt.Color(255, 255, 255));
         AwarenessUpdateJ.setText("Update");
         AwarenessUpdateJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -772,23 +776,22 @@ public class hospital_home_page extends javax.swing.JFrame {
                             .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(YOOriginJ)
                             .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox3, 0, 200, Short.MAX_VALUE)
                             .addGroup(AwarenessUpdateLayout.createSequentialGroup()
-                                .addComponent(jRadioButton9)
+                                .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(SearchAwareness, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jRadioButton9))
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton10))
-                            .addComponent(jComboBox3, 0, 200, Short.MAX_VALUE))
+                                .addComponent(jRadioButton10)))
                         .addGap(155, 155, 155))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AwarenessUpdateLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(SearchAW, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(44, 44, 44)
-                        .addComponent(SearchAwareness, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))
                     .addGroup(AwarenessUpdateLayout.createSequentialGroup()
                         .addGroup(AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(AwarenessUpdateLayout.createSequentialGroup()
+                                .addGap(143, 143, 143)
+                                .addComponent(SearchAW, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(190, Short.MAX_VALUE))))
+                        .addGap(39, 190, Short.MAX_VALUE))))
         );
         AwarenessUpdateLayout.setVerticalGroup(
             AwarenessUpdateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -847,9 +850,9 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addGroup(UpdateDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UpdateDetailsLayout.createSequentialGroup()
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DoctorSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
-                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(AwarenessSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(378, 378, 378))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, UpdateDetailsLayout.createSequentialGroup()
                         .addComponent(UpdateMainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 855, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -861,11 +864,11 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(UpdateDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AwarenessSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DoctorSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(UpdateMainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         MainPanel.add(UpdateDetails, "card4");
@@ -880,14 +883,14 @@ public class hospital_home_page extends javax.swing.JFrame {
             .addGroup(AppointmentPageLayout.createSequentialGroup()
                 .addGap(283, 283, 283)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(463, Short.MAX_VALUE))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
         AppointmentPageLayout.setVerticalGroup(
             AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AppointmentPageLayout.createSequentialGroup()
                 .addGap(308, 308, 308)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(453, Short.MAX_VALUE))
+                .addContainerGap(353, Short.MAX_VALUE))
         );
 
         MainPanel.add(AppointmentPage, "card3");
@@ -960,6 +963,7 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         AwarenessSubmit.setBackground(new java.awt.Color(87, 69, 122));
         AwarenessSubmit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        AwarenessSubmit.setForeground(new java.awt.Color(255, 255, 255));
         AwarenessSubmit.setText("Submit");
         AwarenessSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1009,7 +1013,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                                 .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(21, 21, 21)))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AwarenessFactsLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1052,7 +1056,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(AwarenessSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         MainPanel.add(AwarenessFacts, "card5");
@@ -1168,7 +1172,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 397, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30))
         );
@@ -1284,19 +1288,19 @@ public class hospital_home_page extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_NameJActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void DoctorSwitchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorSwitchActionPerformed
         UpdateMainPanel.removeAll();
         UpdateMainPanel.add(DoctorUPdate);
         UpdateMainPanel.repaint();
         UpdateMainPanel.revalidate();
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_DoctorSwitchActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+    private void AwarenessSwitchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AwarenessSwitchActionPerformed
         UpdateMainPanel.removeAll();
         UpdateMainPanel.add(AwarenessUpdate);
         UpdateMainPanel.repaint();
         UpdateMainPanel.revalidate();
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    }//GEN-LAST:event_AwarenessSwitchActionPerformed
 
     private void YOOriginJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YOOriginJActionPerformed
         // TODO add your handling code here:
@@ -1407,7 +1411,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SearchDoctorActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         String Doctor_ID = D_IDSearch.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -1431,7 +1435,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_DeleteActionPerformed
 
     private void DoctorUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorUpdateActionPerformed
         String Doctor_ID = D_IDSearch.getText();
@@ -1576,6 +1580,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JPanel AppointmentPage;
     private javax.swing.JPanel AwarenessFacts;
     private javax.swing.JButton AwarenessSubmit;
+    private javax.swing.JToggleButton AwarenessSwitch;
     private javax.swing.JPanel AwarenessUpdate;
     private javax.swing.JButton AwarenessUpdateJ;
     private javax.swing.JTextField COOUpdateJ;
@@ -1585,9 +1590,11 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JTextField D_IDSearch;
     private javax.swing.JTextField DegreeD;
     private javax.swing.JTextField DegreeJ;
+    private javax.swing.JButton Delete;
     private javax.swing.JButton DeleteAW;
     private javax.swing.JTextArea DescriptionJ;
     private javax.swing.JTextArea DescriptionUpdateJ;
+    private javax.swing.JToggleButton DoctorSwitch;
     private javax.swing.JPanel DoctorUPdate;
     private javax.swing.JButton DoctorUpdate;
     private javax.swing.JTextField ED;
@@ -1618,7 +1625,6 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
@@ -1679,8 +1685,6 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JTextField phoneNumber;
     // End of variables declaration//GEN-END:variables
 
