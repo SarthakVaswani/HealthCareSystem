@@ -952,7 +952,6 @@ public class hospital_home_page extends javax.swing.JFrame {
         jTextField9.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_checkmark_24px_2.png"))); // NOI18N
-        jButton10.setPreferredSize(new java.awt.Dimension(54, 40));
 
         jLabel49.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel49.setForeground(new java.awt.Color(0, 0, 0));
