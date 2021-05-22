@@ -157,12 +157,12 @@ public class hospital_login extends javax.swing.JFrame {
      login_button.setBackground(Color.decode("#4F8AF2")); 
         try{
            Class.forName("com.mysql.jdbc.Driver");
-           Connection con =(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false","root","baggster");
+           Connection con =(Connection)DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
            String hospitalID= hospital_id.getText();
            String hospitalpassword=password.getText();
            
            Statement stm =con.createStatement();
-           String hospitallogin="Select * from Hospital_login where Hospital_ID='"+hospitalID+"' and password='"+hospitalpassword+"'";
+           String hospitallogin="Select * from hospital_login where Hospital_ID='"+hospitalID+"' and password='"+hospitalpassword+"'";
            ResultSet rs=stm.executeQuery(hospitallogin);
            
            if(rs.next()){

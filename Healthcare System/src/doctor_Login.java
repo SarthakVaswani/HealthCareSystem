@@ -154,11 +154,11 @@ public class doctor_Login extends javax.swing.JFrame {
         jButton1.setBackground(Color.decode("#4F8AF2"));
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             String doctorID = DoctorIDJText.getText();
             String doctorPassword = DocPassword.getText();
             Statement stm = con.createStatement();
-            String doctorLogin = "Select * from doctorAccount where D_ID='" + doctorID + "' and DateOfBirth='" + doctorPassword + "'";
+            String doctorLogin = "Select * from doctoraccount where D_ID='" + doctorID + "' and DateOfBirth='" + doctorPassword + "'";
             ResultSet rs = stm.executeQuery(doctorLogin);
             if (rs.next()) {
                 dispose();

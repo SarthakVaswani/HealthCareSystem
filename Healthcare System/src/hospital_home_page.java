@@ -1446,9 +1446,9 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into doctorAccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID + "',D_ID,'" + degree + "','" + address + "','" + yearExpereince + "');";
+            String createQuery = "Insert into doctoraccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID + "',D_ID,'" + degree + "','" + address + "','" + yearExpereince + "');";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Doctor Profile Created!");
             fullNameJText.setText("");
@@ -1517,7 +1517,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String description = DescriptionJ.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
             String createQuery = "Insert into awarenessfacts values('" + name + "','" + category + "','" + countryOrigin + "','" + yearOrigin + "','" + generalSymptoms + "','" + description + "');";
             stm.execute(createQuery);
@@ -1550,7 +1550,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String description = DescriptionUpdateJ.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
             String query = "update awarenessfacts set name='" + name + "',category='" + category + "',countryOfOrigin='" + countryOrigin + "',yearOfOrigin='" + yearOrigin + "',generalSymptoms='" + generalSymptoms + "',description='" + description + "' where name ='" + awarenessName + "';";
             int i = stmt.executeUpdate(query);
@@ -1570,7 +1570,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String Doctor_ID = D_IDSearch.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
             String searchD_ID = "select FullName,DateOfBirth,Specialization,Ph_Number,Email_id,D_ID,degree,address,yearOfExperience from doctoraccount where D_ID='" + Doctor_ID + "';";
             ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
@@ -1608,7 +1608,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String Doctor_ID = D_IDSearch.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
             String deleteDoctor = "delete from doctoraccount where D_ID='" + Doctor_ID + "'";
             int i = stmt.executeUpdate(deleteDoctor);
@@ -1619,7 +1619,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             phoneNumber.setText("");
             jRadioButton1.setSelected(false);
             jRadioButton2.setSelected(false);
-            jRadioButton3.setSelected(false);
+        jRadioButton3.setSelected(false);
             jComboBox2.setSelectedIndex(0);
             jSpinner1.setValue(Integer.parseInt("0"));
             DegreeJ.setText("");
@@ -1651,7 +1651,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String yearExpereince = YED.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
             String query = "update doctoraccount set FullName='" + fullname + "',Age='" + age + "',DateOfBirth='" + dateOfBirth + "',Gender='" + gender + "',Specialization='" + specialization + "',Ph_Number='" + phone_Number + "',Email_id='" + email_ID + "',degree='" + degree + "',address='" + address + "',yearOfExperience='" + yearExpereince + "' where D_ID ='" + Doctor_ID + "';";
             int i = stmt.executeUpdate(query);
@@ -1667,7 +1667,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String awarenessName = SearchAW.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
             String searchD_ID = "select name,countryOfOrigin,yearOfOrigin,generalSymptoms,description from awarenessfacts where name='" + awarenessName + "';";
             ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
@@ -1697,7 +1697,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         String awarenessName = SearchAW.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/HealthcareSystem?useSSL=false", "root", "baggster");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
             String deleteDoctor = "delete from awarenessfacts where name='" + awarenessName + "'";
             int i = stmt.executeUpdate(deleteDoctor);
