@@ -97,7 +97,9 @@ public class doctor_home_page extends javax.swing.JFrame {
         AppointmentStatusJ.setForeground(new java.awt.Color(255, 255, 255));
         AppointmentStatusJ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_timesheet_32px.png"))); // NOI18N
         AppointmentStatusJ.setText("Appointment ");
-        AppointmentStatusJ.setIconTextGap(20);
+        AppointmentStatusJ.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        AppointmentStatusJ.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        AppointmentStatusJ.setIconTextGap(23);
         AppointmentStatusJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AppointmentStatusJActionPerformed(evt);
@@ -109,7 +111,9 @@ public class doctor_home_page extends javax.swing.JFrame {
         viewPatientRecord.setForeground(new java.awt.Color(255, 255, 255));
         viewPatientRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
         viewPatientRecord.setText("Patient records");
-        viewPatientRecord.setIconTextGap(15);
+        viewPatientRecord.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        viewPatientRecord.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        viewPatientRecord.setIconTextGap(24);
         viewPatientRecord.setPreferredSize(new java.awt.Dimension(168, 40));
         viewPatientRecord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +126,9 @@ public class doctor_home_page extends javax.swing.JFrame {
         aadPrescrription.setForeground(new java.awt.Color(255, 255, 255));
         aadPrescrription.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
         aadPrescrription.setText("Prescription ");
-        aadPrescrription.setIconTextGap(22);
+        aadPrescrription.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aadPrescrription.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        aadPrescrription.setIconTextGap(23);
         aadPrescrription.setInheritsPopupMenu(true);
         aadPrescrription.setPreferredSize(new java.awt.Dimension(152, 40));
         aadPrescrription.addActionListener(new java.awt.event.ActionListener() {
@@ -187,6 +193,7 @@ public class doctor_home_page extends javax.swing.JFrame {
         MainPanel.setLayout(new java.awt.CardLayout());
 
         AppointmentStatus.setBackground(new java.awt.Color(255, 255, 255));
+        AppointmentStatus.setPreferredSize(new java.awt.Dimension(1200, 949));
 
         jLabel12.setBackground(new java.awt.Color(31, 31, 152));
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -226,13 +233,11 @@ public class doctor_home_page extends javax.swing.JFrame {
         AppointmentStatus.setLayout(AppointmentStatusLayout);
         AppointmentStatusLayout.setHorizontalGroup(
             AppointmentStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AppointmentStatusLayout.createSequentialGroup()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 989, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentStatusLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 952, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         AppointmentStatusLayout.setVerticalGroup(
             AppointmentStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

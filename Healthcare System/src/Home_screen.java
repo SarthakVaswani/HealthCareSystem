@@ -41,6 +41,8 @@ public class Home_screen extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("click");
@@ -110,7 +112,21 @@ public class Home_screen extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Healthcare System");
         jLabel4.setOpaque(true);
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 90));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 90));
+
+        jButton3.setBackground(new java.awt.Color(42, 126, 186));
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Patient Login");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, 160, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Patient_Login.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 230, 360));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,6 +169,13 @@ doclogin.show();
         hf.show();
     }//GEN-LAST:event_HospitalLoginClickActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        patient_Loginform hf=new patient_Loginform();
+        hf.show();        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -184,6 +207,7 @@ doclogin.show();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Home_screen().setVisible(true);
+                
             }
         });
     }
@@ -193,7 +217,9 @@ doclogin.show();
     private javax.swing.JButton HospitalLoginClick;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
