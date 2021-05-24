@@ -1,9 +1,10 @@
-
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import java.util.UUID;
+import com.email.durgesh.Email;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -1396,6 +1397,23 @@ public class hospital_home_page extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public String uniqueID = UUID.randomUUID().toString().substring(0, 5);
+
+     public  void emailsender() {
+         String email_ID = emailID.getText();
+        try {
+            Email email=new Email("svas0000@gmail.com", "gimmy@1010");
+            email.setFrom("svas0000@gmail.com", "Your doctor profile has been created");
+            email.setSubject("Doctor Id");
+            email.setContent("Doctor ID :"+uniqueID, "text/html");
+            email.addRecipient(email_ID);
+            email.send();
+            
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MainPanel.removeAll();
         MainPanel.add(RegisterDoctorpage);
@@ -1433,6 +1451,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        emailsender();
         String fullname = fullNameJText.getText();
         String dateOfBirth = DOB.getText();
         String email_ID = emailID.getText();
@@ -1455,7 +1474,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into doctoraccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID + "',D_ID,'" + degree + "','" + address + "','" + yearExpereince + "');";
+            String createQuery = "Insert into doctoraccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID +"','"+ degree + "','" + address + "','" + yearExpereince + "','" + uniqueID + "');";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Doctor Profile Created!");
             fullNameJText.setText("");
@@ -1579,7 +1598,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
-            String searchD_ID = "select FullName,DateOfBirth,Specialization,Ph_Number,Email_id,D_ID,degree,address,yearOfExperience from doctoraccount where D_ID='" + Doctor_ID + "';";
+            String searchD_ID = "select FullName,DateOfBirth,Specialization,Ph_Number,Email_id,Doctor_ID,degree,address,yearOfExperience from doctoraccount where Doctor_ID='" + Doctor_ID + "';";
             ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
             int found = 0;
             while (rs.next()) {
@@ -1617,7 +1636,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
-            String deleteDoctor = "delete from doctoraccount where D_ID='" + Doctor_ID + "'";
+            String deleteDoctor = "delete from doctoraccount where Doctor_ID='" + Doctor_ID + "'";
             int i = stmt.executeUpdate(deleteDoctor);
             JOptionPane.showMessageDialog(this, "records Deleted");
             fullNameJText.setText("");
@@ -1660,7 +1679,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
-            String query = "update doctoraccount set FullName='" + fullname + "',Age='" + age + "',DateOfBirth='" + dateOfBirth + "',Gender='" + gender + "',Specialization='" + specialization + "',Ph_Number='" + phone_Number + "',Email_id='" + email_ID + "',degree='" + degree + "',address='" + address + "',yearOfExperience='" + yearExpereince + "' where D_ID ='" + Doctor_ID + "';";
+            String query = "update doctoraccount set FullName='" + fullname + "',Age='" + age + "',DateOfBirth='" + dateOfBirth + "',Gender='" + gender + "',Specialization='" + specialization + "',Ph_Number='" + phone_Number + "',Email_id='" + email_ID + "',degree='" + degree + "',address='" + address + "',yearOfExperience='" + yearExpereince + "' where Doctor_ID ='" + Doctor_ID + "';";
             int i = stmt.executeUpdate(query);
 
             JOptionPane.showMessageDialog(this, "records Modified");
