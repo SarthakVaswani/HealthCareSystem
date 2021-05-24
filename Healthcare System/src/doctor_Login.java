@@ -158,7 +158,7 @@ public class doctor_Login extends javax.swing.JFrame {
             String doctorID = DoctorIDJText.getText();
             String doctorPassword = DocPassword.getText();
             Statement stm = con.createStatement();
-            String doctorLogin = "Select * from doctoraccount where D_ID='" + doctorID + "' and DateOfBirth='" + doctorPassword + "'";
+            String doctorLogin = "Select * from doctoraccount where Doctor_ID='" + doctorID + "' and DateOfBirth='" + doctorPassword + "'";
             ResultSet rs = stm.executeQuery(doctorLogin);
             if (rs.next()) {
                 dispose();
