@@ -60,6 +60,8 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         p_address = new javax.swing.JTextArea();
         jLabel13 = new javax.swing.JLabel();
+        search = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
         Appointmentpage = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -174,22 +176,23 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Date OF Birth");
 
+        search.setBackground(new java.awt.Color(255, 255, 255));
+        search.setForeground(new java.awt.Color(0, 0, 0));
+
+        jButton7.setText("jButton7");
+
         javax.swing.GroupLayout PatientProfileLayout = new javax.swing.GroupLayout(PatientProfile);
         PatientProfile.setLayout(PatientProfileLayout);
         PatientProfileLayout.setHorizontalGroup(
             PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientProfileLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(186, 186, 186))
             .addGroup(PatientProfileLayout.createSequentialGroup()
                 .addGap(150, 150, 150)
                 .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PatientProfileLayout.createSequentialGroup()
-                        .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(p_name, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(173, 173, 173)
-                        .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(p_age, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
                     .addGroup(PatientProfileLayout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addGap(0, 0, 0)
@@ -208,21 +211,35 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(p_bloodgroup, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(p_date, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PatientProfileLayout.createSequentialGroup()
+                        .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PatientProfileLayout.createSequentialGroup()
+                                .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(p_name, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(173, 173, 173)
+                                .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(p_age, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6))))
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton7)))
                 .addGap(178, 433, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PatientProfileLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(186, 186, 186))
         );
         PatientProfileLayout.setVerticalGroup(
             PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PatientProfileLayout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PatientProfileLayout.createSequentialGroup()
+                        .addComponent(search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(p_name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -578,14 +595,15 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         String  bloodgroup = p_bloodgroup.getText();
         String  dateofbirth = p_date.getText();
         String  address = p_address.getText();
+        String  search1 = search.getText();
         int age = ( Integer ) p_age.getValue();
         
        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into patient_account values('" + patientname + "','" + dateofbirth + "','" + age + "','" + Gender + "','" + EmailId + "','" + bloodgroup + "','" + phonenumber +"','"+ address + "' );";
-            stm.execute(createQuery);
+            String updatequery = "update patient_account set patient_name='" + patientname + "',dateOfbirth='" + dateofbirth + "',age='" + age + "',gender='" + Gender + "',blood_group='" + bloodgroup + "',phonenumber='" + phonenumber+ "',address='" + address + "' where email_id ='" +search1 + "';";
+           int i = stm.executeUpdate(updatequery);
             JOptionPane.showMessageDialog(this, "Patient Profile Created!");
             p_address.setText("");
             p_age.setValue(Integer.parseInt("0"));
@@ -647,6 +665,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -685,5 +704,6 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JTextField p_gender;
     private javax.swing.JTextField p_name;
     private javax.swing.JTextField p_phonenumber;
+    private javax.swing.JTextField search;
     // End of variables declaration//GEN-END:variables
 }
