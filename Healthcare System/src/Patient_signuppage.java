@@ -1,5 +1,7 @@
-
+import java.sql.*;
 import java.awt.Dimension;
+
+import javax.swing.JOptionPane;
 import java.awt.Toolkit;
 
 /*
@@ -36,25 +38,27 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
+        p_gender = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        p_age = new javax.swing.JSpinner();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        p_date = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        p_bloodgroup = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        p_name = new javax.swing.JTextField();
+        p_phonenumber = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        p_emailid = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        p_address = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -72,6 +76,9 @@ public class Patient_signuppage extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        p_gender.setText("jTextField1");
+        jPanel1.add(p_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, -1, -1));
+
         jLabel1.setBackground(new java.awt.Color(42, 127, 186));
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 38)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,6 +91,11 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign up");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 90, 40));
 
         jButton2.setBackground(new java.awt.Color(42, 127, 186));
@@ -111,29 +123,34 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Email ID");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 90, 40));
+        jPanel1.add(p_age, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Phone Number");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, 40));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("jTextField1");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 200, 30));
+        p_date.setText("jTextField2");
+        jPanel1.add(p_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("jTextField2");
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 200, 30));
+        jLabel10.setText("jLabel10");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, -1, -1));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setText("jTextField4");
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 170, 30));
+        p_bloodgroup.setText("jTextField1");
+        jPanel1.add(p_bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, -1, -1));
+
+        jLabel11.setText("jLabel11");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, -1, -1));
+
+        p_name.setBackground(new java.awt.Color(255, 255, 255));
+        p_name.setForeground(new java.awt.Color(0, 0, 0));
+        p_name.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(p_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 200, 30));
+
+        p_phonenumber.setBackground(new java.awt.Color(255, 255, 255));
+        p_phonenumber.setForeground(new java.awt.Color(0, 0, 0));
+        p_phonenumber.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(p_phonenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 170, 30));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
@@ -145,11 +162,10 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel8.setText("Address");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 40));
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setText("jTextField6");
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 200, 30));
+        p_emailid.setBackground(new java.awt.Color(255, 255, 255));
+        p_emailid.setForeground(new java.awt.Color(0, 0, 0));
+        p_emailid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(p_emailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 200, 30));
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -159,33 +175,12 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        p_address.setBackground(new java.awt.Color(255, 255, 255));
+        p_address.setColumns(20);
+        p_address.setRows(5);
+        jScrollPane1.setViewportView(p_address);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
-
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton1.setText("Male");
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, -1, -1));
-
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton2.setText("Female");
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, -1, -1));
-
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(0, 0, 0));
-        jRadioButton3.setText("Other");
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 230, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setOpaque(true);
@@ -211,6 +206,37 @@ public class Patient_signuppage extends javax.swing.JFrame {
             patient_Loginform ps=new patient_Loginform();
              ps.show();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+String  patientname = p_name.getText();
+        String  phonenumber = p_phonenumber.getText();
+        String  EmailId = p_emailid.getText();
+        String  Gender = p_gender.getText();
+        String  bloodgroup = p_bloodgroup.getText();
+        String  dateofbirth = p_date.getText();
+        String  address = p_address.getText();
+        int age = ( Integer ) p_age.getValue();
+        
+       try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            Statement stm = con.createStatement();
+            String createQuery = "Insert into patient_account values('" + patientname + "','" + dateofbirth + "','" + age + "','" + Gender + "','" + EmailId + "','" + bloodgroup + "','" + phonenumber +"','"+ address + "' );";
+            stm.execute(createQuery);
+            JOptionPane.showMessageDialog(this, "Patient Profile Created!");
+            p_address.setText("");
+            p_age.setValue(Integer.parseInt("0"));
+            p_bloodgroup.setText("");
+            p_date.setText("");
+            p_emailid.setText("");
+            p_gender.setText("");
+            p_name.setText("");
+            p_phonenumber.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Please enter valid details");
+        }
+    
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,6 +279,8 @@ public class Patient_signuppage extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -263,14 +291,14 @@ public class Patient_signuppage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextArea p_address;
+    private javax.swing.JSpinner p_age;
+    private javax.swing.JTextField p_bloodgroup;
+    private javax.swing.JTextField p_date;
+    private javax.swing.JTextField p_emailid;
+    private javax.swing.JTextField p_gender;
+    private javax.swing.JTextField p_name;
+    private javax.swing.JTextField p_phonenumber;
     // End of variables declaration//GEN-END:variables
 }
