@@ -1,3 +1,4 @@
+
 import java.sql.*;
 import java.awt.Dimension;
 
@@ -9,7 +10,6 @@ import java.awt.Toolkit;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Asus
@@ -202,26 +202,26 @@ public class Patient_signuppage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:    patient_Loginform
-             dispose();
-            patient_Loginform ps=new patient_Loginform();
-             ps.show();
+        dispose();
+        patient_Loginform ps = new patient_Loginform();
+        ps.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-String  patientname = p_name.getText();
-        String  phonenumber = p_phonenumber.getText();
-        String  EmailId = p_emailid.getText();
-        String  Gender = p_gender.getText();
-        String  bloodgroup = p_bloodgroup.getText();
-        String  dateofbirth = p_date.getText();
-        String  address = p_address.getText();
-        int age = ( Integer ) p_age.getValue();
-        
-       try {
+        String patientname = p_name.getText();
+        String phonenumber = p_phonenumber.getText();
+        String EmailId = p_emailid.getText();
+        String Gender = p_gender.getText();
+        String bloodgroup = p_bloodgroup.getText();
+        String dateofbirth = p_date.getText();
+        String address = p_address.getText();
+        int age = (Integer) p_age.getValue();
+
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into patient_account values('" + patientname + "','" + dateofbirth + "','" + age + "','" + Gender + "','" + EmailId + "','" + bloodgroup + "','" + phonenumber +"','"+ address + "' );";
+            String createQuery = "Insert into patient_account values('" + patientname + "','" + dateofbirth + "','" + age + "','" + Gender + "','" + EmailId + "','" + bloodgroup + "','" + phonenumber + "','" + address + "' );";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Patient Profile Created!");
             p_address.setText("");
@@ -235,7 +235,7 @@ String  patientname = p_name.getText();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Please enter valid details");
         }
-    
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

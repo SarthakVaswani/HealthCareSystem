@@ -1,6 +1,11 @@
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -41,8 +46,8 @@ public class patient_Loginform extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        Patient_ID = new javax.swing.JTextField();
+        Patient_password = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -87,20 +92,20 @@ public class patient_Loginform extends javax.swing.JFrame {
         jLabel8.setText("Password");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 120, 30));
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jTextField1.setText("Email /Phone number");
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Patient_ID.setBackground(new java.awt.Color(255, 255, 255));
+        Patient_ID.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        Patient_ID.setText("Email /Phone number");
+        Patient_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        Patient_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                Patient_IDActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 260, 30));
+        jPanel1.add(Patient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 260, 30));
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 260, 30));
+        Patient_password.setBackground(new java.awt.Color(255, 255, 255));
+        Patient_password.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.add(Patient_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 260, 30));
 
         jButton1.setBackground(new java.awt.Color(42, 127, 186));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -142,9 +147,9 @@ public class patient_Loginform extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void Patient_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Patient_IDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Patient_IDActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
            // TODO add your handling code here:
@@ -161,7 +166,29 @@ public class patient_Loginform extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+ try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            String patientID = Patient_ID.getText();
+            String patientPassword = Patient_password.getText();
+            Statement stm = con.createStatement();
+            String patientLogin = "Select * from patient_account where email_id='" + patientID + "' and DateOfBirth='" + patientPassword + "'";
+            ResultSet rs = stm.executeQuery(patientLogin);
+            if (rs.next()) {
+                dispose();
+                Patient_Home_Page php = new Patient_Home_Page();
+                php.show();
+            } else {
+                JOptionPane.showMessageDialog(this, "Patient ID or passoword is Invalid");
+                Patient_ID.setText("");
+                Patient_password.setText("");
+            }
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }        // TODO add your handling code here:
          dispose();
           Patient_Home_Page ph=new Patient_Home_Page();
           ph.show();
@@ -204,6 +231,8 @@ public class patient_Loginform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Patient_ID;
+    private javax.swing.JTextField Patient_password;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -215,7 +244,5 @@ public class patient_Loginform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
