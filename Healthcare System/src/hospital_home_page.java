@@ -4,7 +4,8 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import java.util.UUID;
-import com.email.durgesh.Email;
+import com.email.durgesh.Email; 
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -1493,7 +1494,6 @@ public class hospital_home_page extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Please enter valid details");
         }
-
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
