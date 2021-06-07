@@ -18,6 +18,8 @@ import javax.swing.JOptionPane;
  * @author Asus
  */
 public class patient_Loginform extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form patient_form
@@ -94,7 +96,6 @@ public class patient_Loginform extends javax.swing.JFrame {
 
         Patient_ID.setBackground(new java.awt.Color(255, 255, 255));
         Patient_ID.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        Patient_ID.setText("Email /Phone number");
         Patient_ID.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         Patient_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,18 +167,25 @@ public class patient_Loginform extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- try {
+ String patientID = null;
+ String patientPassword=null;
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
-            String patientID = Patient_ID.getText();
-            String patientPassword = Patient_password.getText();
+            patientID = Patient_ID.getText();
+            patientPassword = Patient_password.getText();
             Statement stm = con.createStatement();
-            String patientLogin = "Select * from patient_account where email_id='" + patientID + "' and DateOfBirth='" + patientPassword + "'";
+            String patientLogin = "Select * from patient_account where email_id='" + patientID + "' and dateOfbirth='" + patientPassword + "'";
             ResultSet rs = stm.executeQuery(patientLogin);
             if (rs.next()) {
                 dispose();
                 Patient_Home_Page php = new Patient_Home_Page();
-                php.show();
+//                php.show();
+                Patient_Home_Page.search.setText(Patient_ID.getText());
+                php.setVisible(true);
+//new Patient_Home_Page(patientID).setVisible(true);
+//          Patient_Home_Page ph=new Patient_Home_Page();
+//          ph.show();
             } else {
                 JOptionPane.showMessageDialog(this, "Patient ID or passoword is Invalid");
                 Patient_ID.setText("");
@@ -189,9 +197,10 @@ public class patient_Loginform extends javax.swing.JFrame {
             System.out.println(e.getMessage());
 
         }        // TODO add your handling code here:
-         dispose();
-          Patient_Home_Page ph=new Patient_Home_Page();
-          ph.show();
+         
+          
+          
+          
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

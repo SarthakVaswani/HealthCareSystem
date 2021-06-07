@@ -3,6 +3,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
@@ -21,11 +22,21 @@ public class Patient_Home_Page extends javax.swing.JFrame {
      * Creates new form Patient_Home_Page
      */
     public Patient_Home_Page() {
+        
         initComponents();
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
+        
     }
+//    String p_ID;
+//    
+//    Patient_Home_Page(String patientID)
+//    {
+//        this.p_ID=patientID;
+//    }
+//    
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -179,6 +190,11 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         search.setForeground(new java.awt.Color(0, 0, 0));
 
         jButton7.setText("jButton7");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PatientProfileLayout = new javax.swing.GroupLayout(PatientProfile);
         PatientProfile.setLayout(PatientProfileLayout);
@@ -562,6 +578,45 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+public void searchProfile()
+{
+String iD=search.getText();
+//    String iD=p_emailid.getText();
+    
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            Statement stmt = (Statement) con.createStatement();
+            String searchD_ID = "select patient_name,dateOfbirth,gender,email_id,blood_group,phonenumber,address from patient_account where email_id='" + iD + "';";
+            ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
+            int found = 0;
+            while (rs.next()) {
+                String pat_name = rs.getString("patient_name");
+//    String age=rs.getString("Age");
+                String dob = rs.getString("dateOfbirth");
+//   String gender=rs.getString("Gender");
+                String phone = rs.getString("phonenumber");
+                String emailID = rs.getString("email_id");
+                String gender = rs.getString("gender");
+                String bloodgroup = rs.getString("blood_group");
+                String address = rs.getString("address");
+                p_name.setText(pat_name);
+//jSpinner1.setValue(age);       
+                p_date.setText(dob);
+//jTextField4.setText(gender);  
+p_address.setText(address);
+p_bloodgroup.setText(bloodgroup);
+p_emailid.setText(emailID);
+p_gender.setText(gender);
+p_phonenumber.setText(phone);
+                found++;
+
+                JOptionPane.showMessageDialog(this, "records searched");
+            }
+        } catch (Exception e) {
+        }
+}
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Mainpanel.removeAll();
@@ -599,67 +654,75 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        String patientname = p_name.getText();
-        String phonenumber = p_phonenumber.getText();
-        String EmailId = p_emailid.getText();
-        String Gender = p_gender.getText();
-        String bloodgroup = p_bloodgroup.getText();
-        String dateofbirth = p_date.getText();
-        String address = p_address.getText();
-        String search1 = search.getText();
-        int age = (Integer) p_age.getValue();
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
-            Statement stm = con.createStatement();
-            String updatequery = "update patient_account set patient_name='" + patientname + "',dateOfbirth='" + dateofbirth + "',age='" + age + "',gender='" + Gender + "',blood_group='" + bloodgroup + "',phonenumber='" + phonenumber + "',address='" + address + "' where email_id ='" + search1 + "';";
-            int i = stm.executeUpdate(updatequery);
-            JOptionPane.showMessageDialog(this, "Patient Profile Created!");
-            p_address.setText("");
-            p_age.setValue(Integer.parseInt("0"));
-            p_bloodgroup.setText("");
-            p_date.setText("");
-            p_emailid.setText("");
-            p_gender.setText("");
-            p_name.setText("");
-            p_phonenumber.setText("");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Please enter valid details");
-        }
+//        String patientname = p_name.getText();
+//        String phonenumber = p_phonenumber.getText();
+//        String EmailId = p_emailid.getText();
+//        String Gender = p_gender.getText();
+//        String bloodgroup = p_bloodgroup.getText();
+//        String dateofbirth = p_date.getText();
+//        String address = p_address.getText();
+//        String search1 = search.getText();
+//        int age = (Integer) p_age.getValue();
+//
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+//            Statement stm = con.createStatement();
+//            String updatequery = "update patient_account set patient_name='" + patientname + "',dateOfbirth='" + dateofbirth + "',age='" + age + "',gender='" + Gender + "',blood_group='" + bloodgroup + "',phonenumber='" + phonenumber + "',address='" + address + "' where email_id ='" + search1 + "';";
+//            int i = stm.executeUpdate(updatequery);
+//            JOptionPane.showMessageDialog(this, "Patient Profile Created!");
+//            p_address.setText("");
+//            p_age.setValue(Integer.parseInt("0"));
+//            p_bloodgroup.setText("");
+//            p_date.setText("");
+//            p_emailid.setText("");
+//            p_gender.setText("");
+//            p_name.setText("");
+//            p_phonenumber.setText("");
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(this, "Please enter valid details");
+//        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        String a_nu = a_no.getText();
-        String a_date1 = a_date.getText();
-        String a_desc = a_description.getText();
-        String a_emid = a_emailId.getText();
-        String a_symptoms = a_sympoms.getText();
-        String a_time1 = a_time.getText();
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
-            Statement stm = con.createStatement();
-            String createQuery = "Insert into appointment values('" + a_date1 + "','" + a_time1 + "','" + a_desc + "','" + a_emid + "','" + a_symptoms + "','" + a_nu + "' );";
-            stm.execute(createQuery);
-            JOptionPane.showMessageDialog(this, "Appointemt request Created!");
-            a_no.setText("");
-            a_date.setText("");
-            a_description.setText("");
-            a_emailId.setText("");
-            a_time.setText("");
-            a_sympoms.setText("");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Please enter valid details");
-        }
-        // TODO add your handling code here:
+//        String a_nu = a_no.getText();
+//        String a_date1 = a_date.getText();
+//        String a_desc = a_description.getText();
+//        String a_emid = a_emailId.getText();
+//        String a_symptoms = a_sympoms.getText();
+//        String a_time1 = a_time.getText();
+//
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+//            Statement stm = con.createStatement();
+//            String createQuery = "Insert into appointment values('" + a_date1 + "','" + a_time1 + "','" + a_desc + "','" + a_emid + "','" + a_symptoms + "','" + a_nu + "' );";
+//            stm.execute(createQuery);
+//            JOptionPane.showMessageDialog(this, "Appointemt request Created!");
+//            a_no.setText("");
+//            a_date.setText("");
+//            a_description.setText("");
+//            a_emailId.setText("");
+//            a_time.setText("");
+//            a_sympoms.setText("");
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(this, "Please enter valid details");
+//        }
+//        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+searchProfile();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        Patient_Home_Page php1 = new Patient_Home_Page();
+        php1.searchProfile();
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -687,6 +750,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Patient_Home_Page().setVisible(true);
+                
             }
         });
     }
@@ -738,10 +802,10 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JSpinner p_age;
     private javax.swing.JTextField p_bloodgroup;
     private javax.swing.JTextField p_date;
-    private javax.swing.JTextField p_emailid;
+    public static javax.swing.JTextField p_emailid;
     private javax.swing.JTextField p_gender;
     private javax.swing.JTextField p_name;
     private javax.swing.JTextField p_phonenumber;
-    private javax.swing.JTextField search;
+    public static javax.swing.JTextField search;
     // End of variables declaration//GEN-END:variables
 }
