@@ -22,20 +22,22 @@ public class Patient_Home_Page extends javax.swing.JFrame {
      * Creates new form Patient_Home_Page
      */
     public Patient_Home_Page() {
-        
         initComponents();
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
         
     }
-//    String p_ID;
+    String p_ID;
 //    
-//    Patient_Home_Page(String patientID)
-//    {
-//        this.p_ID=patientID;
-//    }
+    
 //    
+
+    Patient_Home_Page(String patientID) {
+        System.out.print(""+patientID);
+       p_ID=patientID;
+        //To change body of generated methods, choose Tools | Templates.
+    }
         
 
     /**
@@ -579,16 +581,56 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-public void searchProfile()
-{
-String iD=search.getText();
-//    String iD=p_emailid.getText();
-    
+//public void searchProfile()
+//{
+////String iD=search.getText();
+////    String iD=p_emailid.getText();
+//    
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+//            Statement stmt = (Statement) con.createStatement();
+//            String searchD_ID = "select patient_name,dateOfbirth,gender,email_id,blood_group,phonenumber,address from patient_account where email_id='" + p_ID + "';";
+//            ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
+//            int found = 0;
+//            while (rs.next()) {
+//                String pat_name = rs.getString("patient_name");
+////    String age=rs.getString("Age");
+//                String dob = rs.getString("dateOfbirth");
+////   String gender=rs.getString("Gender");
+//                String phone = rs.getString("phonenumber");
+//                String emailID = rs.getString("email_id");
+//                String gender = rs.getString("gender");
+//                String bloodgroup = rs.getString("blood_group");
+//                String address = rs.getString("address");
+//                p_name.setText(pat_name);
+////jSpinner1.setValue(age);       
+//                p_date.setText(dob);
+////jTextField4.setText(gender);  
+//p_address.setText(address);
+//p_bloodgroup.setText(bloodgroup);
+//p_emailid.setText(emailID);
+//p_gender.setText(gender);
+//p_phonenumber.setText(phone);
+//                found++;
+//
+//                JOptionPane.showMessageDialog(this, "records searched");
+//            }
+//        } catch (Exception e) {
+//        }
+// }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Mainpanel.removeAll();
+        Mainpanel.add(PatientProfile);
+        Mainpanel.repaint();
+        Mainpanel.revalidate();
+        String pat =p_emailid.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
-            String searchD_ID = "select patient_name,dateOfbirth,gender,email_id,blood_group,phonenumber,address from patient_account where email_id='" + iD + "';";
+            String searchD_ID = "select patient_name,dateOfbirth,gender,email_id,blood_group,phonenumber,address from patient_account where email_id='" + pat + "';";
             ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
             int found = 0;
             while (rs.next()) {
@@ -616,13 +658,6 @@ p_phonenumber.setText(phone);
             }
         } catch (Exception e) {
         }
-}
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        Mainpanel.removeAll();
-        Mainpanel.add(PatientProfile);
-        Mainpanel.repaint();
-        Mainpanel.revalidate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -712,7 +747,7 @@ p_phonenumber.setText(phone);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-searchProfile();        // TODO add your handling code here:
+       // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
@@ -720,8 +755,7 @@ searchProfile();        // TODO add your handling code here:
      */
     public static void main(String args[]) {
         
-        Patient_Home_Page php1 = new Patient_Home_Page();
-        php1.searchProfile();
+       
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
