@@ -702,7 +702,7 @@ p_phonenumber.setText(phone);
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
-            String query = "select * from crAppointment";
+            String query = "select * from crAppointment where email_id='" + pat + "';";
             ResultSet rs = stmt.executeQuery(query);
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             
