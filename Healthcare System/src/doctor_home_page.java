@@ -1,6 +1,10 @@
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -207,26 +211,27 @@ public class doctor_home_page extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Patient Name", "Gender", "Symptoms", "Requested Date and Time", "Department"
+                "Patient Name", "age", "Phone Number", "Gender", "Address", "Symptoms", "Patient Id", "date", "time", "Appointment Id"
             }
         ));
         jTable1.setGridColor(new java.awt.Color(0, 0, 0));
         jTable1.setSelectionForeground(new java.awt.Color(153, 204, 0));
         jScrollPane2.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
+            jTable1.getColumnModel().getColumn(6).setResizable(false);
+            jTable1.getColumnModel().getColumn(8).setResizable(false);
         }
 
         javax.swing.GroupLayout AppointmentStatusLayout = new javax.swing.GroupLayout(AppointmentStatus);
@@ -581,6 +586,32 @@ public class doctor_home_page extends javax.swing.JFrame {
         MainPanel.add(AppointmentStatus);
         MainPanel.repaint();
         MainPanel.revalidate();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
+            String query = "select * from crAppointment";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            int rows = model.getRowCount();
+            for (int i = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+            while (rs.next()) {
+                String ptName = rs.getString("PatientName");
+                String emailID = rs.getString("email_id");
+                String age = rs.getString("age");
+                String gender = rs.getString("gender");
+                String phoneNO = rs.getString("phNumber");
+                String address = rs.getString("address");
+                String symptoms = rs.getString("symptoms");
+                String aptId = rs.getString("app_id");
+                String date = rs.getString("date");
+                String time = rs.getString("time");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_AppointmentStatusJActionPerformed
 
     private void viewPatientRecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPatientRecordActionPerformed

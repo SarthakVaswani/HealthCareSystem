@@ -1,10 +1,12 @@
+
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.*;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import java.util.UUID;
-import com.email.durgesh.Email; 
+import com.email.durgesh.Email;
+import javax.swing.table.DefaultTableModel;
 
 
 /*
@@ -23,9 +25,9 @@ public class hospital_home_page extends javax.swing.JFrame {
      */
     public hospital_home_page() {
         initComponents();
-        Toolkit toolkit=getToolkit();
-        Dimension size=toolkit.getScreenSize();
-        setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
         setResizable(false);
     }
 
@@ -126,8 +128,12 @@ public class hospital_home_page extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel48 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jComboBox1 = new javax.swing.JComboBox<>();
+        AddButton = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        datePicker1 = new com.github.lgooddatepicker.components.DatePicker();
+        emJT = new javax.swing.JTextField();
         AwarenessFacts = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -900,23 +906,26 @@ public class hospital_home_page extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient Name", "Patient ID", "Gender", "Symptoms", "Requested Date and Time", "Department"
+                "Patient Name", "Age", "Phone Nmber", "Gender", "Address", "Symptoms", "Patient ID", "Date", "Time", "Appointment ID"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, true, true, false, true, true, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane5.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("Patient Name");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Patient ID");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Gender");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Symptoms");
-            jTable1.getColumnModel().getColumn(4).setHeaderValue("Requested Date and Time");
-            jTable1.getColumnModel().getColumn(5).setHeaderValue("Department");
+            jTable1.getColumnModel().getColumn(4).setResizable(false);
         }
 
         jLabel48.setBackground(new java.awt.Color(124, 85, 227));
@@ -929,9 +938,23 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel48.setMinimumSize(new java.awt.Dimension(271, 41));
         jLabel48.setOpaque(true);
 
-        jDateChooser1.setDateFormatString("yyyy-MM-dd,");
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2-4pm,", "2-4pm,", "3-7pm,", "2-4pm" }));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2-4pm,", "2-4pm,", "2-4pm,", "2-4pm" }));
+        AddButton.setText("jButton7");
+        AddButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddButtonActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("jButton7");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        emJT.setText(" ");
 
         javax.swing.GroupLayout AppointmentPageLayout = new javax.swing.GroupLayout(AppointmentPage);
         AppointmentPage.setLayout(AppointmentPageLayout);
@@ -939,27 +962,47 @@ public class hospital_home_page extends javax.swing.JFrame {
             AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
-                .addContainerGap(443, Short.MAX_VALUE)
-                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(294, 294, 294))
+                .addGap(126, 126, 126)
+                .addComponent(AddButton)
+                .addGap(329, 329, 329))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97)
+                .addComponent(jButton7)
+                .addGap(354, 354, 354))
             .addGroup(AppointmentPageLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 894, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AppointmentPageLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 951, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AppointmentPageLayout.createSequentialGroup()
+                        .addGap(357, 357, 357)
+                        .addComponent(emJT, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         AppointmentPageLayout.setVerticalGroup(
             AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AppointmentPageLayout.createSequentialGroup()
                 .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
-                .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(73, 73, 73))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddButton)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(emJT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(451, Short.MAX_VALUE))
         );
 
         MainPanel.add(AppointmentPage, "card3");
@@ -1245,7 +1288,7 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 444, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
         );
@@ -1271,16 +1314,41 @@ public class hospital_home_page extends javax.swing.JFrame {
 
     public String uniqueID = UUID.randomUUID().toString().substring(0, 5);
 
-     public  void emailsender() {
-         String email_ID = emailID.getText();
+    
+   
+    
+    public void emailsender() {
+        String email_ID = jTextField1.getText();
+        
+            
+            
         try {
-            Email email=new Email("svas0000@gmail.com", "gimmy@1010");
+            Email email = new Email("svas0000@gmail.com", "gimmy@1010");
             email.setFrom("svas0000@gmail.com", "Your doctor profile has been created");
             email.setSubject("Doctor Id");
-            email.setContent("Doctor ID :"+uniqueID, "text/html");
+            email.setContent("Appointment ID :" + uniqueID , "text/html");
             email.addRecipient(email_ID);
             email.send();
-            
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void appointmentIdSender() {
+        String date=datePicker1.getText();
+     String time=(String)jComboBox1.getSelectedItem();
+     
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        int selectedRow=jTable1.getSelectedRow();
+    String em=model.getValueAt(selectedRow,6).toString();
+    emJT.setText(em);
+        try {
+            Email email = new Email("svas0000@gmail.com", "gimmy@1010");
+            email.setFrom("svas0000@gmail.com", "Your Appointment has been created");
+            email.setSubject("Appointment Id");
+            email.setContent("Doctor ID :" + uniqueID+"Doctor ID :" + date+"Doctor ID :" + time, "text/html");
+            email.addRecipient(emJT.getText());
+            email.send();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -1305,6 +1373,36 @@ public class hospital_home_page extends javax.swing.JFrame {
         MainPanel.add(AppointmentPage);
         MainPanel.repaint();
         MainPanel.revalidate();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
+            String query = "select * from crAppointment";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            
+            int rows = model.getRowCount();
+            for (int i = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+            
+            while (rs.next()) {
+                String ptName = rs.getString("PatientName");
+                String emailID = rs.getString("email_id");
+                String age = rs.getString("age");
+                String gender = rs.getString("gender");
+                String phoneNO = rs.getString("phNumber");
+                String address = rs.getString("address");
+                String symptoms = rs.getString("symptoms");
+                String aptId = rs.getString("app_id");
+                String date = rs.getString("date");
+                String time = rs.getString("time");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
+            }
+            
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void emailIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIDActionPerformed
@@ -1346,7 +1444,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into doctoraccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID +"','"+ degree + "','" + address + "','" + yearExpereince + "','" + uniqueID + "');";
+            String createQuery = "Insert into doctoraccount values('" + fullname + "','" + age + "','" + dateOfBirth + "','" + gender + "','" + specialization + "','" + phone_Number + "','" + email_ID + "','" + degree + "','" + address + "','" + yearExpereince + "','" + uniqueID + "');";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Doctor Profile Created!");
             fullNameJText.setText("");
@@ -1516,7 +1614,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             phoneNumber.setText("");
             jRadioButton1.setSelected(false);
             jRadioButton2.setSelected(false);
-        jRadioButton3.setSelected(false);
+            jRadioButton3.setSelected(false);
             jComboBox2.setSelectedIndex(0);
             jSpinner1.setValue(Integer.parseInt("0"));
             DegreeJ.setText("");
@@ -1628,6 +1726,84 @@ public class hospital_home_page extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GeneralSymptomsCBActionPerformed
 
+    private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
+//        appointmentIdSender(); 
+        String date=datePicker1.getText();
+     String time=(String)jComboBox1.getSelectedItem();
+     String id=jTextField1.getText();
+        
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            Statement stmt = (Statement) con.createStatement();
+            String updateAppointment="Update crAppointment set date='" + date + "',time='" + time + "' where app_id='"+id+"';";
+            int i = stmt.executeUpdate(updateAppointment);
+            JOptionPane.showMessageDialog(this, "records Modified");
+            String query = "select * from crAppointment";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            
+            model.setRowCount(0);
+            int rows = model.getRowCount();
+            for (int j = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+            while (rs.next()) {
+                String ptName = rs.getString("PatientName");
+                String emailID = rs.getString("email_id");
+                String age = rs.getString("age");
+                String gender = rs.getString("gender");
+                String phoneNO = rs.getString("phNumber");
+                String address = rs.getString("address");
+                String symptoms = rs.getString("symptoms");
+                String aptId = rs.getString("app_id");
+                String date2 = rs.getString("date");
+                String time2 = rs.getString("time");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date2, time2, aptId});
+            }
+            
+        }
+            
+        catch(Exception e)
+        {
+        }
+        
+    }//GEN-LAST:event_AddButtonActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+
+        String id=jTextField1.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
+            String query = "select * from crAppointment where app_id='"+id+"';";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            
+            int rows = model.getRowCount();
+            for (int i = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+            
+            while (rs.next()) {
+                String ptName = rs.getString("PatientName");
+                String emailID = rs.getString("email_id");
+                String age = rs.getString("age");
+                String gender = rs.getString("gender");
+                String phoneNO = rs.getString("phNumber");
+                String address = rs.getString("address");
+                String symptoms = rs.getString("symptoms");
+                String aptId = rs.getString("app_id");
+                String date = rs.getString("date");
+                String time = rs.getString("time");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
+            }
+        } catch (Exception e) {
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1664,6 +1840,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddButton;
     private javax.swing.JTextArea AddressD;
     private javax.swing.JTextArea AddressJ;
     private javax.swing.JSpinner AgeJSpinner;
@@ -1707,6 +1884,8 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JTextField YearOfExperienceJ;
     private javax.swing.JTextField YearOfOrigin;
     private javax.swing.ButtonGroup buttonGroup1;
+    public static com.github.lgooddatepicker.components.DatePicker datePicker1;
+    private javax.swing.JTextField emJT;
     private javax.swing.JTextField emailID;
     private javax.swing.JTextField fullNameJText;
     private javax.swing.JButton jButton1;
@@ -1715,10 +1894,10 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton jButton7;
+    public static javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1777,6 +1956,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTable jTable1;
+    public javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField phoneNumber;

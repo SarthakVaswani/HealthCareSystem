@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.UUID;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -74,6 +75,8 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         symptomsL = new javax.swing.JList<>();
         jLabel21 = new javax.swing.JLabel();
         pt_age = new javax.swing.JSpinner();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         PatientProfile = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -181,6 +184,27 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("+91");
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Patient Name", "age", "phone number", "gender ", "address", "symptoms", "email ID", "date", "time", "appid"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, true, true, true, true, true, true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jTable1);
+
         javax.swing.GroupLayout AppointmentpageLayout = new javax.swing.GroupLayout(Appointmentpage);
         Appointmentpage.setLayout(AppointmentpageLayout);
         AppointmentpageLayout.setHorizontalGroup(
@@ -218,6 +242,10 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                         .addGap(173, 173, 173)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(AppointmentpageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 806, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         AppointmentpageLayout.setVerticalGroup(
             AppointmentpageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +281,9 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(15, 15, 15))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(338, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         Mainpanel.add(Appointmentpage, "card3");
@@ -440,7 +470,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(107, 107, 107)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addContainerGap(361, Short.MAX_VALUE))
         );
 
         Mainpanel.add(PatientProfile, "card2");
@@ -461,7 +491,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             .addGroup(AwarnessFactsLayout.createSequentialGroup()
                 .addGap(357, 357, 357)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(648, Short.MAX_VALUE))
+                .addContainerGap(743, Short.MAX_VALUE))
         );
 
         Mainpanel.add(AwarnessFacts, "card4");
@@ -560,7 +590,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addComponent(profilebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 654, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 749, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
@@ -668,6 +698,35 @@ p_phonenumber.setText(phone);
         Mainpanel.add(Appointmentpage);
         Mainpanel.repaint();
         Mainpanel.revalidate();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
+            String query = "select * from crAppointment";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            
+            int rows = model.getRowCount();
+            for (int i = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+            
+            while (rs.next()) {
+                String ptName = rs.getString("PatientName");
+                String emailID = rs.getString("email_id");
+                String age = rs.getString("age");
+                String gender = rs.getString("gender");
+                String phoneNO = rs.getString("phNumber");
+                String address = rs.getString("address");
+                String symptoms = rs.getString("symptoms");
+                String aptId = rs.getString("app_id");
+                String date = rs.getString("date");
+                String time = rs.getString("time");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
+            }
+            
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -832,7 +891,9 @@ p_phonenumber.setText(phone);
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSplitPane jSplitPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea p_address;
     private javax.swing.JSpinner p_age;
     private javax.swing.JTextField p_bloodgroup;
