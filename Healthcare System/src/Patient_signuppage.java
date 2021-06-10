@@ -37,6 +37,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jLabel11 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         p_gender = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -50,7 +51,6 @@ public class Patient_signuppage extends javax.swing.JFrame {
         p_date = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         p_bloodgroup = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         p_name = new javax.swing.JTextField();
         p_phonenumber = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -59,6 +59,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         p_address = new javax.swing.JTextArea();
+        jLabel12 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -72,12 +73,17 @@ public class Patient_signuppage extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Date");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        p_gender.setText("jTextField1");
-        jPanel1.add(p_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, -1, -1));
+        p_gender.setBackground(new java.awt.Color(255, 255, 255));
+        p_gender.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(p_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 90, 30));
 
         jLabel1.setBackground(new java.awt.Color(42, 127, 186));
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 38)); // NOI18N
@@ -122,25 +128,26 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Email ID");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 90, 40));
-        jPanel1.add(p_age, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 90, 40));
+        jPanel1.add(p_age, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 50, 30));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Phone Number");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, 40));
 
-        p_date.setText("jTextField2");
-        jPanel1.add(p_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, -1, -1));
+        p_date.setBackground(new java.awt.Color(255, 255, 255));
+        p_date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(p_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 140, 30));
 
-        jLabel10.setText("jLabel10");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, -1, -1));
+        jLabel10.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Blood Group");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, 40));
 
-        p_bloodgroup.setText("jTextField1");
-        jPanel1.add(p_bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, -1, -1));
-
-        jLabel11.setText("jLabel11");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, -1, -1));
+        p_bloodgroup.setBackground(new java.awt.Color(255, 255, 255));
+        p_bloodgroup.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.add(p_bloodgroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 90, 30));
 
         p_name.setBackground(new java.awt.Color(255, 255, 255));
         p_name.setForeground(new java.awt.Color(0, 0, 0));
@@ -155,17 +162,17 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Gender");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, 40));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, 40));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Address");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 40));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, 40));
 
         p_emailid.setBackground(new java.awt.Color(255, 255, 255));
         p_emailid.setForeground(new java.awt.Color(0, 0, 0));
         p_emailid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(p_emailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 200, 30));
+        jPanel1.add(p_emailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 200, 30));
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -180,9 +187,15 @@ public class Patient_signuppage extends javax.swing.JFrame {
         p_address.setRows(5);
         jScrollPane1.setViewportView(p_address);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Date");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 110, 30));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setOpaque(true);
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 870, 410));
 
@@ -281,6 +294,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
