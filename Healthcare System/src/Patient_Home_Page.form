@@ -67,6 +67,7 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jButton5" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
@@ -94,8 +95,8 @@
                                           <Component id="p_name" pref="200" max="32767" attributes="0"/>
                                           <Component id="p_phonenumber" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="p_gender" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="jScrollPane1" alignment="0" min="-2" pref="239" max="-2" attributes="0"/>
+                                      <Component id="p_emailid" min="-2" pref="78" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="99" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -113,8 +114,8 @@
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="p_age" min="-2" pref="45" max="-2" attributes="0"/>
-                                              <Component id="p_emailid" min="-2" pref="78" max="-2" attributes="0"/>
                                               <Component id="p_bloodgroup" min="-2" pref="77" max="-2" attributes="0"/>
+                                              <Component id="p_gender" min="-2" pref="200" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" attributes="0">
@@ -125,7 +126,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="119" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -142,18 +143,18 @@
                           </Group>
                           <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="p_emailid" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="jLabel12" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="p_phonenumber" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="p_gender" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="p_gender" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel9" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="p_bloodgroup" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="p_emailid" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
