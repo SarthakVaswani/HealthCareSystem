@@ -77,7 +77,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         AwarnessFacts = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         Appointmentpage = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -311,10 +311,10 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Category", "Origin of Country", "Origin of Year", "General Symptoms", "Description"
+                "Name", "Category", "Country of origin", "year of origin", "general Symptoms", "description"
             }
         ));
-        jScrollPane6.setViewportView(jTable2);
+        jScrollPane7.setViewportView(jTable2);
 
         javax.swing.GroupLayout AwarnessFactsLayout = new javax.swing.GroupLayout(AwarnessFacts);
         AwarnessFacts.setLayout(AwarnessFactsLayout);
@@ -322,17 +322,17 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
             .addGroup(AwarnessFactsLayout.createSequentialGroup()
-                .addGap(151, 151, 151)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AwarnessFactsLayout.setVerticalGroup(
             AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AwarnessFactsLayout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 391, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 405, Short.MAX_VALUE))
         );
 
         Mainpanel.add(AwarnessFacts, "card4");
@@ -413,17 +413,17 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient Name", "age", "phone number", "gender ", "address", "symptoms", "email ID", "date", "time", "appid"
+                "Patient Name", "age", "phone number", "gender ", "address", "symptoms", "email ID", "date", "time", "appid", "Doctor Assigned"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, true, true, true, true, true, true, true, true, false
+                true, true, true, true, true, true, true, true, true, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -617,7 +617,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, Short.MAX_VALUE)
+            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
         );
 
         pack();
@@ -733,7 +733,8 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 String aptId = rs.getString("app_id");
                 String date = rs.getString("date");
                 String time = rs.getString("time");
-                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
+                String doc = rs.getString("docAssigned");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId,doc});
             }
 
         } catch (Exception e) {
@@ -926,7 +927,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;

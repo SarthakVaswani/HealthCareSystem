@@ -151,11 +151,12 @@ public class doctor_Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String doctorID;
         jButton1.setBackground(Color.decode("#4F8AF2"));
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
-            String doctorID = DoctorIDJText.getText();
+            doctorID = DoctorIDJText.getText();
             String doctorPassword = DocPassword.getText();
             Statement stm = con.createStatement();
             String doctorLogin = "Select * from doctoraccount where Doctor_ID='" + doctorID + "' and DateOfBirth='" + doctorPassword + "'";
@@ -163,7 +164,9 @@ public class doctor_Login extends javax.swing.JFrame {
             if (rs.next()) {
                 dispose();
                 doctor_home_page dhp = new doctor_home_page();
-                dhp.show();
+                
+                doctor_home_page.DOCID.setText(DoctorIDJText.getText());
+                dhp.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Doctor ID or passoword is Invalid");
                 DoctorIDJText.setText("");

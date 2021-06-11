@@ -134,6 +134,10 @@ public class hospital_home_page extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         emJT = new javax.swing.JTextField();
         datePicker1 = new com.github.lgooddatepicker.components.DatePicker();
+        specCB = new javax.swing.JComboBox<>();
+        search1 = new javax.swing.JButton();
+        docCB = new javax.swing.JComboBox<>();
+        search2 = new javax.swing.JButton();
         AwarenessFacts = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -172,56 +176,56 @@ public class hospital_home_page extends javax.swing.JFrame {
         RegisterDoctorpage.setBackground(new java.awt.Color(255, 255, 255));
         RegisterDoctorpage.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Register Doctor");
         jLabel1.setBackground(new java.awt.Color(124, 85, 227));
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Register Doctor");
         jLabel1.setOpaque(true);
 
+        jLabel3.setText("Full Name");
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Full Name");
 
+        jLabel4.setText("Date Of Birth");
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Date Of Birth");
 
+        jLabel5.setText("Gender");
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Gender");
 
+        jLabel6.setText("Specialization");
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Specialization");
 
+        jLabel7.setText("Age");
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Age");
 
+        jLabel8.setText("Phone Number");
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Phone Number");
 
+        jLabel9.setText("Email ID");
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Email ID");
 
         fullNameJText.setBackground(new java.awt.Color(255, 255, 255));
-        fullNameJText.setForeground(new java.awt.Color(0, 0, 0));
         fullNameJText.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        fullNameJText.setForeground(new java.awt.Color(0, 0, 0));
 
         DOB.setBackground(new java.awt.Color(255, 255, 255));
+        DOB.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         DOB.setForeground(new java.awt.Color(0, 0, 0));
         DOB.setToolTipText("");
-        DOB.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         phoneNumber.setBackground(new java.awt.Color(255, 255, 255));
         phoneNumber.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -254,49 +258,49 @@ public class hospital_home_page extends javax.swing.JFrame {
         jRadioButton3.setForeground(new java.awt.Color(0, 0, 0));
         jRadioButton3.setText("Other");
 
+        jLabel10.setText("+91");
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 13)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("+91");
 
-        jButton5.setBackground(new java.awt.Color(87, 69, 122));
-        jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Submit");
+        jButton5.setBackground(new java.awt.Color(87, 69, 122));
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
+        jButton5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
+        AgeJSpinner.setBorder(null);
         AgeJSpinner.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         AgeJSpinner.setToolTipText("");
-        AgeJSpinner.setBorder(null);
 
+        SpecializationCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
         SpecializationCB.setBackground(new java.awt.Color(255, 255, 255));
         SpecializationCB.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
-        SpecializationCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
         SpecializationCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpecializationCBActionPerformed(evt);
             }
         });
 
+        jLabel14.setText("Degree");
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Degree");
 
         DegreeJ.setBackground(new java.awt.Color(255, 255, 255));
         DegreeJ.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel15.setText("Address");
         jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Address");
 
+        jLabel16.setText("Year of experience");
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Year of experience");
         jLabel16.setToolTipText("");
 
         YearOfExperienceJ.setBackground(new java.awt.Color(255, 255, 255));
@@ -420,11 +424,11 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         UpdateDetails.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Update Details");
         jLabel11.setBackground(new java.awt.Color(124, 85, 227));
         jLabel11.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Update Details");
         jLabel11.setOpaque(true);
 
         DoctorSwitch.setBackground(new java.awt.Color(87, 69, 122));
@@ -456,29 +460,29 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         DoctorUPdate.setBackground(new java.awt.Color(241, 235, 248));
 
+        jLabel26.setText("Name");
         jLabel26.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel26.setText("Name");
 
+        jLabel27.setText("Age");
         jLabel27.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel27.setText("Age");
 
+        jLabel28.setText("Date Of Birth");
         jLabel28.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel28.setText("Date Of Birth");
 
+        jLabel29.setText("Gender");
         jLabel29.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel29.setText("Gender");
 
+        jLabel30.setText("Specialisation");
         jLabel30.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel30.setText("Specialisation");
 
+        jLabel31.setText("Phone Number");
         jLabel31.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel31.setText("Phone Number");
 
         NameD.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -491,55 +495,55 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         PhND.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel32.setText("Email ID");
         jLabel32.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel32.setText("Email ID");
 
         ED.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel33.setText("Degree");
         jLabel33.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel33.setText("Degree");
 
         DegreeD.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel34.setText("Address");
         jLabel34.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel34.setText("Address");
 
         AddressD.setBackground(new java.awt.Color(255, 255, 255));
         AddressD.setColumns(20);
         AddressD.setRows(5);
         jScrollPane3.setViewportView(AddressD);
 
+        jLabel35.setText("Year Of Experience");
         jLabel35.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel35.setText("Year Of Experience");
 
         YED.setBackground(new java.awt.Color(255, 255, 255));
 
+        DoctorUpdate.setText("Save");
         DoctorUpdate.setBackground(new java.awt.Color(87, 69, 122));
         DoctorUpdate.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         DoctorUpdate.setForeground(new java.awt.Color(255, 255, 255));
-        DoctorUpdate.setText("Save");
         DoctorUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DoctorUpdateActionPerformed(evt);
             }
         });
 
+        Delete.setText("Delete");
         Delete.setBackground(new java.awt.Color(87, 69, 122));
         Delete.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Delete.setForeground(new java.awt.Color(255, 255, 255));
-        Delete.setText("Delete");
         Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DeleteActionPerformed(evt);
             }
         });
 
-        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
+        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
 
         jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButton6);
@@ -678,33 +682,33 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         AwarenessUpdate.setBackground(new java.awt.Color(241, 235, 248));
 
+        jLabel24.setText("Name");
         jLabel24.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("Name");
 
+        jLabel36.setText("Category");
         jLabel36.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel36.setText("Category");
 
+        jLabel37.setText("Country Of  Origin");
         jLabel37.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel37.setText("Country Of  Origin");
 
+        jLabel38.setText("Year Of Origin");
         jLabel38.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel38.setText("Year Of Origin");
 
+        jLabel39.setText("Photo");
         jLabel39.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel39.setText("Photo");
 
+        jLabel40.setText("Description");
         jLabel40.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel40.setText("Description");
 
+        jLabel41.setText("General Symptoms");
         jLabel41.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel41.setText("General Symptoms");
 
         NameUpdateJ.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -730,20 +734,20 @@ public class hospital_home_page extends javax.swing.JFrame {
         DescriptionUpdateJ.setPreferredSize(new java.awt.Dimension(200, 80));
         jScrollPane4.setViewportView(DescriptionUpdateJ);
 
+        DeleteAW.setText("Delete");
         DeleteAW.setBackground(new java.awt.Color(87, 69, 122));
         DeleteAW.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         DeleteAW.setForeground(new java.awt.Color(255, 255, 255));
-        DeleteAW.setText("Delete");
         DeleteAW.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DeleteAWActionPerformed(evt);
             }
         });
 
+        AwarenessUpdateJ.setText("Update");
         AwarenessUpdateJ.setBackground(new java.awt.Color(87, 69, 122));
         AwarenessUpdateJ.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         AwarenessUpdateJ.setForeground(new java.awt.Color(255, 255, 255));
-        AwarenessUpdateJ.setText("Update");
         AwarenessUpdateJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AwarenessUpdateJActionPerformed(evt);
@@ -763,8 +767,8 @@ public class hospital_home_page extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton10);
         jRadioButton10.setText("Disease");
 
-        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fever", "Diarrhea", "Fatigue", "Muscle aches", "Coughing" }));
+        jComboBox3.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
@@ -911,43 +915,43 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         AppointmentPage.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setBackground(new java.awt.Color(124, 85, 227));
         jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient Name", "Age", "Phone Nmber", "Gender", "Address", "Symptoms", "Patient ID", "Date", "Time", "Appointment ID"
+                "Patient Name", "Age", "Phone Nmber", "Gender", "Address", "Symptoms", "Patient ID", "Date", "Time", "Appointment ID", "Doctor"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, true, true, true, false, true, true, true, true, true
+                true, true, true, true, false, true, true, true, true, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.setBackground(new java.awt.Color(124, 85, 227));
+        jTable1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane5.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(4).setResizable(false);
         }
 
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("Appointment List");
         jLabel48.setBackground(new java.awt.Color(124, 85, 227));
         jLabel48.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("Appointment List");
-        jLabel48.setToolTipText("");
         jLabel48.setMaximumSize(new java.awt.Dimension(271, 41));
         jLabel48.setMinimumSize(new java.awt.Dimension(271, 41));
         jLabel48.setOpaque(true);
+        jLabel48.setToolTipText("");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2-4pm,", "2-4pm,", "3-7pm,", "2-4pm" }));
 
@@ -969,6 +973,17 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         emJT.setText(" ");
 
+        specCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dermatologists", "Gynecologist", "ENT Specialist", "Dentist", "Cardiologist", "General Surgeon", "Pediatricians", "General Physicians" }));
+
+        search1.setText("jButton8");
+
+        search2.setText("jButton9");
+        search2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                search2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout AppointmentPageLayout = new javax.swing.GroupLayout(AppointmentPage);
         AppointmentPage.setLayout(AppointmentPageLayout);
         AppointmentPageLayout.setHorizontalGroup(
@@ -981,21 +996,30 @@ public class hospital_home_page extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(97, 97, 97)
-                        .addComponent(jButton7)
-                        .addGap(354, 354, 354))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
-                        .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(107, 107, 107)
-                        .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(97, 97, 97)
+                            .addComponent(jButton7)
+                            .addGap(354, 354, 354))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
+                            .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(107, 107, 107)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(102, 102, 102)
+                            .addComponent(AddButton)
+                            .addGap(337, 337, 337))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
                             .addComponent(emJT, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(AppointmentPageLayout.createSequentialGroup()
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(102, 102, 102)
-                                .addComponent(AddButton)))
-                        .addGap(337, 337, 337))))
+                            .addGap(49, 49, 49)))
+                    .addGroup(AppointmentPageLayout.createSequentialGroup()
+                        .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(specCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(search1))
+                        .addGap(110, 110, 110)
+                        .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(search2)
+                            .addComponent(docCB, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         AppointmentPageLayout.setVerticalGroup(
             AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1012,9 +1036,17 @@ public class hospital_home_page extends javax.swing.JFrame {
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(AddButton)
                     .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(172, 172, 172)
+                .addGap(54, 54, 54)
+                .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(specCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(docCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(search1)
+                    .addComponent(search2))
+                .addGap(33, 33, 33)
                 .addComponent(emJT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addGap(258, 258, 258))
         );
 
         MainPanel.add(AppointmentPage, "card3");
@@ -1022,11 +1054,11 @@ public class hospital_home_page extends javax.swing.JFrame {
         AwarenessFacts.setBackground(new java.awt.Color(255, 255, 255));
         AwarenessFacts.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Awareness Facts");
         jLabel12.setBackground(new java.awt.Color(124, 85, 227));
         jLabel12.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Awareness Facts");
         jLabel12.setOpaque(true);
 
         DescriptionJ.setBackground(new java.awt.Color(255, 255, 255));
@@ -1034,13 +1066,13 @@ public class hospital_home_page extends javax.swing.JFrame {
         DescriptionJ.setRows(5);
         jScrollPane2.setViewportView(DescriptionJ);
 
+        jLabel17.setText("Description");
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("Description");
 
+        jLabel18.setText("Name");
         jLabel18.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel18.setText("Name");
 
         NameJ.setBackground(new java.awt.Color(255, 255, 255));
         NameJ.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1050,30 +1082,30 @@ public class hospital_home_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel19.setText("Year Of Origin");
         jLabel19.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel19.setText("Year Of Origin");
 
         YearOfOrigin.setBackground(new java.awt.Color(255, 255, 255));
         YearOfOrigin.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel20.setText("Country Of Origin");
         jLabel20.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("Country Of Origin");
 
         CountryOfOriginJ.setBackground(new java.awt.Color(255, 255, 255));
         CountryOfOriginJ.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel21.setText("General Symptoms");
         jLabel21.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("General Symptoms");
 
+        jLabel22.setText("Photo");
         jLabel22.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("Photo");
 
-        GeneralSymptomsCB.setBackground(new java.awt.Color(255, 255, 255));
         GeneralSymptomsCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fever", "Diarrhea", "Fatigue", "Muscle aches", "Coughing" }));
+        GeneralSymptomsCB.setBackground(new java.awt.Color(255, 255, 255));
         GeneralSymptomsCB.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         GeneralSymptomsCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1082,32 +1114,32 @@ public class hospital_home_page extends javax.swing.JFrame {
         });
 
         jTextField6.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jTextField6.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jTextField6.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        AwarenessSubmit.setText("Submit");
         AwarenessSubmit.setBackground(new java.awt.Color(87, 69, 122));
         AwarenessSubmit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         AwarenessSubmit.setForeground(new java.awt.Color(255, 255, 255));
-        AwarenessSubmit.setText("Submit");
         AwarenessSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AwarenessSubmitActionPerformed(evt);
             }
         });
 
+        jLabel23.setText("Category");
         jLabel23.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel23.setText("Category");
 
-        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButton4);
         jRadioButton4.setText("Disease");
+        jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setText("Medicine");
+        jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         javax.swing.GroupLayout AwarenessFactsLayout = new javax.swing.GroupLayout(AwarenessFacts);
@@ -1194,28 +1226,28 @@ public class hospital_home_page extends javax.swing.JFrame {
         SideMenu.setForeground(new java.awt.Color(28, 78, 128));
         SideMenu.setPreferredSize(new java.awt.Dimension(200, 800));
 
-        jButton1.setBackground(new java.awt.Color(87, 69, 122));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
         jButton1.setText("Register Doctor");
-        jButton1.setToolTipText("");
+        jButton1.setBackground(new java.awt.Color(87, 69, 122));
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton1.setIconTextGap(20);
         jButton1.setOpaque(false);
+        jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(87, 69, 122));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_update_24px_1.png"))); // NOI18N
         jButton2.setText("Update Details ");
+        jButton2.setBackground(new java.awt.Color(87, 69, 122));
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton2.setIconTextGap(25);
         jButton2.setOpaque(false);
@@ -1225,28 +1257,28 @@ public class hospital_home_page extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(87, 69, 122));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_timesheet_32px.png"))); // NOI18N
         jButton3.setText("Appointment List");
-        jButton3.setToolTipText("");
+        jButton3.setBackground(new java.awt.Color(87, 69, 122));
         jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton3.setIconTextGap(18);
         jButton3.setOpaque(false);
+        jButton3.setToolTipText("");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(87, 69, 122));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_megaphone_30px.png"))); // NOI18N
         jButton4.setText("Awareness Facts");
+        jButton4.setBackground(new java.awt.Color(87, 69, 122));
         jButton4.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton4.setIconTextGap(20);
         jButton4.setOpaque(false);
@@ -1256,21 +1288,21 @@ public class hospital_home_page extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(204, 204, 255));
-        jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_export_48px.png"))); // NOI18N
+        jButton6.setBackground(new java.awt.Color(204, 204, 255));
         jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
+        jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
+        jLabel13.setText("Menu");
         jLabel13.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Menu");
 
         javax.swing.GroupLayout SideMenuLayout = new javax.swing.GroupLayout(SideMenu);
         SideMenu.setLayout(SideMenuLayout);
@@ -1329,19 +1361,14 @@ public class hospital_home_page extends javax.swing.JFrame {
 
     public String uniqueID = UUID.randomUUID().toString().substring(0, 5);
 
-    
-   
-    
     public void emailsender() {
-        String email_ID = jTextField1.getText();
-        
-            
-            
+        String email_ID = emailID.getText();
+
         try {
             Email email = new Email("svas0000@gmail.com", "gimmy@1010");
             email.setFrom("svas0000@gmail.com", "Your doctor profile has been created");
             email.setSubject("Doctor Id");
-            email.setContent("Appointment ID :" + uniqueID , "text/html");
+            email.setContent("Appointment ID :" + uniqueID, "text/html");
             email.addRecipient(email_ID);
             email.send();
 
@@ -1349,19 +1376,20 @@ public class hospital_home_page extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
+
     public void appointmentIdSender() {
-        String date=datePicker1.getText();
-     String time=(String)jComboBox1.getSelectedItem();
-     
+        String date = datePicker1.getText();
+        String time = (String) jComboBox1.getSelectedItem();
+
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        int selectedRow=jTable1.getSelectedRow();
-    String em=model.getValueAt(selectedRow,6).toString();
-    emJT.setText(em);
+        int selectedRow = jTable1.getSelectedRow();
+        String em = model.getValueAt(selectedRow, 6).toString();
+        emJT.setText(em);
         try {
             Email email = new Email("svas0000@gmail.com", "gimmy@1010");
             email.setFrom("svas0000@gmail.com", "Your Appointment has been created");
             email.setSubject("Appointment Id");
-            email.setContent("Doctor ID :" + uniqueID+"Doctor ID :" + date+"Doctor ID :" + time, "text/html");
+            email.setContent("Doctor ID :" + uniqueID + "Doctor ID :" + date + "Doctor ID :" + time, "text/html");
             email.addRecipient(emJT.getText());
             email.send();
 
@@ -1396,12 +1424,12 @@ public class hospital_home_page extends javax.swing.JFrame {
             String query = "select * from crAppointment";
             ResultSet rs = stmt.executeQuery(query);
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            
+
             int rows = model.getRowCount();
             for (int i = 0; i < rows; i++) {
                 model.removeRow(0);
             }
-            
+
             while (rs.next()) {
                 String ptName = rs.getString("PatientName");
                 String emailID = rs.getString("email_id");
@@ -1413,9 +1441,10 @@ public class hospital_home_page extends javax.swing.JFrame {
                 String aptId = rs.getString("app_id");
                 String date = rs.getString("date");
                 String time = rs.getString("time");
-                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
+                String spec = rs.getString("docAssigned");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId,spec});
             }
-            
+
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -1743,22 +1772,21 @@ public class hospital_home_page extends javax.swing.JFrame {
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
 //        appointmentIdSender(); 
-        String date=datePicker1.getText();
-     String time=(String)jComboBox1.getSelectedItem();
-     String id=jTextField1.getText();
-        
-        try
-        {
+        String date = datePicker1.getText();
+        String time = (String) jComboBox1.getSelectedItem();
+        String id = jTextField1.getText();
+        String docAssigned=(String) docCB.getSelectedItem();
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
-            String updateAppointment="Update crAppointment set date='" + date + "',time='" + time + "' where app_id='"+id+"';";
+            String updateAppointment = "Update crAppointment set date='" + date + "',time='" + time + "',docAssigned='" + docAssigned + "' where app_id='" + id + "';";
             int i = stmt.executeUpdate(updateAppointment);
             JOptionPane.showMessageDialog(this, "records Modified");
             String query = "select * from crAppointment";
             ResultSet rs = stmt.executeQuery(query);
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            
+
             model.setRowCount(0);
             int rows = model.getRowCount();
             for (int j = 0; i < rows; i++) {
@@ -1775,33 +1803,31 @@ public class hospital_home_page extends javax.swing.JFrame {
                 String aptId = rs.getString("app_id");
                 String date2 = rs.getString("date");
                 String time2 = rs.getString("time");
-                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date2, time2, aptId});
+                String spec2=rs.getString("docAssigned");
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date2, time2, aptId,spec2});
             }
-            
+
+        } catch (Exception e) {
         }
-            
-        catch(Exception e)
-        {
-        }
-        
+
     }//GEN-LAST:event_AddButtonActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
 
-        String id=jTextField1.getText();
+        String id = jTextField1.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
-            String query = "select * from crAppointment where app_id='"+id+"';";
+            String query = "select * from crAppointment where app_id='" + id + "';";
             ResultSet rs = stmt.executeQuery(query);
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            
+
             int rows = model.getRowCount();
             for (int i = 0; i < rows; i++) {
                 model.removeRow(0);
             }
-            
+
             while (rs.next()) {
                 String ptName = rs.getString("PatientName");
                 String emailID = rs.getString("email_id");
@@ -1818,6 +1844,27 @@ public class hospital_home_page extends javax.swing.JFrame {
         } catch (Exception e) {
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void search2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search2ActionPerformed
+String spec=(String) specCB.getSelectedItem();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            Statement stmt = (Statement) con.createStatement();
+            String searchD_ID = "select FullName from doctoraccount where Specialization='" + spec + "';";
+            ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
+            
+            int found = 0;
+            while (rs.next()) {
+                String fName = rs.getString("FullName");
+                docCB.addItem(fName);
+                docCB.updateUI();
+                found++;
+            }
+        } catch (Exception e) {
+        }        // TODO add your handling code here:
+        // TODO add your handling code here:
+    }//GEN-LAST:event_search2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1900,6 +1947,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JTextField YearOfOrigin;
     private javax.swing.ButtonGroup buttonGroup1;
     private com.github.lgooddatepicker.components.DatePicker datePicker1;
+    private javax.swing.JComboBox<String> docCB;
     private javax.swing.JTextField emJT;
     private javax.swing.JTextField emailID;
     private javax.swing.JTextField fullNameJText;
@@ -1975,6 +2023,9 @@ public class hospital_home_page extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField phoneNumber;
+    private javax.swing.JButton search1;
+    private javax.swing.JButton search2;
+    private javax.swing.JComboBox<String> specCB;
     // End of variables declaration//GEN-END:variables
 
     private void setResiable(boolean b) {
