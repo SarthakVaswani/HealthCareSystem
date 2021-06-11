@@ -28,23 +28,20 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
-        
+
     }
     String p_ID;
-    
+
     public String pat;
     public String apptID = UUID.randomUUID().toString().substring(0, 5);
-    
-//    
 
+//    
     Patient_Home_Page(String patientID) {
-        System.out.print(""+patientID);
-       p_ID=patientID;
-    
-       
+        System.out.print("" + patientID);
+        p_ID = patientID;
+
         //To change body of generated methods, choose Tools | Templates.
     }
-        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -80,20 +77,8 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         AwarnessFacts = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTable2 = new javax.swing.JTable();
         Appointmentpage = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -318,115 +303,36 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jLabel3.setText("Awareness");
         jLabel3.setOpaque(true);
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel23.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel23.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel23.setText("Category");
-
-        jLabel24.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel24.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("Country Of Origin");
-
-        jLabel25.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel25.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel25.setText("Description");
-
-        jLabel26.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel26.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel26.setText("Year Of Origin");
-
-        jLabel27.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel27.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel27.setText("General Symptoms");
-
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Search");
-
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jList1.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane5.setViewportView(jList1);
-
-        jScrollPane6.setBackground(new java.awt.Color(255, 255, 255));
-
-        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane6.setViewportView(jTextArea1);
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Name", "Category", "Origin of Country", "Origin of Year", "General Symptoms", "Description"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable2);
 
         javax.swing.GroupLayout AwarnessFactsLayout = new javax.swing.GroupLayout(AwarnessFacts);
         AwarnessFacts.setLayout(AwarnessFactsLayout);
         AwarnessFactsLayout.setHorizontalGroup(
             AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
             .addGroup(AwarnessFactsLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
-                .addComponent(jButton1)
-                .addGap(314, 314, 314))
-            .addGroup(AwarnessFactsLayout.createSequentialGroup()
-                .addGap(207, 207, 207)
-                .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(AwarnessFactsLayout.createSequentialGroup()
-                        .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24)
-                            .addComponent(jLabel25))
-                        .addGap(128, 128, 128)
-                        .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel27)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5)
-                            .addComponent(jScrollPane5)))
-                    .addComponent(jScrollPane6))
-                .addGap(0, 174, Short.MAX_VALUE))
+                .addGap(151, 151, 151)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         AwarnessFactsLayout.setVerticalGroup(
             AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AwarnessFactsLayout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(79, 79, 79)
-                .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(AwarnessFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 90, Short.MAX_VALUE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 391, Short.MAX_VALUE))
         );
 
         Mainpanel.add(AwarnessFacts, "card4");
@@ -711,12 +617,11 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
+            .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
 
 //public void searchProfile()
 //{
@@ -758,12 +663,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 // }
     private void profilebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profilebuttonActionPerformed
         // TODO add your handling code here:
-        
+
         Mainpanel.removeAll();
         Mainpanel.add(PatientProfile);
         Mainpanel.repaint();
         Mainpanel.revalidate();
-        pat =p_emailid.getText();
+        pat = p_emailid.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
@@ -785,11 +690,11 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 //jSpinner1.setValue(age);       
                 p_date.setText(dob);
 //jTextField4.setText(gender);  
-p_address.setText(address);
-p_bloodgroup.setText(bloodgroup);
-p_emailid.setText(emailID);
-p_gender.setText(gender);
-p_phonenumber.setText(phone);
+                p_address.setText(address);
+                p_bloodgroup.setText(bloodgroup);
+                p_emailid.setText(emailID);
+                p_gender.setText(gender);
+                p_phonenumber.setText(phone);
                 found++;
 //
 //                JOptionPane.showMessageDialog(this, "records searched");
@@ -811,12 +716,12 @@ p_phonenumber.setText(phone);
             String query = "select * from crAppointment where email_id='" + pat + "';";
             ResultSet rs = stmt.executeQuery(query);
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            
+
             int rows = model.getRowCount();
             for (int i = 0; i < rows; i++) {
                 model.removeRow(0);
             }
-            
+
             while (rs.next()) {
                 String ptName = rs.getString("PatientName");
                 String emailID = rs.getString("email_id");
@@ -830,7 +735,7 @@ p_phonenumber.setText(phone);
                 String time = rs.getString("time");
                 model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId});
             }
-            
+
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -841,6 +746,31 @@ p_phonenumber.setText(phone);
         Mainpanel.add(AwarnessFacts);
         Mainpanel.repaint();
         Mainpanel.revalidate();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
+            String query = "select * from awarenessfacts";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+            int rows = model.getRowCount();
+            for (int i = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+
+            while (rs.next()) {
+                String awName = rs.getString("name");
+                String awCat = rs.getString("category");
+                String awCoc = rs.getString("countryOfOrigin");
+                String awYear = rs.getString("yearOfOrigin");
+                String awSymptoms = rs.getString("generalSymptoms");
+                String awDesc = rs.getString("description");
+                model.addRow(new Object[]{awName, awCat, awCoc, awYear, awSymptoms, awDesc});
+            }
+
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -890,10 +820,10 @@ p_phonenumber.setText(phone);
         String a_name = pt_name.getText();
         int age = (Integer) pt_age.getValue();
         String a_symptoms = symptomsL.getSelectedValue();
-        String ph_no= phno.getText();
+        String ph_no = phno.getText();
         String gender = (String) genderCB.getSelectedItem();
-        String a_address=addressTA.getText();
-        String ptID= p_emailid.getText();
+        String a_address = addressTA.getText();
+        String ptID = p_emailid.getText();
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -926,9 +856,7 @@ p_phonenumber.setText(phone);
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-       
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -956,7 +884,7 @@ p_phonenumber.setText(phone);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Patient_Home_Page().setVisible(true);
-                
+
             }
         });
     }
@@ -969,7 +897,6 @@ p_phonenumber.setText(phone);
     private javax.swing.JPanel Sidemenu;
     private javax.swing.JTextArea addressTA;
     private javax.swing.JComboBox<String> genderCB;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -988,11 +915,6 @@ p_phonenumber.setText(phone);
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1000,20 +922,14 @@ p_phonenumber.setText(phone);
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextArea p_address;
     private javax.swing.JSpinner p_age;
     private javax.swing.JTextField p_bloodgroup;
