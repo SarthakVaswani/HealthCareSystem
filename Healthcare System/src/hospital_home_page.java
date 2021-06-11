@@ -137,6 +137,7 @@ public class hospital_home_page extends javax.swing.JFrame {
         search1 = new javax.swing.JButton();
         docCB = new javax.swing.JComboBox<>();
         search2 = new javax.swing.JButton();
+        datePicker1 = new com.github.lgooddatepicker.components.DatePicker();
         AwarenessFacts = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -993,10 +994,10 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 975, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(16, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(188, Short.MAX_VALUE)
                 .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AppointmentPageLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(136, 136, 136)
                         .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1004,21 +1005,24 @@ public class hospital_home_page extends javax.swing.JFrame {
                                 .addComponent(jButton7)
                                 .addGap(354, 354, 354))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(102, 102, 102)
-                                .addComponent(AddButton)
-                                .addGap(337, 337, 337))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
                                 .addComponent(emJT, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(49, 49, 49))))
                     .addGroup(AppointmentPageLayout.createSequentialGroup()
+                        .addGap(87, 87, 87)
                         .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(specCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(search1))
                         .addGap(110, 110, 110)
                         .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(search2)
-                            .addComponent(docCB, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(docCB, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AppointmentPageLayout.createSequentialGroup()
+                        .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(102, 102, 102)
+                        .addComponent(AddButton)
+                        .addGap(337, 337, 337))))
         );
         AppointmentPageLayout.setVerticalGroup(
             AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1033,8 +1037,9 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AddButton))
-                .addGap(54, 54, 54)
+                    .addComponent(AddButton)
+                    .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
                 .addGroup(AppointmentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(specCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(docCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1944,6 +1949,7 @@ String spec=(String) specCB.getSelectedItem();
     private javax.swing.JTextField YearOfExperienceJ;
     private javax.swing.JTextField YearOfOrigin;
     private javax.swing.ButtonGroup buttonGroup1;
+    private com.github.lgooddatepicker.components.DatePicker datePicker1;
     private javax.swing.JComboBox<String> docCB;
     private javax.swing.JTextField emJT;
     private javax.swing.JTextField emailID;

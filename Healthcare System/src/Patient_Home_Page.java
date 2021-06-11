@@ -521,13 +521,13 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Medicine Name", "Dose", "Frequency", "Diagnose", "days", "Date", "Email ID", "Prescription ID"
             }
         ));
         jScrollPane5.setViewportView(jTable3);
@@ -548,7 +548,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 276, Short.MAX_VALUE))
+                .addGap(0, 278, Short.MAX_VALUE))
         );
 
         Mainpanel.add(prescriptionpage, "card5");
@@ -558,12 +558,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         Sidemenu.setBackground(new java.awt.Color(49, 34, 81));
         Sidemenu.setPreferredSize(new java.awt.Dimension(200, 950));
 
-        profilebutton.setBackground(new java.awt.Color(87, 69, 122));
-        profilebutton.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        profilebutton.setForeground(new java.awt.Color(255, 255, 255));
         profilebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
         profilebutton.setText("Profile");
+        profilebutton.setBackground(new java.awt.Color(87, 69, 122));
         profilebutton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        profilebutton.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        profilebutton.setForeground(new java.awt.Color(255, 255, 255));
         profilebutton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         profilebutton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         profilebutton.setIconTextGap(34);
@@ -589,12 +589,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(87, 69, 122));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_megaphone_30px.png"))); // NOI18N
         jButton3.setText("Awareness Facts");
+        jButton3.setBackground(new java.awt.Color(87, 69, 122));
         jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButton3.setIconTextGap(30);
@@ -612,12 +612,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(87, 69, 122));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
         jButton1.setText("Prescription");
+        jButton1.setBackground(new java.awt.Color(87, 69, 122));
         jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton1.setIconTextGap(27);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -885,13 +885,13 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         String ph_no = phno.getText();
         String gender = (String) genderCB.getSelectedItem();
         String a_address = addressTA.getText();
-        String ptID = p_emailid.getText();
+        pat = p_emailid.getText();
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into crAppointment values('" + a_name + "','" + age + "','" + ph_no + "','" + gender + "','" + a_address + "','" + a_symptoms + "','" + ptID + "',null,null,'" + apptID + "' );";
+            String createQuery = "Insert into crAppointment values('" + a_name + "','" + age + "','" + ph_no + "','" + gender + "','" + a_address + "','" + a_symptoms + "','" + pat + "',null,null,'" + apptID + "',null,null );";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Appointemt request Created!");
             pt_name.setText("");
@@ -920,6 +920,31 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         Mainpanel.add(prescriptionpage);
         Mainpanel.repaint();
         Mainpanel.revalidate();
+        pat = p_emailid.getText();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
+            String query = "select * from prescription where email_id IN (select email_id from patient_account where email_id='" + pat + "')";
+            ResultSet rs = stmt.executeQuery(query);
+            DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+            int rows = model.getRowCount();
+            for (int i = 0; i < rows; i++) {
+                model.removeRow(0);
+            }
+            while (rs.next()) {
+                String mdName = rs.getString("medName");
+                String mddose = rs.getString("dose");
+                String mdFreq = rs.getString("frequency");
+                String mdDiag = rs.getString("diagnose");
+                String mdDays = rs.getString("days");
+                String mdDate = rs.getString("date");
+                String mdEmail = rs.getString("email_id");
+                String mdPres = rs.getString("pres_ID");
+                model.addRow(new Object[]{mdName, mddose, mdFreq, mdDiag, mdDays, mdDate, mdEmail, mdPres,});
+            }
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

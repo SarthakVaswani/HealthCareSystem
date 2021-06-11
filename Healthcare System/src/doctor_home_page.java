@@ -87,13 +87,14 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         dateJ = new javax.swing.JTextField();
         doseJ = new javax.swing.JTextField();
-        diagJ = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        addPres = new javax.swing.JButton();
         daysCB = new javax.swing.JComboBox<>();
         freqCB = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        DiagText = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1200, 950));
@@ -264,7 +265,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 621, Short.MAX_VALUE))
+                .addGap(0, 472, Short.MAX_VALUE))
         );
 
         MainPanel.add(AppointmentStatus, "card2");
@@ -361,7 +362,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                     .addGroup(ViewPatientRecordLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(697, 700, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(ViewPatientRecordLayout.createSequentialGroup()
                         .addGroup(ViewPatientRecordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(ViewPatientRecordLayout.createSequentialGroup()
@@ -389,7 +390,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                                     .addComponent(addressJ)
                                     .addComponent(dobJ)
                                     .addComponent(genderJ))
-                                .addGap(0, 287, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(ViewPatientRecordLayout.createSequentialGroup()
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -441,7 +442,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                 .addGroup(ViewPatientRecordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(genderJ, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                .addContainerGap(220, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         MainPanel.add(ViewPatientRecord, "card3");
@@ -514,19 +515,16 @@ public class doctor_home_page extends javax.swing.JFrame {
         doseJ.setBackground(new java.awt.Color(255, 255, 255));
         doseJ.setPreferredSize(new java.awt.Dimension(200, 32));
 
-        diagJ.setBackground(new java.awt.Color(255, 255, 255));
-        diagJ.setPreferredSize(new java.awt.Dimension(200, 32));
-
-        jButton3.setBackground(new java.awt.Color(31, 31, 152));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Add Prescription");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        addPres.setBackground(new java.awt.Color(31, 31, 152));
+        addPres.setForeground(new java.awt.Color(255, 255, 255));
+        addPres.setText("Add Prescription");
+        addPres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                addPresActionPerformed(evt);
             }
         });
 
-        daysCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 days", "3 days", " " }));
+        daysCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 days", "3 days" }));
 
         freqCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 times", "3 times" }));
 
@@ -547,6 +545,10 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Parient ID");
 
+        DiagText.setColumns(20);
+        DiagText.setRows(5);
+        jScrollPane3.setViewportView(DiagText);
+
         javax.swing.GroupLayout AddPrescriptionLayout = new javax.swing.GroupLayout(AddPrescription);
         AddPrescription.setLayout(AddPrescriptionLayout);
         AddPrescriptionLayout.setHorizontalGroup(
@@ -561,19 +563,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(daysCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateJ, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
-                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
-                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(94, 94, 94)
-                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(freqCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(doseJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(94, 94, 94)
-                        .addComponent(diagJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(dateJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(AddPrescriptionLayout.createSequentialGroup()
                         .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -581,14 +571,25 @@ public class doctor_home_page extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(mName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(patienID))))
+                            .addComponent(patienID)))
+                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
+                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(94, 94, 94)
+                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(freqCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(doseJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AddPrescriptionLayout.createSequentialGroup()
                         .addGap(139, 139, 139)
-                        .addComponent(jButton3)
+                        .addComponent(addPres)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddPrescriptionLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -626,14 +627,14 @@ public class doctor_home_page extends javax.swing.JFrame {
                     .addComponent(freqCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AddPrescriptionLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(diagJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(278, Short.MAX_VALUE))
+                        .addComponent(addPres, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(246, Short.MAX_VALUE))
         );
 
         MainPanel.add(AddPrescription, "card4");
@@ -714,10 +715,10 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
 
             while (rs.next()) {
-                
+
                 String emailID1 = rs.getString("email_id");
                 String ptName1 = rs.getString("patient_name");
-                model.addRow(new Object[]{emailID1,ptName1});
+                model.addRow(new Object[]{emailID1, ptName1});
             }
 
         } catch (Exception e) {
@@ -731,12 +732,13 @@ public class doctor_home_page extends javax.swing.JFrame {
     private void mNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mNameActionPerformed
+
     public String presciptionID = UUID.randomUUID().toString().substring(0, 5);
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void addPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPresActionPerformed
         String patID = patienID.getText();
         String medicName = mName.getText();
         String frequencyName = (String) freqCB.getSelectedItem();
-        String diasName = diagJ.getText();
+        String diasName = DiagText.getText();
         String date2 = dateJ.getText();
         String days = (String) daysCB.getSelectedItem();
         String dose = doseJ.getText();
@@ -744,20 +746,29 @@ public class doctor_home_page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into prescription values('" + medicName + "','" + dose + "','" + frequencyName + "','" + diasName + "','" + days + "','" + date2    + "','" + patID + "','" + presciptionID + "');";
+            String createQuery = "Insert into prescription values('" + medicName + "','" + dose + "','" + frequencyName + "','" + diasName + "','" + days + "','" + date2 + "','" + patID + "','" + presciptionID + "' );";
             stm.execute(createQuery);
+//            System.out.println("" + patID);
+//            System.out.println("" + medicName);
+//            System.out.println("" + frequencyName);
+//            System.out.println("" + diasName);
+//            System.out.println("" + date2);
+//            System.out.println("" + days);
+//            System.out.println("" + dose);
+//            System.out.println("" + presciptionID);
+
             JOptionPane.showMessageDialog(this, "Prescription added");
             patienID.setText("");
             mName.setText("");
-            diagJ.setText("");
+            DiagText.setText("");
             dateJ.setText("");
             freqCB.setSelectedIndex(0);
             doseJ.setText("");
             daysCB.setSelectedIndex(0);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Please enter valid details");
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_addPresActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -848,23 +859,23 @@ public class doctor_home_page extends javax.swing.JFrame {
     private javax.swing.JPanel AppointmentStatus;
     private javax.swing.JButton AppointmentStatusJ;
     public static javax.swing.JLabel DOCID;
+    private javax.swing.JTextArea DiagText;
     private javax.swing.JPanel MainPanel;
     private javax.swing.JTextField Name;
     private javax.swing.JPanel SideBar;
     private javax.swing.JPanel ViewPatientRecord;
     private javax.swing.JButton aadPrescrription;
+    private javax.swing.JButton addPres;
     private javax.swing.JTextField addressJ;
     private javax.swing.JTextField bg;
     private javax.swing.JTextField dateJ;
     private javax.swing.JComboBox<String> daysCB;
-    private javax.swing.JTextField diagJ;
     private javax.swing.JTextField dobJ;
     private javax.swing.JTextField doseJ;
     private javax.swing.JTextField emailidJ;
     private javax.swing.JComboBox<String> freqCB;
     private javax.swing.JTextField genderJ;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
@@ -887,6 +898,7 @@ public class doctor_home_page extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
