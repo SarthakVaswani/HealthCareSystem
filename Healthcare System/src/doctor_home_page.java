@@ -85,7 +85,6 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        dateJ = new javax.swing.JTextField();
         doseJ = new javax.swing.JTextField();
         addPres = new javax.swing.JButton();
         daysCB = new javax.swing.JComboBox<>();
@@ -95,6 +94,7 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         DiagText = new javax.swing.JTextArea();
+        datePicker1 = new com.github.lgooddatepicker.components.DatePicker();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1200, 950));
@@ -504,14 +504,6 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel17.setText("Diagnosed with");
         jLabel17.setPreferredSize(new java.awt.Dimension(49, 32));
 
-        dateJ.setBackground(new java.awt.Color(255, 255, 255));
-        dateJ.setPreferredSize(new java.awt.Dimension(200, 32));
-        dateJ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dateJActionPerformed(evt);
-            }
-        });
-
         doseJ.setBackground(new java.awt.Color(255, 255, 255));
         doseJ.setPreferredSize(new java.awt.Dimension(200, 32));
 
@@ -563,7 +555,8 @@ public class doctor_home_page extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(daysCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(AddPrescriptionLayout.createSequentialGroup()
                         .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -611,7 +604,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -739,7 +732,7 @@ public class doctor_home_page extends javax.swing.JFrame {
         String medicName = mName.getText();
         String frequencyName = (String) freqCB.getSelectedItem();
         String diasName = DiagText.getText();
-        String date2 = dateJ.getText();
+       String date2 = datePicker1.getText();
         String days = (String) daysCB.getSelectedItem();
         String dose = doseJ.getText();
         try {
@@ -761,7 +754,7 @@ public class doctor_home_page extends javax.swing.JFrame {
             patienID.setText("");
             mName.setText("");
             DiagText.setText("");
-            dateJ.setText("");
+            datePicker1.setText("");
             freqCB.setSelectedIndex(0);
             doseJ.setText("");
             daysCB.setSelectedIndex(0);
@@ -815,10 +808,6 @@ public class doctor_home_page extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dobJActionPerformed
 
-    private void dateJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateJActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dateJActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -868,7 +857,7 @@ public class doctor_home_page extends javax.swing.JFrame {
     private javax.swing.JButton addPres;
     private javax.swing.JTextField addressJ;
     private javax.swing.JTextField bg;
-    private javax.swing.JTextField dateJ;
+    private com.github.lgooddatepicker.components.DatePicker datePicker1;
     private javax.swing.JComboBox<String> daysCB;
     private javax.swing.JTextField dobJ;
     private javax.swing.JTextField doseJ;
