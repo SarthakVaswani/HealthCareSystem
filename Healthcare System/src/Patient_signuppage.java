@@ -39,7 +39,6 @@ public class Patient_signuppage extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel11 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        p_gender = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -50,6 +49,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         p_date = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         p_bloodgroup = new javax.swing.JTextField();
         p_name = new javax.swing.JTextField();
         p_phonenumber = new javax.swing.JTextField();
@@ -80,10 +80,6 @@ public class Patient_signuppage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        p_gender.setBackground(new java.awt.Color(255, 255, 255));
-        p_gender.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(p_gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 90, 30));
 
         jLabel1.setBackground(new java.awt.Color(42, 127, 186));
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 38)); // NOI18N
@@ -144,6 +140,9 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Blood Group");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, 40));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
 
         p_bloodgroup.setBackground(new java.awt.Color(255, 255, 255));
         p_bloodgroup.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -224,7 +223,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
         String patientname = p_name.getText();
         String phonenumber = p_phonenumber.getText();
         String EmailId = p_emailid.getText();
-        String Gender = p_gender.getText();
+        String Gender = (String) jComboBox1.getSelectedItem();
         String bloodgroup = p_bloodgroup.getText();
         String dateofbirth = p_date.getText();
         String address = p_address.getText();
@@ -242,7 +241,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
             p_bloodgroup.setText("");
             p_date.setText("");
             p_emailid.setText("");
-            p_gender.setText("");
+           jComboBox1.setSelectedIndex(0);
             p_name.setText("");
             p_phonenumber.setText("");
         } catch (Exception e) {
@@ -291,6 +290,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -311,7 +311,6 @@ public class Patient_signuppage extends javax.swing.JFrame {
     private javax.swing.JTextField p_bloodgroup;
     private javax.swing.JTextField p_date;
     private javax.swing.JTextField p_emailid;
-    private javax.swing.JTextField p_gender;
     private javax.swing.JTextField p_name;
     private javax.swing.JTextField p_phonenumber;
     // End of variables declaration//GEN-END:variables

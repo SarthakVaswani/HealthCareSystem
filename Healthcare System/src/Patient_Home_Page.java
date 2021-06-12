@@ -66,7 +66,6 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         p_name = new javax.swing.JTextField();
         p_phonenumber = new javax.swing.JTextField();
         p_date = new javax.swing.JTextField();
-        p_gender = new javax.swing.JTextField();
         p_bloodgroup = new javax.swing.JTextField();
         p_emailid = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
@@ -75,6 +74,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         p_address = new javax.swing.JTextArea();
         jLabel13 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         AwarnessFacts = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -172,8 +172,6 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 
         p_date.setBackground(new java.awt.Color(255, 255, 255));
 
-        p_gender.setBackground(new java.awt.Color(255, 255, 255));
-
         p_bloodgroup.setBackground(new java.awt.Color(255, 255, 255));
         p_bloodgroup.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -208,6 +206,8 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Date OF Birth");
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+
         javax.swing.GroupLayout PatientProfileLayout = new javax.swing.GroupLayout(PatientProfile);
         PatientProfile.setLayout(PatientProfileLayout);
         PatientProfileLayout.setHorizontalGroup(
@@ -217,8 +217,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PatientProfileLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56))
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PatientProfileLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,12 +254,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                                 .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(p_age, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(p_bloodgroup, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(p_gender, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(PatientProfileLayout.createSequentialGroup()
                                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(p_date, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(63, 63, 63))
+                .addGap(119, 119, 119))
         );
         PatientProfileLayout.setVerticalGroup(
             PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,7 +277,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(p_phonenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(p_gender, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
                 .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -558,12 +557,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         Sidemenu.setBackground(new java.awt.Color(49, 34, 81));
         Sidemenu.setPreferredSize(new java.awt.Dimension(200, 950));
 
-        profilebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
-        profilebutton.setText("Profile");
         profilebutton.setBackground(new java.awt.Color(87, 69, 122));
-        profilebutton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         profilebutton.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         profilebutton.setForeground(new java.awt.Color(255, 255, 255));
+        profilebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
+        profilebutton.setText("Profile");
+        profilebutton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         profilebutton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         profilebutton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         profilebutton.setIconTextGap(34);
@@ -589,12 +588,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_megaphone_30px.png"))); // NOI18N
-        jButton3.setText("Awareness Facts");
         jButton3.setBackground(new java.awt.Color(87, 69, 122));
-        jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_megaphone_30px.png"))); // NOI18N
+        jButton3.setText("Awareness Facts");
+        jButton3.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButton3.setIconTextGap(30);
@@ -612,12 +611,12 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
-        jButton1.setText("Prescription");
         jButton1.setBackground(new java.awt.Color(87, 69, 122));
-        jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
+        jButton1.setText("Prescription");
+        jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton1.setIconTextGap(27);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -663,7 +662,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 335, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 425, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39))
         );
@@ -734,13 +733,13 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
-            String searchD_ID = "select patient_name,dateOfbirth,gender,email_id,blood_group,phonenumber,address from patient_account where email_id='" + pat + "';";
+            String searchD_ID = "select patient_name,dateOfbirth,age,gender,email_id,blood_group,phonenumber,address from patient_account where email_id='" + pat + "';";
             ResultSet rs = (ResultSet) stmt.executeQuery(searchD_ID);
             int found = 0;
             while (rs.next()) {
                 String pat_name = rs.getString("patient_name");
-//    String age=rs.getString("Age");
                 String dob = rs.getString("dateOfbirth");
+                int age = (Integer) rs.getInt("age");
 //   String gender=rs.getString("Gender");
                 String phone = rs.getString("phonenumber");
                 String emailID = rs.getString("email_id");
@@ -749,15 +748,19 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 String address = rs.getString("address");
                 p_name.setText(pat_name);
 //jSpinner1.setValue(age);       
+
+                p_age.setValue(Integer.valueOf(age));
+                
                 p_date.setText(dob);
 //jTextField4.setText(gender);  
                 p_address.setText(address);
                 p_bloodgroup.setText(bloodgroup);
                 p_emailid.setText(emailID);
-                p_gender.setText(gender);
+               jComboBox1.setSelectedItem(gender);
                 p_phonenumber.setText(phone);
                 found++;
 //
+
 //                JOptionPane.showMessageDialog(this, "records searched");
             }
         } catch (Exception e) {
@@ -795,7 +798,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 String date = rs.getString("date");
                 String time = rs.getString("time");
                 String doc = rs.getString("docAssigned");
-                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId,doc});
+                model.addRow(new Object[]{ptName, age, phoneNO, gender, address, symptoms, emailID, date, time, aptId, doc});
             }
 
         } catch (Exception e) {
@@ -848,33 +851,46 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-//        String patientname = p_name.getText();
-//        String phonenumber = p_phonenumber.getText();
-//        String EmailId = p_emailid.getText();
-//        String Gender = p_gender.getText();
-//        String bloodgroup = p_bloodgroup.getText();
-//        String dateofbirth = p_date.getText();
-//        String address = p_address.getText();
-//        String search1 = search.getText();
-//        int age = (Integer) p_age.getValue();
-//
+        pat = p_emailid.getText();
+        String patientname = p_name.getText();
+        String phonenumber = p_phonenumber.getText();
+        String Gender = (String)jComboBox1.getSelectedItem();
+        String bloodgroup = p_bloodgroup.getText();
+        String dateofbirth = p_date.getText();
+        String address = p_address.getText();
+        int age = (Integer) p_age.getValue();
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            Statement stm = con.createStatement();
+            String updatequery = "update patient_account set patient_name='" + patientname + "',dateOfbirth='" + dateofbirth + "',age='" + age + "',gender='" + Gender + "',blood_group='" + bloodgroup + "',phonenumber='" + phonenumber + "',address='" + address + "' where email_id ='" + pat + "';";
+            int i = stm.executeUpdate(updatequery);
+            JOptionPane.showMessageDialog(this, "Patient Profile Updated!");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Please enter valid details");
+        }
+
+
+
+// String awarenessName = SearchAW.getText();
+//        String name = NameUpdateJ.getText();
+//        String category = (String) jComboBox7.getSelectedItem();
+//        String countryOrigin = COOUpdateJ.getText();
+//        String yearOrigin = YOOriginJ.getText();
+//        String generalSymptoms = (String) jComboBox3.getSelectedItem();
+//        String description = DescriptionUpdateJ.getText();
 //        try {
 //            Class.forName("com.mysql.jdbc.Driver");
 //            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
-//            Statement stm = con.createStatement();
-//            String updatequery = "update patient_account set patient_name='" + patientname + "',dateOfbirth='" + dateofbirth + "',age='" + age + "',gender='" + Gender + "',blood_group='" + bloodgroup + "',phonenumber='" + phonenumber + "',address='" + address + "' where email_id ='" + search1 + "';";
-//            int i = stm.executeUpdate(updatequery);
-//            JOptionPane.showMessageDialog(this, "Patient Profile Created!");
-//            p_address.setText("");
-//            p_age.setValue(Integer.parseInt("0"));
-//            p_bloodgroup.setText("");
-//            p_date.setText("");
-//            p_emailid.setText("");
-//            p_gender.setText("");
-//            p_name.setText("");
-//            p_phonenumber.setText("");
+//            Statement stmt = (Statement) con.createStatement();
+//            String query = "update awarenessfacts set name='" + name + "',category='" + category + "',countryOfOrigin='" + countryOrigin + "',yearOfOrigin='" + yearOrigin + "',generalSymptoms='" + generalSymptoms + "',description='" + description + "' where name ='" + awarenessName + "';";
+//            int i = stmt.executeUpdate(query);
+//
+//            JOptionPane.showMessageDialog(this, "records Modified");
+//
 //        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Please enter valid details");
+//            JOptionPane.showMessageDialog(this, e.getMessage());
 //        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -998,6 +1014,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1034,7 +1051,6 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JTextField p_bloodgroup;
     private javax.swing.JTextField p_date;
     public static javax.swing.JTextField p_emailid;
-    public javax.swing.JTextField p_gender;
     private javax.swing.JTextField p_name;
     private javax.swing.JTextField p_phonenumber;
     private javax.swing.JTextField phno;
