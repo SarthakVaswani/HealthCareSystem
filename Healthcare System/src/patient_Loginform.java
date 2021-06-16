@@ -45,11 +45,12 @@ public class patient_Loginform extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         Patient_ID = new javax.swing.JTextField();
-        Patient_password = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -80,6 +81,15 @@ public class patient_Loginform extends javax.swing.JFrame {
         jLabel3.setOpaque(true);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 100));
 
+        jCheckBox1.setSelected(true);
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 30, 30));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 260, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/patient_photo.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 440, 500));
 
@@ -103,10 +113,6 @@ public class patient_Loginform extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Patient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 260, 30));
-
-        Patient_password.setBackground(new java.awt.Color(255, 255, 255));
-        Patient_password.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel1.add(Patient_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 260, 30));
 
         jButton1.setBackground(new java.awt.Color(42, 127, 186));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -172,7 +178,7 @@ public class patient_Loginform extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             patientID = Patient_ID.getText();
-            String patientPassword = Patient_password.getText();
+            String patientPassword = jPasswordField1.getText();
             Statement stm = con.createStatement();
             String patientLogin = "Select * from patient_account where email_id='" + patientID + "' and dateOfbirth='" + patientPassword + "'";
             ResultSet rs = stm.executeQuery(patientLogin);
@@ -192,7 +198,7 @@ public class patient_Loginform extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Patient ID or passoword is Invalid");
                 Patient_ID.setText("");
-                Patient_password.setText("");
+                jPasswordField1.setText("");
             }
             con.close();
 
@@ -206,6 +212,17 @@ public class patient_Loginform extends javax.swing.JFrame {
           
           
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        if(jCheckBox1.isSelected())
+        {
+            jPasswordField1.setEchoChar((char)0);
+        }
+        else
+        {
+            jPasswordField1.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -245,10 +262,10 @@ public class patient_Loginform extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Patient_ID;
-    private javax.swing.JTextField Patient_password;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -257,5 +274,6 @@ public class patient_Loginform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
 }

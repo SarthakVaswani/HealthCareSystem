@@ -43,6 +43,7 @@ public class doctor_Login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         DocPassword = new javax.swing.JPasswordField();
@@ -85,6 +86,13 @@ public class doctor_Login extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(34, 34, 34));
         jLabel3.setText("Doctor ID");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 140, 30));
+
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 30, 30));
 
         jButton1.setBackground(new java.awt.Color(42, 127, 186));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -196,6 +204,17 @@ public class doctor_Login extends javax.swing.JFrame {
        DocPassword.setText("");  // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+ if(jCheckBox1.isSelected())
+        {
+            DocPassword.setEchoChar((char)0);
+        }
+        else
+        {
+            DocPassword.setEchoChar('*');
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -237,6 +256,7 @@ public class doctor_Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
