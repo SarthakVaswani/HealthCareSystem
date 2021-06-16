@@ -36,6 +36,7 @@ public class Home_screen extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
         HospitalLoginClick = new javax.swing.JButton();
         DoctorLoginClick = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -50,11 +51,20 @@ public class Home_screen extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(134, 168, 231));
         setMinimumSize(new java.awt.Dimension(490, 440));
+        setUndecorated(true);
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("EditorPane.selectionBackground"));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setMaximumSize(new java.awt.Dimension(490, 440));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_close_window_48px_1.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(698, 0, 40, 40));
 
         HospitalLoginClick.setBackground(new java.awt.Color(42, 127, 186));
         HospitalLoginClick.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -139,7 +149,8 @@ public class Home_screen extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(738, 450));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -175,6 +186,10 @@ doclogin.show();
         patient_Loginform hf=new patient_Loginform();
         hf.show();        
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,6 +233,7 @@ doclogin.show();
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

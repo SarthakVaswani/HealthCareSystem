@@ -122,8 +122,10 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
         jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         Mainpanel.setLayout(new java.awt.CardLayout());
 
@@ -701,6 +703,13 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
             }
         });
 
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_close_window_48px_1.png"))); // NOI18N
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout SidemenuLayout = new javax.swing.GroupLayout(Sidemenu);
         Sidemenu.setLayout(SidemenuLayout);
         SidemenuLayout.setHorizontalGroup(
@@ -713,10 +722,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                             .addGroup(SidemenuLayout.createSequentialGroup()
                                 .addGap(43, 43, 43)
                                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(SidemenuLayout.createSequentialGroup()
-                                .addGap(73, 73, 73)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SidemenuLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -724,6 +730,12 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                             .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(profileButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
+            .addGroup(SidemenuLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SidemenuLayout.setVerticalGroup(
             SidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -738,9 +750,11 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 424, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
+                .addGroup(SidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton9))
+                .addGap(28, 28, 28))
         );
 
         jSplitPane2.setLeftComponent(Sidemenu);
@@ -756,7 +770,8 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
             .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(1200, 950));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 //public void searchProfile()
@@ -1068,6 +1083,10 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
     change();
     }//GEN-LAST:event_PatientProfileMouseEntered
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1121,6 +1140,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
