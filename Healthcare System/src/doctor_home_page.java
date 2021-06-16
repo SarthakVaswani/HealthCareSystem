@@ -25,6 +25,10 @@ public class doctor_home_page extends javax.swing.JFrame {
      */
     public doctor_home_page() {
         initComponents();
+        MainPanel.removeAll();
+        MainPanel.add(ViewPatientRecord);
+        MainPanel.repaint();
+        MainPanel.revalidate();
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
@@ -114,12 +118,12 @@ public class doctor_home_page extends javax.swing.JFrame {
         SideBar.setBackground(new java.awt.Color(32, 23, 216));
         SideBar.setPreferredSize(new java.awt.Dimension(200, 949));
 
-        AppointmentStatusJ.setBackground(new java.awt.Color(31, 31, 152));
-        AppointmentStatusJ.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        AppointmentStatusJ.setForeground(new java.awt.Color(255, 255, 255));
         AppointmentStatusJ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_timesheet_32px.png"))); // NOI18N
         AppointmentStatusJ.setText("Appointment ");
+        AppointmentStatusJ.setBackground(new java.awt.Color(31, 31, 152));
         AppointmentStatusJ.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        AppointmentStatusJ.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        AppointmentStatusJ.setForeground(new java.awt.Color(255, 255, 255));
         AppointmentStatusJ.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         AppointmentStatusJ.setIconTextGap(23);
         AppointmentStatusJ.addActionListener(new java.awt.event.ActionListener() {
@@ -128,12 +132,12 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        viewPatientRecord.setBackground(new java.awt.Color(31, 31, 152));
-        viewPatientRecord.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        viewPatientRecord.setForeground(new java.awt.Color(255, 255, 255));
         viewPatientRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
         viewPatientRecord.setText("Patient records");
+        viewPatientRecord.setBackground(new java.awt.Color(31, 31, 152));
         viewPatientRecord.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        viewPatientRecord.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        viewPatientRecord.setForeground(new java.awt.Color(255, 255, 255));
         viewPatientRecord.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         viewPatientRecord.setIconTextGap(24);
         viewPatientRecord.setPreferredSize(new java.awt.Dimension(168, 40));
@@ -143,12 +147,12 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        aadPrescrription.setBackground(new java.awt.Color(31, 31, 152));
-        aadPrescrription.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        aadPrescrription.setForeground(new java.awt.Color(255, 255, 255));
         aadPrescrription.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
         aadPrescrription.setText("Prescription ");
+        aadPrescrription.setBackground(new java.awt.Color(31, 31, 152));
         aadPrescrription.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aadPrescrription.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        aadPrescrription.setForeground(new java.awt.Color(255, 255, 255));
         aadPrescrription.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         aadPrescrription.setIconTextGap(23);
         aadPrescrription.setInheritsPopupMenu(true);
@@ -159,20 +163,20 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Home");
         jButton1.setBorder(null);
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_export_48px.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -183,9 +187,11 @@ public class doctor_home_page extends javax.swing.JFrame {
         SideBar.setLayout(SideBarLayout);
         SideBarLayout.setHorizontalGroup(
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(viewPatientRecord, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addComponent(aadPrescrription, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-            .addComponent(AppointmentStatusJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(aadPrescrription, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
             .addGroup(SideBarLayout.createSequentialGroup()
                 .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SideBarLayout.createSequentialGroup()
@@ -194,11 +200,13 @@ public class doctor_home_page extends javax.swing.JFrame {
                     .addGroup(SideBarLayout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addComponent(DOCID)))
-                .addContainerGap(43, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SideBarLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(SideBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AppointmentStatusJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(viewPatientRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         SideBarLayout.setVerticalGroup(
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,11 +215,11 @@ public class doctor_home_page extends javax.swing.JFrame {
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(DOCID)
-                .addGap(26, 26, 26)
-                .addComponent(AppointmentStatusJ, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(9, 9, 9)
                 .addComponent(viewPatientRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGap(38, 38, 38)
+                .addComponent(AppointmentStatusJ, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
                 .addComponent(aadPrescrription, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 508, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,11 +236,11 @@ public class doctor_home_page extends javax.swing.JFrame {
 
         Doctordasboard.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("DashBoard");
         jLabel10.setBackground(new java.awt.Color(31, 96, 211));
         jLabel10.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("DashBoard");
         jLabel10.setOpaque(true);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
@@ -248,27 +256,27 @@ public class doctor_home_page extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jTable3);
 
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Total Patient");
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(51, 51, 51));
         jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jTextField1.setForeground(new java.awt.Color(51, 51, 51));
 
-        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Patient Left");
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setForeground(new java.awt.Color(51, 51, 51));
         jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jTextField2.setForeground(new java.awt.Color(51, 51, 51));
 
-        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Bed Left");
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(51, 51, 51));
         jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jTextField4.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout DoctordasboardLayout = new javax.swing.GroupLayout(Doctordasboard);
         Doctordasboard.setLayout(DoctordasboardLayout);
@@ -313,12 +321,17 @@ public class doctor_home_page extends javax.swing.JFrame {
 
         AppointmentStatus.setBackground(new java.awt.Color(255, 255, 255));
         AppointmentStatus.setPreferredSize(new java.awt.Dimension(1200, 949));
+        AppointmentStatus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AppointmentStatusMouseEntered(evt);
+            }
+        });
 
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Appointment");
         jLabel12.setBackground(new java.awt.Color(31, 96, 211));
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Appointment");
         jLabel12.setOpaque(true);
 
         jTable1.setBackground(new java.awt.Color(31, 102, 224));
@@ -374,28 +387,28 @@ public class doctor_home_page extends javax.swing.JFrame {
         ViewPatientRecord.setBackground(new java.awt.Color(255, 255, 255));
         ViewPatientRecord.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("View Patient Record");
         jLabel2.setBackground(new java.awt.Color(31, 96, 211));
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("View Patient Record");
         jLabel2.setOpaque(true);
 
+        jLabel5.setText("Name");
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Name");
 
+        jLabel6.setText("Age");
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Age");
 
+        jLabel7.setText("Blood Group");
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Blood Group");
 
+        jLabel9.setText("Patient ID");
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Patient ID");
 
         Name.setBackground(new java.awt.Color(255, 255, 255));
         Name.setForeground(new java.awt.Color(51, 51, 51));
@@ -406,56 +419,56 @@ public class doctor_home_page extends javax.swing.JFrame {
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setForeground(new java.awt.Color(51, 51, 51));
 
+        jButton4.setText("Search");
         jButton4.setBackground(new java.awt.Color(31, 31, 152));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Search");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        ptID.setBackground(new java.awt.Color(255, 255, 255));
-        ptID.setForeground(new java.awt.Color(51, 51, 51));
         ptID.setText(" Enter Patient ID");
+        ptID.setBackground(new java.awt.Color(255, 255, 255));
         ptID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ptID.setForeground(new java.awt.Color(51, 51, 51));
 
+        phJ.setText(" ");
         phJ.setBackground(new java.awt.Color(255, 255, 255));
         phJ.setForeground(new java.awt.Color(51, 51, 51));
-        phJ.setText(" ");
 
+        addressJ.setText(" ");
         addressJ.setBackground(new java.awt.Color(255, 255, 255));
         addressJ.setForeground(new java.awt.Color(51, 51, 51));
-        addressJ.setText(" ");
 
+        dobJ.setText(" ");
         dobJ.setBackground(new java.awt.Color(255, 255, 255));
         dobJ.setForeground(new java.awt.Color(51, 51, 51));
-        dobJ.setText(" ");
         dobJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dobJActionPerformed(evt);
             }
         });
 
+        genderJ.setText(" ");
         genderJ.setBackground(new java.awt.Color(255, 255, 255));
         genderJ.setForeground(new java.awt.Color(51, 51, 51));
-        genderJ.setText(" ");
 
+        ph.setText("Phone no");
         ph.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         ph.setForeground(new java.awt.Color(0, 0, 0));
-        ph.setText("Phone no");
 
+        jLabel19.setText("Address");
         jLabel19.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel19.setText("Address");
 
+        jLabel20.setText("DOB");
         jLabel20.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("DOB");
 
+        jLabel21.setText("gender");
         jLabel21.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("gender");
 
         javax.swing.GroupLayout ViewPatientRecordLayout = new javax.swing.GroupLayout(ViewPatientRecord);
         ViewPatientRecord.setLayout(ViewPatientRecordLayout);
@@ -553,11 +566,11 @@ public class doctor_home_page extends javax.swing.JFrame {
         AddPrescription.setBackground(new java.awt.Color(255, 255, 255));
         AddPrescription.setPreferredSize(new java.awt.Dimension(1200, 949));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Prescription");
         jLabel1.setBackground(new java.awt.Color(31, 96, 211));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Prescription");
         jLabel1.setOpaque(true);
 
         patienID.setBackground(new java.awt.Color(255, 255, 255));
@@ -569,19 +582,19 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Medicine Name");
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Medicine Name");
         jLabel4.setPreferredSize(new java.awt.Dimension(87, 32));
 
+        jLabel13.setText("Start date");
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Start date");
         jLabel13.setPreferredSize(new java.awt.Dimension(56, 32));
 
+        jLabel14.setText("Days");
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Days");
         jLabel14.setPreferredSize(new java.awt.Dimension(49, 32));
 
         mName.setBackground(new java.awt.Color(255, 255, 255));
@@ -593,41 +606,41 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel15.setText("Dose");
         jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Dose");
         jLabel15.setPreferredSize(new java.awt.Dimension(49, 32));
 
+        jLabel16.setText("Frequency");
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Frequency");
         jLabel16.setPreferredSize(new java.awt.Dimension(49, 32));
 
+        jLabel17.setText("Diagnosed with");
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("Diagnosed with");
         jLabel17.setPreferredSize(new java.awt.Dimension(49, 32));
 
         doseJ.setBackground(new java.awt.Color(255, 255, 255));
         doseJ.setForeground(new java.awt.Color(51, 51, 51));
         doseJ.setPreferredSize(new java.awt.Dimension(200, 32));
 
+        addPres.setText("Add Prescription");
         addPres.setBackground(new java.awt.Color(31, 31, 152));
         addPres.setForeground(new java.awt.Color(255, 255, 255));
-        addPres.setText("Add Prescription");
         addPres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addPresActionPerformed(evt);
             }
         });
 
+        daysCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 days", "3 days" }));
         daysCB.setBackground(new java.awt.Color(255, 255, 255));
         daysCB.setForeground(new java.awt.Color(51, 51, 51));
-        daysCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 days", "3 days" }));
 
+        freqCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 times", "3 times" }));
         freqCB.setBackground(new java.awt.Color(255, 255, 255));
         freqCB.setForeground(new java.awt.Color(51, 51, 51));
-        freqCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 times", "3 times" }));
 
         jTable2.setBackground(new java.awt.Color(31, 102, 224));
         jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -646,9 +659,9 @@ public class doctor_home_page extends javax.swing.JFrame {
         jTable2.setGridColor(new java.awt.Color(51, 51, 51));
         jScrollPane1.setViewportView(jTable2);
 
+        jLabel8.setText("Parient ID");
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Parient ID");
 
         DiagText.setColumns(20);
         DiagText.setRows(5);
@@ -932,6 +945,10 @@ public class doctor_home_page extends javax.swing.JFrame {
         MainPanel.repaint();
         MainPanel.revalidate();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void AppointmentStatusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AppointmentStatusMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AppointmentStatusMouseEntered
 
     /**
      * @param args the command line arguments

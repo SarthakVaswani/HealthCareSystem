@@ -18,13 +18,19 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Asus
  */
-public class Patient_Home_Page extends javax.swing.JFrame {
+public class Patient_Home_Page extends javax.swing.JFrame  {
 
     /**
      * Creates new form Patient_Home_Page
      */
     public Patient_Home_Page() {
         initComponents();
+        
+        Mainpanel.removeAll();
+        Mainpanel.add(PatientProfile);
+        Mainpanel.repaint();
+        Mainpanel.revalidate();
+       
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
@@ -110,7 +116,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
         Sidemenu = new javax.swing.JPanel();
-        javax.swing.JButton profilebutton = new javax.swing.JButton();
+        profileButton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -151,6 +157,11 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         Mainpanel.add(patientdashboard, "card6");
 
         PatientProfile.setBackground(new java.awt.Color(255, 255, 255));
+        PatientProfile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                PatientProfileMouseEntered(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -308,7 +319,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PatientProfileLayout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
+                .addGap(55, 55, 55)
                 .addGroup(PatientProfileLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(p_age, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -382,7 +393,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 379, Short.MAX_VALUE))
+                .addGap(0, 425, Short.MAX_VALUE))
         );
 
         Mainpanel.add(AwarnessFacts, "card4");
@@ -598,7 +609,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 364, Short.MAX_VALUE))
+                .addGap(0, 410, Short.MAX_VALUE))
         );
 
         Mainpanel.add(prescriptionpage, "card5");
@@ -607,20 +618,25 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 
         Sidemenu.setBackground(new java.awt.Color(49, 34, 81));
         Sidemenu.setPreferredSize(new java.awt.Dimension(200, 950));
+        Sidemenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SidemenuMouseClicked(evt);
+            }
+        });
 
-        profilebutton.setBackground(new java.awt.Color(87, 69, 122));
-        profilebutton.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        profilebutton.setForeground(new java.awt.Color(255, 255, 255));
-        profilebutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
-        profilebutton.setText("Profile");
-        profilebutton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        profilebutton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        profilebutton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        profilebutton.setIconTextGap(34);
-        profilebutton.setPreferredSize(new java.awt.Dimension(195, 32));
-        profilebutton.addActionListener(new java.awt.event.ActionListener() {
+        profileButton.setBackground(new java.awt.Color(87, 69, 122));
+        profileButton.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        profileButton.setForeground(new java.awt.Color(255, 255, 255));
+        profileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
+        profileButton.setText("Profile");
+        profileButton.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        profileButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        profileButton.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        profileButton.setIconTextGap(34);
+        profileButton.setPreferredSize(new java.awt.Dimension(195, 32));
+        profileButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                profilebuttonActionPerformed(evt);
+                profileButtonActionPerformed(evt);
             }
         });
 
@@ -706,7 +722,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(SidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(profilebutton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(profileButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         SidemenuLayout.setVerticalGroup(
@@ -715,7 +731,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60)
-                .addComponent(profilebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(profileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
@@ -737,7 +753,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
+            .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 950, Short.MAX_VALUE)
         );
 
         pack();
@@ -781,14 +797,10 @@ public class Patient_Home_Page extends javax.swing.JFrame {
 //        } catch (Exception e) {
 //        }
 // }
-    private void profilebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profilebuttonActionPerformed
-        // TODO add your handling code here:
-
-        Mainpanel.removeAll();
-        Mainpanel.add(PatientProfile);
-        Mainpanel.repaint();
-        Mainpanel.revalidate();
-        pat = p_emailid.getText();
+    
+    public void change()
+    { pat = p_emailid.getText();
+        
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
@@ -825,7 +837,16 @@ public class Patient_Home_Page extends javax.swing.JFrame {
             }
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_profilebuttonActionPerformed
+    }
+    private void profileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileButtonActionPerformed
+        // TODO add your handling code here:
+
+        Mainpanel.removeAll();
+        Mainpanel.add(PatientProfile);
+        Mainpanel.repaint();
+        Mainpanel.revalidate();
+        change();
+    }//GEN-LAST:event_profileButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -1038,6 +1059,15 @@ public class Patient_Home_Page extends javax.swing.JFrame {
         Mainpanel.revalidate();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    private void SidemenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SidemenuMouseClicked
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_SidemenuMouseClicked
+
+    private void PatientProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PatientProfileMouseEntered
+    change();
+    }//GEN-LAST:event_PatientProfileMouseEntered
+
     /**
      * @param args the command line arguments
      */
@@ -1136,6 +1166,7 @@ public class Patient_Home_Page extends javax.swing.JFrame {
     private javax.swing.JPanel patientdashboard;
     private javax.swing.JTextField phno;
     private javax.swing.JPanel prescriptionpage;
+    public static javax.swing.JButton profileButton;
     private javax.swing.JSpinner pt_age;
     private javax.swing.JTextField pt_name;
     private javax.swing.JList<String> symptomsL;
