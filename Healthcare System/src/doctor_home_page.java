@@ -58,14 +58,12 @@ public class doctor_home_page extends javax.swing.JFrame {
         MainPanel = new javax.swing.JPanel();
         Doctordasboard = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jSpinner2 = new javax.swing.JSpinner();
+        jSpinner3 = new javax.swing.JSpinner();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         AppointmentStatus = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -104,8 +102,6 @@ public class doctor_home_page extends javax.swing.JFrame {
         addPres = new javax.swing.JButton();
         daysCB = new javax.swing.JComboBox<>();
         freqCB = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         DiagText = new javax.swing.JTextArea();
@@ -120,12 +116,12 @@ public class doctor_home_page extends javax.swing.JFrame {
         SideBar.setBackground(new java.awt.Color(32, 23, 216));
         SideBar.setPreferredSize(new java.awt.Dimension(200, 949));
 
-        AppointmentStatusJ.setBackground(new java.awt.Color(31, 31, 152));
-        AppointmentStatusJ.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        AppointmentStatusJ.setForeground(new java.awt.Color(255, 255, 255));
         AppointmentStatusJ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_timesheet_32px.png"))); // NOI18N
         AppointmentStatusJ.setText("Appointment ");
+        AppointmentStatusJ.setBackground(new java.awt.Color(31, 31, 152));
         AppointmentStatusJ.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        AppointmentStatusJ.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        AppointmentStatusJ.setForeground(new java.awt.Color(255, 255, 255));
         AppointmentStatusJ.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         AppointmentStatusJ.setIconTextGap(23);
         AppointmentStatusJ.addActionListener(new java.awt.event.ActionListener() {
@@ -134,12 +130,12 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        viewPatientRecord.setBackground(new java.awt.Color(31, 31, 152));
-        viewPatientRecord.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        viewPatientRecord.setForeground(new java.awt.Color(255, 255, 255));
         viewPatientRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_account_30px.png"))); // NOI18N
         viewPatientRecord.setText("Patient records");
+        viewPatientRecord.setBackground(new java.awt.Color(31, 31, 152));
         viewPatientRecord.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        viewPatientRecord.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        viewPatientRecord.setForeground(new java.awt.Color(255, 255, 255));
         viewPatientRecord.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         viewPatientRecord.setIconTextGap(24);
         viewPatientRecord.setPreferredSize(new java.awt.Dimension(168, 40));
@@ -149,12 +145,12 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        aadPrescrription.setBackground(new java.awt.Color(31, 31, 152));
-        aadPrescrription.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        aadPrescrription.setForeground(new java.awt.Color(255, 255, 255));
         aadPrescrription.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
         aadPrescrription.setText("Prescription ");
+        aadPrescrription.setBackground(new java.awt.Color(31, 31, 152));
         aadPrescrription.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+        aadPrescrription.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        aadPrescrription.setForeground(new java.awt.Color(255, 255, 255));
         aadPrescrription.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         aadPrescrription.setIconTextGap(23);
         aadPrescrription.setInheritsPopupMenu(true);
@@ -165,20 +161,20 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Home");
         jButton1.setBorder(null);
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_export_48px.png"))); // NOI18N
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -197,7 +193,7 @@ public class doctor_home_page extends javax.swing.JFrame {
         SideBar.setLayout(SideBarLayout);
         SideBarLayout.setHorizontalGroup(
             SideBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(aadPrescrription, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(aadPrescrription, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(viewPatientRecord, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(AppointmentStatusJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(SideBarLayout.createSequentialGroup()
@@ -244,86 +240,85 @@ public class doctor_home_page extends javax.swing.JFrame {
         MainPanel.setLayout(new java.awt.CardLayout());
 
         Doctordasboard.setBackground(new java.awt.Color(255, 255, 255));
+        Doctordasboard.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                DoctordasboardMouseEntered(evt);
+            }
+        });
 
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("DashBoard");
         jLabel10.setBackground(new java.awt.Color(31, 72, 230));
         jLabel10.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("DashBoard");
         jLabel10.setOpaque(true);
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        jLabel3.setText("Total Patient");
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel11.setText("Patient Left");
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "patient ID", "Name", "Status"
             }
-        ));
-        jScrollPane4.setViewportView(jTable3);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
 
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Total Patient");
-
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setForeground(new java.awt.Color(51, 51, 51));
-        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel11.setText("Patient Left");
-
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setForeground(new java.awt.Color(51, 51, 51));
-        jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Bed Left");
-
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(51, 51, 51));
-        jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable2.setBackground(new java.awt.Color(31, 102, 224));
+        jTable2.setForeground(new java.awt.Color(51, 51, 51));
+        jTable2.setGridColor(new java.awt.Color(51, 51, 51));
+        jScrollPane1.setViewportView(jTable2);
 
         javax.swing.GroupLayout DoctordasboardLayout = new javax.swing.GroupLayout(Doctordasboard);
         Doctordasboard.setLayout(DoctordasboardLayout);
         DoctordasboardLayout.setHorizontalGroup(
             DoctordasboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane4)
             .addGroup(DoctordasboardLayout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(151, 151, 151)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116))
+                .addGroup(DoctordasboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DoctordasboardLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69)
+                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(117, 117, 117)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
+                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(DoctordasboardLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(430, Short.MAX_VALUE))
         );
         DoctordasboardLayout.setVerticalGroup(
             DoctordasboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DoctordasboardLayout.createSequentialGroup()
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(35, 35, 35)
                 .addGroup(DoctordasboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(DoctordasboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField1)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(140, 140, 140)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(213, 213, 213))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(113, 113, 113)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         MainPanel.add(Doctordasboard, "card5");
@@ -336,11 +331,11 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Appointment");
         jLabel12.setBackground(new java.awt.Color(31, 96, 211));
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("Appointment");
         jLabel12.setOpaque(true);
 
         jTable1.setBackground(new java.awt.Color(31, 102, 224));
@@ -396,28 +391,28 @@ public class doctor_home_page extends javax.swing.JFrame {
         ViewPatientRecord.setBackground(new java.awt.Color(255, 255, 255));
         ViewPatientRecord.setForeground(new java.awt.Color(0, 0, 0));
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("View Patient Record");
         jLabel2.setBackground(new java.awt.Color(31, 96, 211));
         jLabel2.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("View Patient Record");
         jLabel2.setOpaque(true);
 
+        jLabel5.setText("Name");
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Name");
 
+        jLabel6.setText("Age");
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Age");
 
+        jLabel7.setText("Blood Group");
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Blood Group");
 
+        jLabel9.setText("Patient ID");
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Patient ID");
 
         Name.setBackground(new java.awt.Color(255, 255, 255));
         Name.setForeground(new java.awt.Color(51, 51, 51));
@@ -428,56 +423,56 @@ public class doctor_home_page extends javax.swing.JFrame {
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setForeground(new java.awt.Color(51, 51, 51));
 
+        jButton4.setText("Search");
         jButton4.setBackground(new java.awt.Color(31, 31, 152));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Search");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        ptID.setBackground(new java.awt.Color(255, 255, 255));
-        ptID.setForeground(new java.awt.Color(51, 51, 51));
         ptID.setText(" Enter Patient ID");
+        ptID.setBackground(new java.awt.Color(255, 255, 255));
         ptID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ptID.setForeground(new java.awt.Color(51, 51, 51));
 
+        phJ.setText(" ");
         phJ.setBackground(new java.awt.Color(255, 255, 255));
         phJ.setForeground(new java.awt.Color(51, 51, 51));
-        phJ.setText(" ");
 
+        addressJ.setText(" ");
         addressJ.setBackground(new java.awt.Color(255, 255, 255));
         addressJ.setForeground(new java.awt.Color(51, 51, 51));
-        addressJ.setText(" ");
 
+        dobJ.setText(" ");
         dobJ.setBackground(new java.awt.Color(255, 255, 255));
         dobJ.setForeground(new java.awt.Color(51, 51, 51));
-        dobJ.setText(" ");
         dobJ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dobJActionPerformed(evt);
             }
         });
 
+        genderJ.setText(" ");
         genderJ.setBackground(new java.awt.Color(255, 255, 255));
         genderJ.setForeground(new java.awt.Color(51, 51, 51));
-        genderJ.setText(" ");
 
+        ph.setText("Phone no");
         ph.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         ph.setForeground(new java.awt.Color(0, 0, 0));
-        ph.setText("Phone no");
 
+        jLabel19.setText("Address");
         jLabel19.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel19.setText("Address");
 
+        jLabel20.setText("DOB");
         jLabel20.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel20.setText("DOB");
 
+        jLabel21.setText("gender");
         jLabel21.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel21.setText("gender");
 
         javax.swing.GroupLayout ViewPatientRecordLayout = new javax.swing.GroupLayout(ViewPatientRecord);
         ViewPatientRecord.setLayout(ViewPatientRecordLayout);
@@ -575,11 +570,11 @@ public class doctor_home_page extends javax.swing.JFrame {
         AddPrescription.setBackground(new java.awt.Color(255, 255, 255));
         AddPrescription.setPreferredSize(new java.awt.Dimension(1200, 949));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Prescription");
         jLabel1.setBackground(new java.awt.Color(31, 96, 211));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Prescription");
         jLabel1.setOpaque(true);
 
         patienID.setBackground(new java.awt.Color(255, 255, 255));
@@ -591,19 +586,19 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Medicine Name");
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Medicine Name");
         jLabel4.setPreferredSize(new java.awt.Dimension(87, 32));
 
+        jLabel13.setText("Start date");
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Start date");
         jLabel13.setPreferredSize(new java.awt.Dimension(56, 32));
 
+        jLabel14.setText("Days");
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel14.setText("Days");
         jLabel14.setPreferredSize(new java.awt.Dimension(49, 32));
 
         mName.setBackground(new java.awt.Color(255, 255, 255));
@@ -615,62 +610,45 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel15.setText("Dose");
         jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Dose");
         jLabel15.setPreferredSize(new java.awt.Dimension(49, 32));
 
+        jLabel16.setText("Frequency");
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("Frequency");
         jLabel16.setPreferredSize(new java.awt.Dimension(49, 32));
 
+        jLabel17.setText("Diagnosed with");
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("Diagnosed with");
         jLabel17.setPreferredSize(new java.awt.Dimension(49, 32));
 
         doseJ.setBackground(new java.awt.Color(255, 255, 255));
         doseJ.setForeground(new java.awt.Color(51, 51, 51));
         doseJ.setPreferredSize(new java.awt.Dimension(200, 32));
 
+        addPres.setText("Add Prescription");
         addPres.setBackground(new java.awt.Color(31, 31, 152));
         addPres.setForeground(new java.awt.Color(255, 255, 255));
-        addPres.setText("Add Prescription");
         addPres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addPresActionPerformed(evt);
             }
         });
 
+        daysCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 days", "3 days" }));
         daysCB.setBackground(new java.awt.Color(255, 255, 255));
         daysCB.setForeground(new java.awt.Color(51, 51, 51));
-        daysCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 days", "3 days" }));
 
+        freqCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 times", "3 times" }));
         freqCB.setBackground(new java.awt.Color(255, 255, 255));
         freqCB.setForeground(new java.awt.Color(51, 51, 51));
-        freqCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 times", "3 times" }));
 
-        jTable2.setBackground(new java.awt.Color(31, 102, 224));
-        jTable2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable2.setForeground(new java.awt.Color(51, 51, 51));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "patient ID", "Name"
-            }
-        ));
-        jTable2.setGridColor(new java.awt.Color(51, 51, 51));
-        jScrollPane1.setViewportView(jTable2);
-
+        jLabel8.setText("Parient ID");
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Parient ID");
 
         DiagText.setColumns(20);
         DiagText.setRows(5);
@@ -712,15 +690,9 @@ public class doctor_home_page extends javax.swing.JFrame {
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(freqCB, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addComponent(addPres)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddPrescriptionLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17))))
+                .addGap(139, 139, 139)
+                .addComponent(addPres)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         AddPrescriptionLayout.setVerticalGroup(
@@ -728,21 +700,18 @@ public class doctor_home_page extends javax.swing.JFrame {
             .addGroup(AddPrescriptionLayout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(77, 77, 77)
-                .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AddPrescriptionLayout.createSequentialGroup()
-                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(patienID, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(mName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(patienID, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(mName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(datePicker1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addGroup(AddPrescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(daysCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -826,19 +795,15 @@ public class doctor_home_page extends javax.swing.JFrame {
         MainPanel.revalidate();
     }//GEN-LAST:event_viewPatientRecordActionPerformed
 
-    private void aadPrescrriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aadPrescrriptionActionPerformed
-        MainPanel.removeAll();
-        MainPanel.add(AddPrescription);
-        MainPanel.repaint();
-        MainPanel.revalidate();
-
+    public void presSatus() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             com.mysql.jdbc.Statement stmt = (com.mysql.jdbc.Statement) con.createStatement();
-            String query = "select email_id,patient_name from patient_account";
+            String query = "select patient_account.email_id as em,patient_account.patient_name as pn,prescription.Status as ps from patient_account  ,prescription where patient_account.email_id = prescription.email_id;  ";
             ResultSet rs = stmt.executeQuery(query);
             DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+            model.setRowCount(0);
             int rows = model.getRowCount();
             for (int i = 0; i < rows; i++) {
                 model.removeRow(0);
@@ -846,13 +811,22 @@ public class doctor_home_page extends javax.swing.JFrame {
 
             while (rs.next()) {
 
-                String emailID1 = rs.getString("email_id");
-                String ptName1 = rs.getString("patient_name");
-                model.addRow(new Object[]{emailID1, ptName1});
+                String emailID1 = rs.getString("em");
+                String ptName1 = rs.getString("pn");
+                String pstatus = rs.getString("ps");
+                model.addRow(new Object[]{emailID1, ptName1, pstatus});
             }
 
         } catch (Exception e) {
         }
+    }
+    private void aadPrescrriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aadPrescrriptionActionPerformed
+        MainPanel.removeAll();
+        MainPanel.add(AddPrescription);
+        MainPanel.repaint();
+        MainPanel.revalidate();
+
+
     }//GEN-LAST:event_aadPrescrriptionActionPerformed
 
     private void patienIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patienIDActionPerformed
@@ -869,14 +843,15 @@ public class doctor_home_page extends javax.swing.JFrame {
         String medicName = mName.getText();
         String frequencyName = (String) freqCB.getSelectedItem();
         String diasName = DiagText.getText();
-       String date2 = datePicker1.getText();
+        String date2 = datePicker1.getText();
         String days = (String) daysCB.getSelectedItem();
         String dose = doseJ.getText();
+        String st = "yes";
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into prescription values('" + medicName + "','" + dose + "','" + frequencyName + "','" + diasName + "','" + days + "','" + date2 + "','" + patID + "','" + presciptionID + "' );";
+            String createQuery = "Insert into prescription values('" + medicName + "','" + dose + "','" + frequencyName + "','" + diasName + "','" + days + "','" + date2 + "','" + patID + "','" + presciptionID + "','" + st + "' );";
             stm.execute(createQuery);
 //            System.out.println("" + patID);
 //            System.out.println("" + medicName);
@@ -949,18 +924,46 @@ public class doctor_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_dobJActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    
+        MainPanel.removeAll();
+        MainPanel.add(Doctordasboard);
+        MainPanel.repaint();
+        MainPanel.revalidate();        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void AppointmentStatusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AppointmentStatusMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_AppointmentStatusMouseEntered
+    public void hospitalDashboard() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+
+            Statement stm = con.createStatement();
+            String s1 = "select count(app_id) from crAppointment";
+            ResultSet rs = stm.executeQuery(s1);
+            int found = 0;
+            while (rs.next()) {
+                int pat_no = rs.getInt("count(app_id)");
+                jSpinner2.setValue(Integer.valueOf(pat_no));
+                found++;
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
+    }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-System.exit(0);
+        System.exit(0);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void DoctordasboardMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DoctordasboardMouseEntered
+        presSatus();
+        hospitalDashboard();// TODO add your handling code here:
+    }//GEN-LAST:event_DoctordasboardMouseEntered
 
     /**
      * @param args the command line arguments
@@ -1032,7 +1035,6 @@ System.exit(0);
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -1048,15 +1050,12 @@ System.exit(0);
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner3;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField mName;
     private javax.swing.JTextField patienID;
     private javax.swing.JLabel ph;
