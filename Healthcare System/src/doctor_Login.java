@@ -61,6 +61,7 @@ public class doctor_Login extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton3.setBackground(new java.awt.Color(42, 127, 186));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_back_arrow_50px.png"))); // NOI18N
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);

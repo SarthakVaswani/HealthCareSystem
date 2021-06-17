@@ -60,12 +60,6 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
 
         jSplitPane2 = new javax.swing.JSplitPane();
         Mainpanel = new javax.swing.JPanel();
-        patientdashboard = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
         PatientProfile = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -128,35 +122,6 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
         setUndecorated(true);
 
         Mainpanel.setLayout(new java.awt.CardLayout());
-
-        patientdashboard.setBackground(new java.awt.Color(255, 255, 255));
-        patientdashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel22.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel22.setText("Welcome");
-        patientdashboard.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 200, 60));
-
-        jLabel4.setBackground(new java.awt.Color(124, 85, 227));
-        jLabel4.setOpaque(true);
-        patientdashboard.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 0, 990, 119));
-
-        jLabel23.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel23.setText("Next Appointment date");
-        patientdashboard.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 150, 40));
-
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        patientdashboard.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 160, 150, 30));
-
-        jButton7.setText("jButton7");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        patientdashboard.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
-
-        Mainpanel.add(patientdashboard, "card6");
 
         PatientProfile.setBackground(new java.awt.Color(255, 255, 255));
         PatientProfile.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -695,7 +660,8 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
         });
 
         jButton8.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jButton8.setText("Home");
+        jButton8.setForeground(new java.awt.Color(255, 255, 255));
+        jButton8.setText("Menu");
         jButton8.setBorder(null);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -704,6 +670,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
         });
 
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_close_window_48px_1.png"))); // NOI18N
+        jButton9.setBorder(null);
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -734,7 +701,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                 .addGap(22, 22, 22)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton9)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SidemenuLayout.setVerticalGroup(
@@ -751,9 +718,9 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                 .addGap(40, 40, 40)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
-                .addGroup(SidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9))
+                .addGroup(SidemenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(28, 28, 28))
         );
 
@@ -1061,18 +1028,11 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        Mainpanel.removeAll();
-        Mainpanel.add(patientdashboard);
-        Mainpanel.repaint();
-        Mainpanel.revalidate();
+//        Mainpanel.removeAll();
+//        Mainpanel.add(patientdashboard);
+//        Mainpanel.repaint();
+//        Mainpanel.revalidate();
     }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
- Mainpanel.removeAll();
-        Mainpanel.add(PatientProfile);
-        Mainpanel.repaint();
-        Mainpanel.revalidate();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     private void SidemenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SidemenuMouseClicked
         
@@ -1138,7 +1098,6 @@ System.exit(0);        // TODO add your handling code here:
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
@@ -1156,10 +1115,7 @@ System.exit(0);        // TODO add your handling code here:
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1175,7 +1131,6 @@ System.exit(0);        // TODO add your handling code here:
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextArea p_address;
     private javax.swing.JSpinner p_age;
     private javax.swing.JTextField p_bloodgroup;
@@ -1183,7 +1138,6 @@ System.exit(0);        // TODO add your handling code here:
     public static javax.swing.JTextField p_emailid;
     private javax.swing.JTextField p_name;
     private javax.swing.JTextField p_phonenumber;
-    private javax.swing.JPanel patientdashboard;
     private javax.swing.JTextField phno;
     private javax.swing.JPanel prescriptionpage;
     public static javax.swing.JButton profileButton;
