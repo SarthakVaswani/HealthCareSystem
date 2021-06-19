@@ -202,24 +202,26 @@ public class hospital_home_page extends javax.swing.JFrame {
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText("Total Appointed Patient");
         jLabel44.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel44.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel44.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 180, 40));
+        jPanel2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 270, 50));
 
         jSpinner2.setBorder(null);
-        jPanel2.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 50, 40));
+        jSpinner2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jPanel2.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 160, 60, 60));
 
         jPanel3.setBackground(new java.awt.Color(124, 87, 232));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("Active Doctors");
-        jLabel45.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel45.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel3.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 180, 41));
+        jPanel3.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 180, 41));
 
         jSpinner3.setBorder(null);
-        jPanel3.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 50, 40));
+        jSpinner3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jPanel3.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 60, 60));
 
         javax.swing.GroupLayout hospitaldashboardLayout = new javax.swing.GroupLayout(hospitaldashboard);
         hospitaldashboard.setLayout(hospitaldashboardLayout);
@@ -227,11 +229,11 @@ public class hospital_home_page extends javax.swing.JFrame {
             hospitaldashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(hospitaldashboardLayout.createSequentialGroup()
-                .addGap(195, 195, 195)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 263, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(186, 186, 186))
+                .addGap(71, 71, 71)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 197, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
         hospitaldashboardLayout.setVerticalGroup(
             hospitaldashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -239,9 +241,9 @@ public class hospital_home_page extends javax.swing.JFrame {
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
                 .addGroup(hospitaldashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
-                .addContainerGap(611, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(463, Short.MAX_VALUE))
         );
 
         MainPanel.add(hospitaldashboard, "card6");
@@ -1430,6 +1432,7 @@ public class hospital_home_page extends javax.swing.JFrame {
 
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_close_window_48px_1.png"))); // NOI18N
         jButton11.setBorder(null);
+        jButton11.setForeground(new java.awt.Color(0, 0, 0));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
