@@ -43,6 +43,7 @@ public class SplashScreen extends javax.swing.JFrame {
 
         loadBar.setBackground(new java.awt.Color(124, 85, 227));
         loadBar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        loadBar.setForeground(new java.awt.Color(0, 102, 255));
 
         ProgressText.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         ProgressText.setForeground(new java.awt.Color(124, 85, 227));

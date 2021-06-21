@@ -108,7 +108,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 430, 90, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 440, 90, 40));
 
         jButton2.setBackground(new java.awt.Color(42, 127, 186));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
@@ -119,7 +119,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, 90, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 90, 40));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -143,7 +143,13 @@ public class Patient_signuppage extends javax.swing.JFrame {
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, 40));
 
         p_date.setBackground(new java.awt.Color(255, 255, 255));
+        p_date.setToolTipText("dd-mm-yyyy");
         p_date.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        p_date.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                p_dateKeyTyped(evt);
+            }
+        });
         jPanel1.add(p_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 140, 30));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -266,6 +272,15 @@ public class Patient_signuppage extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void p_dateKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p_dateKeyTyped
+char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||    
+     (c == '-') ))
+      {
+          evt.consume();
+      }          // TODO add your handling code here:
+    }//GEN-LAST:event_p_dateKeyTyped
 
     /**
      * @param args the command line arguments

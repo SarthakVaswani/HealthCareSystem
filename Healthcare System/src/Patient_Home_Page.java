@@ -559,7 +559,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Medicine Name", "Dose", "Frequency", "Diagnose", "days", "Date", "Email ID", "Prescription ID"
+                "Medicine Name", "Dose", "Frequency", "Diagnose", "days", "Date", "Email ID", "Receipt no."
             }
         ));
         jTable3.setGridColor(new java.awt.Color(51, 51, 51));
@@ -581,7 +581,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 410, Short.MAX_VALUE))
+                .addGap(0, 366, Short.MAX_VALUE))
         );
 
         Mainpanel.add(prescriptionpage, "card5");
@@ -650,12 +650,12 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
-        jButton1.setText("Prescription");
         jButton1.setBackground(new java.awt.Color(87, 69, 122));
-        jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8_treatment_32px.png"))); // NOI18N
+        jButton1.setText("Prescription");
+        jButton1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
         jButton1.setIconTextGap(27);
         jButton1.addActionListener(new java.awt.event.ActionListener() {

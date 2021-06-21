@@ -84,7 +84,7 @@ public class hospital_login extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(828, 0, 40, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 0, 40, 40));
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -104,7 +104,7 @@ public class hospital_login extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 110, 30));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hosp.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 430, 500));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 440, 500));
 
         hospital_id.setBackground(new java.awt.Color(255, 255, 255));
         hospital_id.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -113,6 +113,11 @@ public class hospital_login extends javax.swing.JFrame {
         hospital_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hospital_idActionPerformed(evt);
+            }
+        });
+        hospital_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                hospital_idKeyTyped(evt);
             }
         });
         jPanel1.add(hospital_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 260, 30));
@@ -144,6 +149,11 @@ public class hospital_login extends javax.swing.JFrame {
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
+            }
+        });
+        password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                passwordKeyTyped(evt);
             }
         });
         jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 260, 30));
@@ -232,6 +242,26 @@ public class hospital_login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
+char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||    
+     (c == '-') ))
+      {
+          JOptionPane.showMessageDialog(this, "The password should be in date format");
+          evt.consume();
+      }          // TODO add your handling code here:
+    }//GEN-LAST:event_passwordKeyTyped
+
+    private void hospital_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hospital_idKeyTyped
+char c = evt.getKeyChar();
+      if (!Character.isDigit(c))
+      
+      {
+          JOptionPane.showMessageDialog(this, "The Hospital Id should be in numerical format");
+          evt.consume();
+      }          // TODO add your handling code here:
+    }//GEN-LAST:event_hospital_idKeyTyped
 
     /**
      * @param args the command line arguments

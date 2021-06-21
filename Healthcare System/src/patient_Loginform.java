@@ -1,6 +1,7 @@
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -98,6 +99,14 @@ public class patient_Loginform extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, 30, 30));
+
+        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyTyped(evt);
+            }
+        });
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 260, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/patient_photo.jpg"))); // NOI18N
@@ -120,6 +129,11 @@ public class patient_Loginform extends javax.swing.JFrame {
         Patient_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Patient_IDActionPerformed(evt);
+            }
+        });
+        Patient_ID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Patient_IDKeyTyped(evt);
             }
         });
         jPanel1.add(Patient_ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 260, 30));
@@ -238,6 +252,19 @@ public class patient_Loginform extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void Patient_IDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Patient_IDKeyTyped
+     
+    }//GEN-LAST:event_Patient_IDKeyTyped
+
+    private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
+ char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||    
+     (c == '-') ))
+      {JOptionPane.showMessageDialog(this, "The password should be in date format");
+          evt.consume();
+      }        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1KeyTyped
 
     /**
      * @param args the command line arguments

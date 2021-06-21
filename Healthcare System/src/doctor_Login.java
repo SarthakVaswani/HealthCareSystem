@@ -129,6 +129,11 @@ public class doctor_Login extends javax.swing.JFrame {
 
         DocPassword.setBackground(new java.awt.Color(255, 255, 255));
         DocPassword.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        DocPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                DocPasswordKeyTyped(evt);
+            }
+        });
         jPanel1.add(DocPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 260, 30));
 
         DoctorIDJText.setBackground(new java.awt.Color(255, 255, 255));
@@ -230,6 +235,16 @@ public class doctor_Login extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void DocPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DocPasswordKeyTyped
+char c = evt.getKeyChar();
+      if (!((c >= '0') && (c <= '9') ||    
+     (c == '-') ))
+      {
+          JOptionPane.showMessageDialog(this, "The password should be in date format");
+          evt.consume();
+      }          // TODO add your handling code here:
+    }//GEN-LAST:event_DocPasswordKeyTyped
 
     /**
      * @param args the command line arguments
