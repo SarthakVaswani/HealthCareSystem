@@ -787,7 +787,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
 //        }
 // }
     
-    public void change()
+    public void ProfileView()
     { pat = p_emailid.getText();
         
         try {
@@ -801,28 +801,22 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
                 String pat_name = rs.getString("patient_name");
                 String dob = rs.getString("dateOfbirth");
                 int age = (Integer) rs.getInt("age");
-//   String gender=rs.getString("Gender");
                 String phone = rs.getString("phonenumber");
                 String emailID = rs.getString("email_id");
                 String gender = rs.getString("gender");
                 String bloodgroup = rs.getString("blood_group");
                 String address = rs.getString("address");
-                p_name.setText(pat_name);
-//jSpinner1.setValue(age);       
+                p_name.setText(pat_name);     
 
                 p_age.setValue(Integer.valueOf(age));
                 
                 p_date.setText(dob);
-//jTextField4.setText(gender);  
                 p_address.setText(address);
                 p_bloodgroup.setText(bloodgroup);
                 p_emailid.setText(emailID);
                jComboBox1.setSelectedItem(gender);
                 p_phonenumber.setText(phone);
                 found++;
-//
-
-//                JOptionPane.showMessageDialog(this, "records searched");
             }
         } catch (Exception e) {
         }
@@ -834,7 +828,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
         Mainpanel.add(PatientProfile);
         Mainpanel.repaint();
         Mainpanel.revalidate();
-        change();
+        ProfileView();
     }//GEN-LAST:event_profileButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -977,7 +971,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into crAppointment values('" + a_name + "','" + age + "','" + ph_no + "','" + gender + "','" + a_address + "','" + a_symptoms + "','" + pat + "',null,null,'" + apptID + "',null,null );";
+            String createQuery = "Insert into crAppointment values('" + a_name + "','" + age + "','" + ph_no + "','" + gender + "','" + a_address + "','" + a_symptoms + "','" + pat + "',null,null,'" + apptID + "','','' );";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Appointemt request Created!");
             pt_name.setText("");
@@ -1047,7 +1041,7 @@ public class Patient_Home_Page extends javax.swing.JFrame  {
     }//GEN-LAST:event_SidemenuMouseClicked
 
     private void PatientProfileMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PatientProfileMouseEntered
-    change();
+    ProfileView();
     }//GEN-LAST:event_PatientProfileMouseEntered
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed

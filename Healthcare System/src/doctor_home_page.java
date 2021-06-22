@@ -327,10 +327,10 @@ public class doctor_home_page extends javax.swing.JFrame {
                 .addContainerGap(95, Short.MAX_VALUE))
         );
 
-        jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Patient Details");
+        jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout DoctordasboardLayout = new javax.swing.GroupLayout(Doctordasboard);
         Doctordasboard.setLayout(DoctordasboardLayout);
@@ -340,7 +340,7 @@ public class doctor_home_page extends javax.swing.JFrame {
             .addGroup(DoctordasboardLayout.createSequentialGroup()
                 .addGap(98, 98, 98)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DoctordasboardLayout.createSequentialGroup()
@@ -385,27 +385,27 @@ public class doctor_home_page extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setOpaque(true);
 
-        jTable1.setBackground(new java.awt.Color(31, 102, 224));
         jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Patient Name", "age", "Phone Number", "Gender", "Address", "Symptoms", "Patient Id", "date", "time", "Appointment Id", "null"
+                "Patient Name", "age", "Phone Number", "Gender", "Address", "Symptoms", "Patient Id", "date", "time", "Appointment Id"
             }
         ));
+        jTable1.setBackground(new java.awt.Color(31, 102, 224));
         jTable1.setFillsViewportHeight(true);
+        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setGridColor(new java.awt.Color(51, 51, 51));
         jTable1.setSelectionForeground(new java.awt.Color(153, 204, 0));
         jScrollPane2.setViewportView(jTable1);
@@ -738,7 +738,7 @@ public class doctor_home_page extends javax.swing.JFrame {
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(freqCB, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddPrescriptionLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -939,10 +939,7 @@ dispose();
             int found = 0;
             while (rs.next()) {
                 String ptName = rs.getString("patient_name");
-//    String age=rs.getString("Age");
                 String dob = rs.getString("dateOfbirth");
-//   String gender=rs.getString("Gender");
-
                 int age = (Integer) rs.getInt("age");
                 String gender = rs.getString("gender");
                 String email = rs.getString("email_id");
@@ -951,9 +948,7 @@ dispose();
                 String ptAddress = rs.getString("address");
                 Name.setText(ptName);
                 jSpinner1.setValue(Integer.valueOf(age));
-//jSpinner1.setValue(age);       
                 dobJ.setText(dob);
-//jTextField4.setText(gender);  
                 phJ.setText(ptPhone);
                 emailidJ.setText(email);
                 addressJ.setText(ptAddress);

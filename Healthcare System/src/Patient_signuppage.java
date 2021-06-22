@@ -252,7 +252,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stm = con.createStatement();
-            String createQuery = "Insert into patient_account values('" + patientname + "','" + dateofbirth + "','" + age + "','" + Gender + "','" + EmailId + "','" + bloodgroup + "','" + phonenumber + "','" + address + "' );";
+            String createQuery = "Insert into patient_account values('" + patientname + "','" + dateofbirth + "','" + age + "','" + Gender + "','" + EmailId + "','" + bloodgroup + "','" + phonenumber + "','" + address + "','' );";
             stm.execute(createQuery);
             JOptionPane.showMessageDialog(this, "Patient Profile Created!");
             p_address.setText("");

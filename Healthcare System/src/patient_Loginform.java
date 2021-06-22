@@ -209,17 +209,9 @@ public class patient_Loginform extends javax.swing.JFrame {
             ResultSet rs = stm.executeQuery(patientLogin);
             if (rs.next()) {
                 dispose();
-//                new Patient_Home_Page(patientID).setVisible(true);
                 Patient_Home_Page php = new Patient_Home_Page();
-//                Patient_Home_Page ph=new Patient_Home_Page();
-//      ph.setVisible(true);
-//      System.out.print(""+patientID);
-//                php.show();
                 Patient_Home_Page.p_emailid.setText(Patient_ID.getText());
                 php.setVisible(true);
-//new Patient_Home_Page(patientID).setVisible(true);
-//          Patient_Home_Page ph=new Patient_Home_Page();
-//          ph.show();
             } else {
                 JOptionPane.showMessageDialog(this, "Patient ID or passoword is Invalid");
                 Patient_ID.setText("");
@@ -230,11 +222,7 @@ public class patient_Loginform extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e.getMessage());
 
-        }    
-       // TODO add your handling code here:
-         
-          
-          
+        }   
           
     }//GEN-LAST:event_jButton1ActionPerformed
 
