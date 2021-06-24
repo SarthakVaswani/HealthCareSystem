@@ -4,6 +4,7 @@ import java.awt.Dimension;
 
 import javax.swing.JOptionPane;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -174,6 +175,11 @@ public class Patient_signuppage extends javax.swing.JFrame {
         p_phonenumber.setBackground(new java.awt.Color(255, 255, 255));
         p_phonenumber.setForeground(new java.awt.Color(0, 0, 0));
         p_phonenumber.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        p_phonenumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                p_phonenumberKeyTyped(evt);
+            }
+        });
         jPanel1.add(p_phonenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 170, 30));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -247,6 +253,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
         String dateofbirth = p_date.getText();
         String address = p_address.getText();
         int age = (Integer) p_age.getValue();
+        int len = phonenumber.length();
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -260,7 +267,7 @@ public class Patient_signuppage extends javax.swing.JFrame {
             p_bloodgroup.setText("");
             p_date.setText("");
             p_emailid.setText("");
-           jComboBox1.setSelectedIndex(0);
+            jComboBox1.setSelectedIndex(0);
             p_name.setText("");
             p_phonenumber.setText("");
         } catch (Exception e) {
@@ -270,17 +277,37 @@ public class Patient_signuppage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void p_dateKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p_dateKeyTyped
-char c = evt.getKeyChar();
-      if (!((c >= '0') && (c <= '9') ||    
-     (c == '-') ))
-      {
-          evt.consume();
-      }          // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == '-'))) {
+            evt.consume();
+        }          // TODO add your handling code here:
     }//GEN-LAST:event_p_dateKeyTyped
+
+    private void p_phonenumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_p_phonenumberKeyTyped
+
+        String phonenumber = p_phonenumber.getText();
+        int len = phonenumber.length();
+        char c = evt.getKeyChar();
+        if (evt.getKeyChar() >= '0' && evt.getKeyChar() < '9') {
+            if (len < 10) {
+                p_phonenumber.setEditable(true);
+            } else {
+                p_phonenumber.setEditable(false);
+            }
+
+        } else {
+            if (evt.getExtendedKeyCode() == KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode() == KeyEvent.VK_DELETE) {
+                p_phonenumber.setEditable(true);
+            } else {
+                p_phonenumber.setEditable(false);
+            }
+        }
+    }//GEN-LAST:event_p_phonenumberKeyTyped
 
     /**
      * @param args the command line arguments
@@ -345,6 +372,6 @@ char c = evt.getKeyChar();
     private javax.swing.JTextField p_date;
     private javax.swing.JTextField p_emailid;
     private javax.swing.JTextField p_name;
-    private javax.swing.JTextField p_phonenumber;
+    public javax.swing.JTextField p_phonenumber;
     // End of variables declaration//GEN-END:variables
 }

@@ -112,22 +112,21 @@ public class SplashScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        SplashScreen ss= new SplashScreen();
+        SplashScreen ss = new SplashScreen();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                 ss.setVisible(true);
+                ss.setVisible(true);
             }
         });
-        Home_screen hs =new Home_screen(); 
+        Home_screen hs = new Home_screen();
         try {
-            for(int i=0;i<100;i++)
-            {
-            Thread.sleep(20);
-            ss.loadBar.setValue(i);
-            ss.ProgressText.setText("Loading"+Integer.toString(i)+"%");
-                    
-                    }
+            for (int i = 0; i < 100; i++) {
+                Thread.sleep(20);
+                ss.loadBar.setValue(i);
+                ss.ProgressText.setText("Loading" + Integer.toString(i) + "%");
+
+            }
         } catch (Exception e) {
         }
         new SplashScreen().setVisible(false);

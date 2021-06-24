@@ -13,14 +13,11 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Asus
  */
 public class patient_Loginform extends javax.swing.JFrame {
-    
-    
 
     /**
      * Creates new form patient_form
@@ -184,21 +181,21 @@ public class patient_Loginform extends javax.swing.JFrame {
     }//GEN-LAST:event_Patient_IDActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-           // TODO add your handling code here:
-            dispose();
-            Home_screen hs=new Home_screen();
-             hs.show();
+        // TODO add your handling code here:
+        dispose();
+        Home_screen hs = new Home_screen();
+        hs.show();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         dispose();
-          Patient_signuppage  pp=new Patient_signuppage();
-          pp.show();
+        dispose();
+        Patient_signuppage pp = new Patient_signuppage();
+        pp.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-  String patientID ;
+        String patientID;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
@@ -222,36 +219,33 @@ public class patient_Loginform extends javax.swing.JFrame {
         } catch (Exception e) {
             System.out.println(e.getMessage());
 
-        }   
-          
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        if(jCheckBox1.isSelected())
-        {
-            jPasswordField1.setEchoChar((char)0);
-        }
-        else
-        {
+        if (jCheckBox1.isSelected()) {
+            jPasswordField1.setEchoChar((char) 0);
+        } else {
             jPasswordField1.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void Patient_IDKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Patient_IDKeyTyped
-     
+
     }//GEN-LAST:event_Patient_IDKeyTyped
 
     private void jPasswordField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyTyped
- char c = evt.getKeyChar();
-      if (!((c >= '0') && (c <= '9') ||    
-     (c == '-') ))
-      {JOptionPane.showMessageDialog(this, "The password should be in date format");
-          evt.consume();
-      }        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == '-')) && (evt.getExtendedKeyCode() == KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode() == KeyEvent.VK_DELETE)) {
+            JOptionPane.showMessageDialog(this, "The password should be in date format");
+            evt.consume();
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1KeyTyped
 
     /**

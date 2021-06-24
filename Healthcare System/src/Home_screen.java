@@ -1,14 +1,11 @@
 
 import java.awt.*;
 
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Asus
@@ -20,9 +17,9 @@ public class Home_screen extends javax.swing.JFrame {
      */
     public Home_screen() {
         initComponents();
-        Toolkit toolkit=getToolkit();
-        Dimension size=toolkit.getScreenSize();
-        setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
     }
 
     /**
@@ -154,41 +151,41 @@ public class Home_screen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-dispose();
-doctor_Login doclogin=new doctor_Login();
-doclogin.show();
+        dispose();
+        doctor_Login doclogin = new doctor_Login();
+        doclogin.show();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
-        hospital_login hf=new hospital_login();
+        hospital_login hf = new hospital_login();
         hf.show();
-       
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void DoctorLoginClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorLoginClickActionPerformed
-DoctorLoginClick.setBackground(Color.decode("#86e8a7"));  
-dispose();
-doctor_Login doclogin=new doctor_Login();
-doclogin.show();
+        DoctorLoginClick.setBackground(Color.decode("#86e8a7"));
+        dispose();
+        doctor_Login doclogin = new doctor_Login();
+        doclogin.show();
     }//GEN-LAST:event_DoctorLoginClickActionPerformed
 
     private void HospitalLoginClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HospitalLoginClickActionPerformed
-        DoctorLoginClick.setBackground(Color.decode("#86e8a7"));   
-          dispose();
-        hospital_login hf=new hospital_login();
+        DoctorLoginClick.setBackground(Color.decode("#86e8a7"));
+        dispose();
+        hospital_login hf = new hospital_login();
         hf.show();
     }//GEN-LAST:event_HospitalLoginClickActionPerformed
 
     private void PatientLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientLoginActionPerformed
         // TODO add your handling code here:
         dispose();
-        patient_Loginform hf=new patient_Loginform();
-        hf.show();        
+        patient_Loginform hf = new patient_Loginform();
+        hf.show();
     }//GEN-LAST:event_PatientLoginActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -222,7 +219,7 @@ System.exit(0);        // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Home_screen().setVisible(true);
-                
+
             }
         });
     }

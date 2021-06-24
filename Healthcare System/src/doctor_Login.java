@@ -3,6 +3,7 @@ import java.sql.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 
@@ -189,7 +190,7 @@ public class doctor_Login extends javax.swing.JFrame {
             if (rs.next()) {
                 dispose();
                 doctor_home_page dhp = new doctor_home_page();
-                
+
                 doctor_home_page.DOCID.setText(DoctorIDJText.getText());
                 dhp.setVisible(true);
             } else {
@@ -210,40 +211,36 @@ public class doctor_Login extends javax.swing.JFrame {
     }//GEN-LAST:event_DoctorIDJTextActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       // TODO add your handling code here:
-           dispose();
-            Home_screen hs=new Home_screen();
-             hs.show();
+        // TODO add your handling code here:
+        dispose();
+        Home_screen hs = new Home_screen();
+        hs.show();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      DoctorIDJText.setText("");
-       DocPassword.setText("");  // TODO add your handling code here:
+        DoctorIDJText.setText("");
+        DocPassword.setText("");  // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
- if(jCheckBox1.isSelected())
-        {
-            DocPassword.setEchoChar((char)0);
-        }
-        else
-        {
+        if (jCheckBox1.isSelected()) {
+            DocPassword.setEchoChar((char) 0);
+        } else {
             DocPassword.setEchoChar('*');
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void DocPasswordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DocPasswordKeyTyped
-char c = evt.getKeyChar();
-      if (!((c >= '0') && (c <= '9') ||    
-     (c == '-') ))
-      {
-          JOptionPane.showMessageDialog(this, "The password should be in date format");
-          evt.consume();
-      }          // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == '-')) && (evt.getExtendedKeyCode() == KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode() == KeyEvent.VK_DELETE)) {
+            JOptionPane.showMessageDialog(this, "The password should be in date format");
+            evt.consume();
+        }          // TODO add your handling code here:
     }//GEN-LAST:event_DocPasswordKeyTyped
 
     /**

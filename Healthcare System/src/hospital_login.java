@@ -1,8 +1,10 @@
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.*;
 import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,10 +22,10 @@ public class hospital_login extends javax.swing.JFrame {
      */
     public hospital_login() {
         initComponents();
-        Toolkit toolkit=getToolkit();
-        Dimension size=toolkit.getScreenSize();
-        setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
-      
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
+
     }
 
     /**
@@ -183,39 +185,38 @@ public class hospital_login extends javax.swing.JFrame {
     }//GEN-LAST:event_hospital_idActionPerformed
 
     private void login_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_buttonActionPerformed
-     login_button.setBackground(Color.decode("#4F8AF2")); 
-        try{
-           Class.forName("com.mysql.jdbc.Driver");
-           Connection con =(Connection)DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
-           String hospitalID= hospital_id.getText();
-           String hospitalpassword=password.getText();
-           
-           Statement stm =con.createStatement();
-           String hospitallogin="Select * from hospital_login where Hospital_ID='"+hospitalID+"' and password='"+hospitalpassword+"'";
-           ResultSet rs=stm.executeQuery(hospitallogin);
-           
-           if(rs.next()){
-               dispose();
-               hospital_home_page hhp=new hospital_home_page();
-               hhp.show();
-           }else{
-               JOptionPane.showMessageDialog(this,"Hospital ID or password is invalid");
-               hospital_id.setText("");
-      password.setText("");
-              
-           }
-           con.close();
-           
-       }
-           catch(Exception e){
-                   System.out.println(e.getMessage());
-                   
-                   }
+        login_button.setBackground(Color.decode("#4F8AF2"));
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
+            String hospitalID = hospital_id.getText();
+            String hospitalpassword = password.getText();
+
+            Statement stm = con.createStatement();
+            String hospitallogin = "Select * from hospital_login where Hospital_ID='" + hospitalID + "' and password='" + hospitalpassword + "'";
+            ResultSet rs = stm.executeQuery(hospitallogin);
+
+            if (rs.next()) {
+                dispose();
+                hospital_home_page hhp = new hospital_home_page();
+                hhp.show();
+            } else {
+                JOptionPane.showMessageDialog(this, "Hospital ID or password is invalid");
+                hospital_id.setText("");
+                password.setText("");
+
+            }
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
     }//GEN-LAST:event_login_buttonActionPerformed
 
     private void reset_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reset_buttonActionPerformed
-      hospital_id.setText("");
-      password.setText("");
+        hospital_id.setText("");
+        password.setText("");
     }//GEN-LAST:event_reset_buttonActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
@@ -223,44 +224,38 @@ public class hospital_login extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- dispose();
-       Home_screen hs=new Home_screen();
+        dispose();
+        Home_screen hs = new Home_screen();
         hs.show();// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
- if(jCheckBox1.isSelected())
-        {
-            password.setEchoChar((char)0);
-        }
-        else
-        {
+        if (jCheckBox1.isSelected()) {
+            password.setEchoChar((char) 0);
+        } else {
             password.setEchoChar('*');
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
-char c = evt.getKeyChar();
-      if (!((c >= '0') && (c <= '9') ||    
-     (c == '-') ))
-      {
-          JOptionPane.showMessageDialog(this, "The password should be in date format");
-          evt.consume();
-      }          // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!((c >= '0') && (c <= '9')
+                || (c == '-'))) {
+            JOptionPane.showMessageDialog(this, "The password should be in date format");
+            evt.consume();
+        }          // TODO add your handling code here:
     }//GEN-LAST:event_passwordKeyTyped
 
     private void hospital_idKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hospital_idKeyTyped
-char c = evt.getKeyChar();
-      if (!Character.isDigit(c))
-      
-      {
-          JOptionPane.showMessageDialog(this, "The Hospital Id should be in numerical format");
-          evt.consume();
-      }          // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!Character.isDigit(c)) {
+            JOptionPane.showMessageDialog(this, "The Hospital Id should be in numerical format");
+            evt.consume();
+        }          // TODO add your handling code here:
     }//GEN-LAST:event_hospital_idKeyTyped
 
     /**

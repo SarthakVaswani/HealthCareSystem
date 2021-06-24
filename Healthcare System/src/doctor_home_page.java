@@ -25,7 +25,7 @@ public class doctor_home_page extends javax.swing.JFrame {
      */
     public doctor_home_page() {
         initComponents();
-    
+
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
@@ -479,7 +479,6 @@ public class doctor_home_page extends javax.swing.JFrame {
             }
         });
 
-        ptID.setText(" Enter Patient ID");
         ptID.setBackground(new java.awt.Color(255, 255, 255));
         ptID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ptID.setForeground(new java.awt.Color(51, 51, 51));
@@ -923,7 +922,7 @@ public class doctor_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_addPresActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-dispose();
+        dispose();
         Home_screen hs = new Home_screen();
         hs.show();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed

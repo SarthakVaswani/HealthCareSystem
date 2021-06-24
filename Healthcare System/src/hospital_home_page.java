@@ -5,6 +5,7 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import java.util.UUID;
 import com.email.durgesh.Email;
+import java.awt.event.KeyEvent;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -304,6 +305,11 @@ public class hospital_home_page extends javax.swing.JFrame {
         phoneNumber.setBackground(new java.awt.Color(255, 255, 255));
         phoneNumber.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         phoneNumber.setForeground(new java.awt.Color(51, 51, 51));
+        phoneNumber.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                phoneNumberKeyTyped(evt);
+            }
+        });
 
         emailID.setBackground(new java.awt.Color(255, 255, 255));
         emailID.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1535,15 +1541,11 @@ public class hospital_home_page extends javax.swing.JFrame {
         MainPanel.add(UpdateDetails);
         MainPanel.repaint();
         MainPanel.revalidate();
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
-   public void searchID()
-    {
+    public void searchID() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
@@ -1560,7 +1562,7 @@ public class hospital_home_page extends javax.swing.JFrame {
             }
         } catch (Exception e) {
         }
-        
+
     }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         MainPanel.removeAll();
@@ -1620,13 +1622,6 @@ public class hospital_home_page extends javax.swing.JFrame {
         int age = (Integer) AgeJSpinner.getValue();
         String specialization = (String) SpecializationCB.getSelectedItem();
         String gender = (String) jComboBox5.getSelectedItem();
-//        if (jRadioButton1.isSelected()) {
-//            gender = "Male";
-//        } else if (jRadioButton2.isSelected()) {
-//            gender = "Female";
-//        } else if (jRadioButton3.isSelected()) {
-//            gender = "Other";
-//        }
         String degree = DegreeJ.getText();
         String address = AddressJ.getText();
         String yearExpereince = YearOfExperienceJ.getText();
@@ -1643,9 +1638,6 @@ public class hospital_home_page extends javax.swing.JFrame {
             emailID.setText("");
             AgeJSpinner.setValue(Integer.parseInt("0"));
             phoneNumber.setText("");
-//            jRadioButton1.setSelected(false);
-//            jRadioButton2.setSelected(false);
-//            jRadioButton3.setSelected(false);
             jComboBox5.setSelectedIndex(0);
             SpecializationCB.setSelectedIndex(0);
             DegreeJ.setText("");
@@ -1715,7 +1707,7 @@ public class hospital_home_page extends javax.swing.JFrame {
     }//GEN-LAST:event_DOBDActionPerformed
 
     private void SearchDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchDoctorActionPerformed
-String doctorName = (String) jComboBox8.getSelectedItem();
+        String doctorName = (String) jComboBox8.getSelectedItem();
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -1755,7 +1747,7 @@ String doctorName = (String) jComboBox8.getSelectedItem();
     }//GEN-LAST:event_SearchDoctorActionPerformed
 
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
-String doctorName = (String) jComboBox8.getSelectedItem();        
+        String doctorName = (String) jComboBox8.getSelectedItem();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
@@ -1763,7 +1755,7 @@ String doctorName = (String) jComboBox8.getSelectedItem();
             String deleteDoctor = "delete from doctoraccount where FullName='" + doctorName + "'";
             int i = stmt.executeUpdate(deleteDoctor);
             JOptionPane.showMessageDialog(this, "records Deleted");
-           jComboBox8.setSelectedIndex(0);
+            jComboBox8.setSelectedIndex(0);
             NameD.setText("");
             jComboBox8.updateUI();
             DOBD.setText("");
@@ -2012,7 +2004,7 @@ String doctorName = (String) jComboBox8.getSelectedItem();
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void AwarenessUpdateJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AwarenessUpdateJActionPerformed
-       String awarenessName = (String) jComboBox9.getSelectedItem();
+        String awarenessName = (String) jComboBox9.getSelectedItem();
         String name = NameUpdateJ.getText();
         String category = (String) jComboBox7.getSelectedItem();
         String countryOrigin = COOUpdateJ.getText();
@@ -2034,7 +2026,7 @@ String doctorName = (String) jComboBox8.getSelectedItem();
     }//GEN-LAST:event_AwarenessUpdateJActionPerformed
 
     private void DeleteAWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteAWActionPerformed
-     String awarenessName = (String) jComboBox9.getSelectedItem();
+        String awarenessName = (String) jComboBox9.getSelectedItem();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
@@ -2064,7 +2056,7 @@ String doctorName = (String) jComboBox8.getSelectedItem();
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         NameUpdateJ.setText("");
-      jComboBox9.setSelectedIndex(0);
+        jComboBox9.setSelectedIndex(0);
         COOUpdateJ.setText("");
         YOOriginJ.setText("");
         DescriptionUpdateJ.setText("");
@@ -2082,7 +2074,7 @@ String doctorName = (String) jComboBox8.getSelectedItem();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void hospitaldashboardMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hospitaldashboardMouseEntered
-        hospitalDashboard(); 
+        hospitalDashboard();
         hospitalDashboard2();// TODO add your handling code here:
     }//GEN-LAST:event_hospitaldashboardMouseEntered
 
@@ -2091,11 +2083,11 @@ String doctorName = (String) jComboBox8.getSelectedItem();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void SearchDoctor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchDoctor1ActionPerformed
-searchID();        // TODO add your handling code here:
+        searchID();        // TODO add your handling code here:
     }//GEN-LAST:event_SearchDoctor1ActionPerformed
 
     private void SearchAwareness1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchAwareness1ActionPerformed
-try {
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://bsodd4fwcjnds07m8f9v-mysql.services.clever-cloud.com/bsodd4fwcjnds07m8f9v?useSSL=false", "u3qctvs2k0aq4900", "KQ6ciVFMkN41tXdrw8gY");
             Statement stmt = (Statement) con.createStatement();
@@ -2113,6 +2105,26 @@ try {
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_SearchAwareness1ActionPerformed
+
+    private void phoneNumberKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneNumberKeyTyped
+        String phonenumber = phoneNumber.getText();
+        int len = phonenumber.length();
+        char c = evt.getKeyChar();
+        if (evt.getKeyChar() >= '0' && evt.getKeyChar() < '9') {
+            if (len < 10) {
+                phoneNumber.setEditable(true);
+            } else {
+                phoneNumber.setEditable(false);
+            }
+
+        } else {
+            if (evt.getExtendedKeyCode() == KeyEvent.VK_BACK_SPACE || evt.getExtendedKeyCode() == KeyEvent.VK_DELETE) {
+                phoneNumber.setEditable(true);
+            } else {
+                phoneNumber.setEditable(false);
+            }
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_phoneNumberKeyTyped
 
     /**
      * @param args the command line arguments
